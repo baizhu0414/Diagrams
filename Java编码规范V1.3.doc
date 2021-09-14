@@ -1,0 +1,1756 @@
+Message-ID: <1124025788.941.1630899628573.JavaMail.work@bjkjy-ite-wiki06.bjkjy.baidu.com>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_940_1171507106.1630899628573"
+
+------=_Part_940_1171507106.1630899628573
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>1.1 =E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V1=
+.3</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>1.1 =E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V1.3<=
+/h1>
+    <div class=3D"Section1">
+        <h1 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=
+=E8=8C=83V1.3-=E5=89=8D=E8=A8=80"><strong>=E5=89=8D=E8=A8=80</strong></h1>
+<p align=3D"left">=E4=B8=BA=E7=BB=9F=E4=B8=80=E5=85=AC=E5=8F=B8Java=E9=A1=
+=B9=E7=9B=AE=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83=EF=BC=8C=E6=8F=90=E9=AB=98=
+=E5=8F=AF=E8=AF=BB=E6=80=A7=EF=BC=8C=E7=89=B9=E5=88=B6=E5=AE=9A=E6=9C=AC=E8=
+=A7=84=E8=8C=83=E3=80=82</p>
+<p align=3D"left">=E6=9C=AC=E8=A7=84=E8=8C=83=E5=90=8C=E6=A0=B7=E9=80=82=E7=
+=94=A8=E4=BA=8EAndroid=E9=A1=B9=E7=9B=AE=E3=80=82</p>
+<p align=3D"left">=E6=9C=AC=E8=A7=84=E8=8C=83=E5=9F=BA=E4=BA=8E<u><a class=
+=3D"external-link" href=3D"https://google.github.io/styleguide/javaguide.ht=
+ml" rel=3D"nofollow">Google Java Style</a></u><span style=3D"color: rgb(0,5=
+1,102);">&nbsp;</span><span style=3D"color: rgb(0,51,102);">=E5=92=8C</span=
+>&nbsp;<u><a class=3D"external-link" href=3D"https://github.com/alibaba/p3c=
+" rel=3D"nofollow">=E9=98=BF=E9=87=8C=E5=B7=B4=E5=B7=B4Java=E5=BC=80=E5=8F=
+=91=E8=A7=84=E8=8C=83</a></u>=EF=BC=8C=E4=B8=BB=E8=A6=81=E7=9A=84=E5=8C=BA=
+=E5=88=AB=E5=A6=82=E4=B8=8B=EF=BC=9A</p>
+<ul>
+<li>=E4=BF=9D=E7=95=99=E4=BA=86=E7=99=BE=E5=BA=A6=E5=8E=9F=E6=9C=89=E8=A7=
+=84=E8=8C=83=E7=9A=844=E7=A9=BA=E6=A0=BC=E7=BC=A9=E8=BF=9B=E5=92=8C120=E5=
+=AD=97=E7=AC=A6=E5=88=97=E5=AE=BD=E9=99=90=E5=88=B6=E3=80=82</li>
+<li>=E6=94=BE=E6=9D=BE=E4=BA=86=E5=AF=B9import=E8=AF=AD=E5=8F=A5=E7=9A=84=
+=E7=BB=84=E7=BB=87=E6=96=B9=E5=BC=8F=E8=A6=81=E6=B1=82=E3=80=82=E5=8F=AA=E8=
+=A6=81=E6=9C=89=E4=B8=80=E5=AE=9A=E9=80=BB=E8=BE=91=E6=80=A7=E5=8D=B3=E5=8F=
+=AF=EF=BC=8C=E4=B8=8D=E5=81=9A=E4=B8=A5=E6=A0=BC=E9=99=90=E5=88=B6=E3=80=82=
+=E4=BD=86=E8=A6=81=E6=B1=82=E6=9C=AA=E4=BD=BF=E7=94=A8=E7=9A=84import=E8=AF=
+=AD=E5=8F=A5=E5=BF=85=E9=A1=BB=E5=88=A0=E9=99=A4=E3=80=82</li>
+<li>=E5=AF=B9Android=E7=9A=84=E6=88=90=E5=91=98=E5=8F=98=E9=87=8F=E5=91=BD=
+=E5=90=8D=E5=85=81=E8=AE=B8=E4=BA=86=E4=BE=8B=E5=A4=96=E3=80=82</li>
+<ul>
+<li>=E9=9D=9Epublic=E9=9D=9Estatic=E7=9A=84=E5=8F=98=E9=87=8F=E5=8F=AF=E4=
+=BB=A5=E4=BD=BF=E7=94=A8m=E5=BC=80=E5=A4=B4</li>
+<li>=E9=9D=9E=E5=B8=B8=E9=87=8F=E7=9A=84static=E5=8F=98=E9=87=8F=E5=8F=AF=
+=E4=BB=A5=E4=BD=BF=E7=94=A8s=E5=BC=80=E5=A4=B4</li>
+</ul>
+<li>switch=E8=AF=AD=E5=8F=A5=E7=A6=81=E6=AD=A2=E4=BA=86case=E8=B4=AF=E7=A9=
+=BF=EF=BC=8C=E5=90=8C=E6=97=B6=E8=A6=81=E6=B1=82default=E5=BF=85=E9=A1=BB=
+=E8=A2=AB=E7=BB=88=E6=AD=A2=E3=80=82</li>
+<li>=E5=85=81=E8=AE=B8=E7=89=B9=E6=AE=8A=E5=9C=BA=E6=99=AF=E4=B8=8B=E7=9A=
+=84=E5=8D=95=E5=AD=97=E7=AC=A6=E5=8F=82=E6=95=B0=E5=91=BD=E5=90=8D=EF=BC=8C=
+=E4=BE=8B=E5=A6=82=E4=BD=BF=E7=94=A8x=E3=80=81y=E8=A1=A8=E7=A4=BA=E5=9D=90=
+=E6=A0=87=E3=80=82</li>
+<li><p>=E7=A6=81=E7=94=A8=E4=BA=86=E6=9E=9A=E4=B8=BE=E7=B1=BB=E7=9A=84=E5=
+=8D=95=E8=A1=8C=E9=A3=8E=E6=A0=BC=E3=80=82</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">private=
+ enum Suit { CLUBS, HEARTS, SPADES, DIAMONDS }</pre>=20
+</div>
+</div></li>
+<li><p>=E7=A6=81=E7=94=A8=E4=BA=86=E6=97=A0=E5=8F=82=E6=95=B0=E6=B3=A8=E8=
+=A7=A3=E7=9A=84=E4=B8=8D=E6=8D=A2=E8=A1=8C=E9=A3=8E=E6=A0=BC</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">@Overri=
+de public int hashCode() { ... }
+@Partial @Mock DataLoader loader;</pre>=20
+</div>
+</div></li>
+</ul>
+<ul>
+<li>=E5=A2=9E=E5=8A=A0=E4=BA=86=E5=AF=B9=E4=BD=BF=E7=94=A8=E6=8B=BC=E9=9F=
+=B3=E5=91=BD=E5=90=8D=E7=9A=84=E8=AF=B4=E6=98=8E=EF=BC=9A=E4=B8=8D=E5=BB=BA=
+=E8=AE=AE=E4=BD=86=E5=85=81=E8=AE=B8=E5=B0=91=E9=87=8F=E4=BE=8B=E5=A4=96=E3=
+=80=82</li>
+<li>=E7=A6=81=E6=AD=A2=E4=BD=BF=E7=94=A8=E8=BF=9E=E7=BB=AD=E7=9A=84=E7=A9=
+=BA=E8=A1=8C=E8=BF=9B=E8=A1=8C=E5=88=86=E9=9A=94=E3=80=82</li>
+<li><p>=E7=A6=81=E7=94=A8=E4=BA=86=E4=B8=80=E7=A7=8D=E6=95=B0=E7=BB=84=E5=
+=88=9D=E5=A7=8B=E5=8C=96=E6=8D=A2=E8=A1=8C=E7=9A=84=E9=A3=8E=E6=A0=BC=E3=80=
+=82</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">new int=
+[]
+{0, 1, 2, 3}</pre>=20
+</div>
+</div></li>
+</ul>
+<ul>
+<li>=E7=A6=81=E6=AD=A2=E4=BD=BF=E7=94=A8=E8=BF=9E=E7=BB=AD=E7=9A=84=E7=A9=
+=BA=E6=A0=BC=E5=88=86=E9=9A=94=E3=80=82=E4=B8=8D=E5=86=8D=E5=85=81=E8=AE=B8=
+=E4=BD=BF=E7=94=A8=E5=A2=9E=E5=8A=A0=E7=A9=BA=E6=A0=BC=E6=9D=A5=E8=BF=9B=E8=
+=A1=8C=E5=AF=B9=E9=BD=90=E7=9A=84=E9=A3=8E=E6=A0=BC=E3=80=82</li>
+<li>=E5=85=81=E8=AE=B8=E5=8C=85=E5=90=8D=E4=B8=AD=E5=8C=85=E5=90=AB=E6=95=
+=B0=E5=AD=97=EF=BC=8C=E4=BE=8B=E5=A6=82&nbsp;org.apache.logging.log4j=E3=80=
+=82</li>
+<li>=E5=A2=9E=E5=8A=A0=E4=BA=86=E6=8D=A2=E8=A1=8C=E7=AC=A6=E5=BC=BA=E5=88=
+=B6=E4=BD=BF=E7=94=A8Unix=E6=A0=BC=E5=BC=8F=E7=9A=84=E8=A6=81=E6=B1=82=E3=
+=80=82</li>
+<li>=E5=88=A0=E9=99=A4=E4=BA=86=E9=9D=9EASCII=E5=AD=97=E7=AC=A6=E7=9A=84=E8=
+=A6=81=E6=B1=82=E3=80=82</li>
+<li>=E5=88=A0=E9=99=A4=E4=BA=86=E7=B1=BB=E6=88=90=E5=91=98=E9=A1=BA=E5=BA=
+=8F=E7=9A=84=E8=A6=81=E6=B1=82=E3=80=82</li>
+<li>=E7=AE=80=E5=8C=96=E4=BA=86=E5=88=97=E5=AE=BD=E5=92=8C=E6=8D=A2=E8=A1=
+=8C=E8=A6=81=E6=B1=82=E6=8F=8F=E8=BF=B0=E3=80=82</li>
+<li>=E5=88=A0=E9=99=A4=E4=BA=86=E6=9E=9A=E4=B8=BE=E7=B1=BB=E7=9A=84=E8=A6=
+=81=E6=B1=82=E3=80=82</li>
+<li>=E8=A1=A5=E5=85=85=E7=89=B9=E5=AE=9A=E7=B1=BB=E5=9E=8B=E5=91=BD=E5=90=
+=8D=E8=A7=84=E8=8C=83=EF=BC=8C=E5=A2=9E=E5=8A=A0=E5=AF=B9=E6=8A=BD=E8=B1=A1=
+=E7=B1=BB=E3=80=81=E5=BC=82=E5=B8=B8=E3=80=81=E5=8D=95=E6=B5=8B=E7=9A=84=E7=
+=B1=BB=E5=90=8D=E8=A6=81=E6=B1=82=EF=BC=8C=E5=A2=9E=E5=8A=A0POJO=E5=B8=83=
+=E5=B0=94=E7=B1=BB=E5=9E=8B=E5=8F=98=E9=87=8F=E8=8E=B7=E5=8F=96=E6=96=B9=E6=
+=B3=95=E3=80=81=E5=86=85=E9=83=A8=E5=AE=9E=E7=8E=B0=E6=96=B9=E6=B3=95=E3=80=
+=81=E9=AD=94=E6=B3=95=E5=80=BC=E7=AD=89=E6=96=B9=E9=9D=A2=E7=9A=84=E4=B8=A5=
+=E6=A0=BC=E8=A6=81=E6=B1=82=E3=80=82</li>
+<li>=E8=A1=A5=E5=85=85=E7=BC=96=E7=A8=8B=E5=AE=9E=E8=B7=B5=E6=96=B9=E9=9D=
+=A2=E8=A6=81=E6=B1=82=EF=BC=8C=E5=AE=8C=E5=96=84OOP=E3=80=81=E9=9B=86=E5=90=
+=88=E5=A4=84=E7=90=86=E3=80=81=E5=B9=B6=E5=8F=91=E5=A4=84=E7=90=86=E3=80=81=
+=E5=BC=82=E5=B8=B8=E5=A4=84=E7=90=86=E7=AD=89=E6=96=B9=E9=9D=A2=E8=A6=81=E6=
+=B1=82=E3=80=82</li>
+<li>=E5=88=A0=E9=99=A4=E4=BA=86Javadoc=E6=B3=A8=E9=87=8A=E7=9A=84=E8=A6=81=
+=E6=B1=82=E3=80=82</li>
+<li>=E5=A2=9E=E5=8A=A0=E4=BA=86Java=E5=AE=89=E5=85=A8=E7=BC=96=E7=A0=81=E8=
+=A7=84=E8=8C=83=E8=A6=81=E6=B1=82=E3=80=82</li>
+</ul>
+<p align=3D"left">=E7=9B=B8=E5=AF=B9=E4=BA=8E=E5=8E=9F=E5=85=88=E7=9A=84=E7=
+=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83=EF=BC=8C=E6=9C=AC=
+=E8=A7=84=E8=8C=83=E5=81=9A=E5=87=BA=E4=BA=86=E5=A4=A7=E9=87=8F=E6=9B=B4=E5=
+=8A=A0=E4=B8=A5=E6=A0=BC=E7=9A=84=E9=99=90=E5=88=B6=EF=BC=8C=E5=B9=B6=E5=8A=
+=A0=E5=BC=BA=E4=BA=86=E7=9B=B8=E5=85=B3=E7=BC=96=E7=A8=8B=E5=AE=9E=E8=B7=B5=
+=E6=96=B9=E9=9D=A2=E5=86=85=E5=AE=B9=E3=80=82</p>
+<h1 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-=E6=9C=AF=E8=AF=AD"><strong>=E6=9C=AF=E8=AF=AD</strong></h1>
+<p align=3D"left">=E9=99=A4=E9=9D=9E=E7=89=B9=E5=88=AB=E7=BA=A6=E5=AE=9A=EF=
+=BC=8C=E6=88=91=E4=BB=AC=E4=BD=BF=E7=94=A8=E4=BB=A5=E4=B8=8B=E6=9C=AF=E8=AF=
+=AD=EF=BC=9A</p>
+<ul>
+<li><strong>=E7=B1=BB</strong>=E7=94=A8=E4=BA=8E=E6=8C=87=E4=BB=A3=E6=89=80=
+=E6=9C=89=E7=B1=BB=EF=BC=88class=EF=BC=89=E3=80=81=E6=9E=9A=E4=B8=BE=EF=BC=
+=88enum class=EF=BC=89=E3=80=81=E6=8E=A5=E5=8F=A3=EF=BC=88interface=EF=BC=
+=89=E4=BB=A5=E5=8F=8A=E6=B3=A8=E8=A7=A3=EF=BC=88annotation=EF=BC=89=E3=80=
+=82</li>
+<li><strong>=E6=B3=A8=E9=87=8A</strong>=E4=BB=85=E7=94=A8=E4=BA=8E=E6=8C=87=
+=E4=BB=A3=E8=A1=8C=E9=97=B4=E6=B3=A8=E9=87=8A=EF=BC=8C<strong>Javadoc</stro=
+ng>=E7=94=A8=E4=BA=8E=E6=8C=87=E4=BB=A3=E6=96=87=E6=A1=A3=E6=B3=A8=E9=87=8A=
+=E3=80=82</li>
+</ul>
+<h1 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-=E6=96=87=E6=A1=A3=E8=AF=B4=E6=98=8E"><strong>=E6=96=87=E6=A1=A3=E8=AF=
+=B4=E6=98=8E</strong></h1>
+<p align=3D"left">=E6=9C=AC=E6=96=87=E4=B8=AD=E6=89=80=E4=BD=BF=E7=94=A8=E7=
+=9A=84=E7=A4=BA=E4=BE=8B=E4=BB=A3=E7=A0=81=E4=B8=8D=E5=85=B7=E5=A4=87=E5=94=
+=AF=E4=B8=80=E6=9D=83=E5=A8=81=E6=80=A7=E3=80=82=E7=A4=BA=E4=BE=8B=E4=BB=A3=
+=E7=A0=81=E5=8F=AA=E4=BB=A3=E8=A1=A8=E4=B8=80=E7=A7=8D=E7=AC=A6=E5=90=88=E8=
+=A7=84=E8=8C=83=E7=9A=84=E5=86=99=E6=B3=95=EF=BC=8C=E4=B9=9F=E5=8F=AF=E8=83=
+=BD=E5=AD=98=E5=9C=A8=E5=85=B6=E4=BB=96=E7=AC=A6=E5=90=88=E8=A7=84=E8=8C=83=
+=E7=9A=84=E4=B8=8D=E5=90=8C=E5=86=99=E6=B3=95=E3=80=82</p>
+<h1 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-=E7=9B=AE=E5=BD=95"><strong>=E7=9B=AE=E5=BD=95</strong></h1>
+<h1 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-/*<![CDATA[*/div.rbtoc1630899628480{padding:0px;}div.rbtoc1630899628480=
+ul{list-style:disc;margin-left:0px;}div.rbtoc1630899628480li{margin-left:0p=
+x;padding-left:0px;}/*]]>*/=E5=89=8D=E8=A8=80#id-1.1=E7=99=BE=E5=BA=A6Java=
+=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V1.3-=E5=89=8D=E8=A8=80=E6=9C=AF=E8=AF=
+=AD#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V1.3-=
+=E6=9C=AF=E8=AF=AD=E6=96=87=E6=A1=A3=E8=AF=B4=E6=98=8E#id-1"><strong><stron=
+g><style type=3D"text/css">/*<![CDATA[*/
+div.rbtoc1630899628480 {padding: 0px;}
+div.rbtoc1630899628480 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1630899628480 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style>
+<div class=3D"toc-macro rbtoc1630899628480">=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-=E5=89=8D=E8=A8=80">=E5=89=8D=E8=A8=80</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-=E6=9C=AF=E8=AF=AD">=E6=9C=AF=E8=AF=AD</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-=E6=96=87=E6=A1=A3=E8=AF=B4=E6=98=8E">=E6=96=87=E6=A1=A3=E8=AF=
+=B4=E6=98=8E</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-=E7=9B=AE=E5=BD=95">=E7=9B=AE=E5=BD=95</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-"></a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-1.=E6=BA=90=E6=96=87=E4=BB=B6=E8=A7=84=E8=8C=83">1. =E6=BA=90=E6=
+=96=87=E4=BB=B6=E8=A7=84=E8=8C=83</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-1.1.=E6=96=87=E4=BB=B6=E5=90=8D">1.1. =E6=96=87=E4=BB=B6=E5=90=
+=8D</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-1.2.=E6=96=87=E4=BB=B6=E7=BC=96=E7=A0=81">1.2. =E6=96=87=E4=BB=
+=B6=E7=BC=96=E7=A0=81</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-1.3.=E7=89=B9=E6=AE=8A=E5=AD=97=E7=AC=A6">1.3. =E7=89=B9=E6=AE=
+=8A=E5=AD=97=E7=AC=A6</a></li>=20
+</ul> </li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-2.=E6=BA=90=E6=96=87=E4=BB=B6=E7=BB=84=E7=BB=87=E7=BB=93=E6=9E=
+=84">2. =E6=BA=90=E6=96=87=E4=BB=B6=E7=BB=84=E7=BB=87=E7=BB=93=E6=9E=84</a>=
+=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-2.1.=E8=AE=B8=E5=8F=AF=E8=AF=81=EF=BC=88License=EF=BC=89=E6=88=
+=96=E7=89=88=E6=9D=83=E5=A3=B0=E6=98=8E=EF=BC=88Copyright=EF=BC=89">2.1. =
+=E8=AE=B8=E5=8F=AF=E8=AF=81=EF=BC=88License=EF=BC=89=E6=88=96=E7=89=88=E6=
+=9D=83=E5=A3=B0=E6=98=8E=EF=BC=88Copyright=EF=BC=89</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-2.2.package=E8=AF=AD=E5=8F=A5">2.2. package=E8=AF=AD=E5=8F=A5</a=
+></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-2.3.import=E8=AF=AD=E5=8F=A5">2.3. import=E8=AF=AD=E5=8F=A5</a><=
+/li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-2.4.=E7=B1=BB=E5=A3=B0=E6=98=8E">2.4. =E7=B1=BB=E5=A3=B0=E6=98=
+=8E</a></li>=20
+</ul> </li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-3.=E4=BB=A3=E7=A0=81=E6=A0=BC=E5=BC=8F">3. =E4=BB=A3=E7=A0=81=E6=
+=A0=BC=E5=BC=8F</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-3.1.=E8=8A=B1=E6=8B=AC=E5=8F=B7">3.1. =E8=8A=B1=E6=8B=AC=E5=8F=
+=B7</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-3.2.=E5=9D=97=E7=BC=A9=E8=BF=9B=EF=BC=9A4=E4=B8=AA=E7=A9=BA=E6=
+=A0=BC">3.2. =E5=9D=97=E7=BC=A9=E8=BF=9B=EF=BC=9A4=E4=B8=AA=E7=A9=BA=E6=A0=
+=BC</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-3.3.=E6=AF=8F=E8=A1=8C=E5=8F=AA=E5=86=99=E4=B8=80=E6=9D=A1=E8=AF=
+=AD=E5=8F=A5">3.3. =E6=AF=8F=E8=A1=8C=E5=8F=AA=E5=86=99=E4=B8=80=E6=9D=A1=
+=E8=AF=AD=E5=8F=A5</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-3.4.=E5=88=97=E5=AE=BD=E5=92=8C=E6=8D=A2=E8=A1=8C">3.4. =E5=88=
+=97=E5=AE=BD=E5=92=8C=E6=8D=A2=E8=A1=8C</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-3.5.=E7=A9=BA=E7=99=BD">3.5.&nbsp;=E7=A9=BA=E7=99=BD</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-3.6.=E8=A1=A8=E8=BE=BE=E5=BC=8F=E5=9C=86=E6=8B=AC=E5=8F=B7">3.6.=
+ =E8=A1=A8=E8=BE=BE=E5=BC=8F=E5=9C=86=E6=8B=AC=E5=8F=B7</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-3.7.=E5=85=B6=E4=BB=96=E8=AF=B4=E6=98=8E">3.7. =E5=85=B6=E4=BB=
+=96=E8=AF=B4=E6=98=8E</a></li>=20
+</ul> </li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-4.=E5=91=BD=E5=90=8D">4. =E5=91=BD=E5=90=8D</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-4.1.=E9=80=9A=E7=94=A8=E5=91=BD=E5=90=8D=E8=A7=84=E8=8C=83">4.1.=
+ =E9=80=9A=E7=94=A8=E5=91=BD=E5=90=8D=E8=A7=84=E8=8C=83</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-4.2.=E7=89=B9=E5=AE=9A=E7=B1=BB=E5=9E=8B=E5=91=BD=E5=90=8D=E8=A7=
+=84=E8=8C=83">4.2. =E7=89=B9=E5=AE=9A=E7=B1=BB=E5=9E=8B=E5=91=BD=E5=90=8D=
+=E8=A7=84=E8=8C=83</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-4.3.=E9=A9=BC=E5=B3=B0=E5=91=BD=E5=90=8D=E6=96=B9=E5=BC=8F=E5=AE=
+=9A=E4=B9=89">4.3. =E9=A9=BC=E5=B3=B0=E5=91=BD=E5=90=8D=E6=96=B9=E5=BC=8F=
+=E5=AE=9A=E4=B9=89</a></li>=20
+</ul> </li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-5.=E7=BC=96=E7=A8=8B=E5=AE=9E=E8=B7=B5">5. =E7=BC=96=E7=A8=8B=E5=
+=AE=9E=E8=B7=B5</a>=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-5.1.OOP=E8=A7=84=E7=BA=A6">5.1. OOP=E8=A7=84=E7=BA=A6</a></li>=
+=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-5.2.=E9=9B=86=E5=90=88=E5=A4=84=E7=90=86">5.2. =E9=9B=86=E5=90=
+=88=E5=A4=84=E7=90=86</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-5.3.=E5=B9=B6=E5=8F=91=E5=A4=84=E7=90=86">5.3. =E5=B9=B6=E5=8F=
+=91=E5=A4=84=E7=90=86</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-5.4.=E6=8E=A7=E5=88=B6=E8=AF=AD=E5=8F=A5">5.4. =E6=8E=A7=E5=88=
+=B6=E8=AF=AD=E5=8F=A5</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-5.5.=E6=B3=A8=E9=87=8A=E8=A7=84=E7=BA=A6">5.5. =E6=B3=A8=E9=87=
+=8A=E8=A7=84=E7=BA=A6</a></li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-5.6.=E5=BC=82=E5=B8=B8=E5=A4=84=E7=90=86">5.6. =E5=BC=82=E5=B8=
+=B8=E5=A4=84=E7=90=86</a></li>=20
+</ul> </li>=20
+<li><a href=3D"#id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=
+=8C=83V1.3-6.Java=E5=AE=89=E5=85=A8=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83">6.=
+&nbsp;Java=E5=AE=89=E5=85=A8=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83</a></li>=
+=20
+</ul>=20
+</div></strong><br></strong></h1>
+<h1 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-1.=E6=BA=90=E6=96=87=E4=BB=B6=E8=A7=84=E8=8C=83"><strong>1. </strong><s=
+trong>=E6=BA=90=E6=96=87=E4=BB=B6=E8=A7=84=E8=8C=83</strong></h1>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-1.1.=E6=96=87=E4=BB=B6=E5=90=8D"><strong>1.1. </strong><strong>=E6=96=
+=87=E4=BB=B6=E5=90=8D</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA001] =E6=BA=90=E6=96=87=E4=BB=
+=B6=E5=90=8D=E5=BF=85=E9=A1=BB=E5=92=8C=E5=AE=83=E5=8C=85=E5=90=AB=E7=9A=84=
+=E9=A1=B6=E5=B1=82=E7=B1=BB=E5=90=8D=E4=BF=9D=E6=8C=81=E4=B8=80=E8=87=B4=EF=
+=BC=8C=E5=8C=85=E6=8B=AC=E5=A4=A7=E5=B0=8F=E5=86=99=EF=BC=8C=E5=B9=B6=E4=BB=
+=A5.java=E4=BD=9C=E4=B8=BA=E5=90=8E=E7=BC=80=E5=90=8D=E3=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-1.2.=E6=96=87=E4=BB=B6=E7=BC=96=E7=A0=81"><strong>1.2. </strong><strong=
+>=E6=96=87=E4=BB=B6=E7=BC=96=E7=A0=81</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA002] =E6=89=80=E6=9C=89=E6=BA=
+=90=E6=96=87=E4=BB=B6=E7=BC=96=E7=A0=81=E5=BF=85=E9=A1=BB=E6=98=AF<strong>U=
+TF-8</strong></p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-1.3.=E7=89=B9=E6=AE=8A=E5=AD=97=E7=AC=A6"><strong>1.3. </strong><strong=
+>=E7=89=B9=E6=AE=8A=E5=AD=97=E7=AC=A6</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA003] =E9=99=A4=E4=BA=86=E6=8D=
+=A2=E8=A1=8C=E7=AC=A6=E4=B9=8B=E5=A4=96=EF=BC=8CASCII=E7=A9=BA=E6=A0=BC=EF=
+=BC=880x20=EF=BC=89=E6=98=AF=E5=94=AF=E4=B8=80=E5=90=88=E6=B3=95=E7=9A=84=
+=E7=A9=BA=E6=A0=BC=E5=AD=97=E7=AC=A6=E3=80=82=E8=BF=99=E6=84=8F=E5=91=B3=E7=
+=9D=80=EF=BC=9A</p>
+<ul>
+<li>=E6=89=80=E6=9C=89=E5=9C=A8=E6=BA=90=E4=BB=A3=E7=A0=81=E4=B8=AD=EF=BC=
+=88=E5=8C=85=E6=8B=AC=E5=AD=97=E7=AC=A6=E3=80=81=E5=AD=97=E7=AC=A6=E4=B8=B2=
+=E4=BB=A5=E5=8F=8A=E6=B3=A8=E9=87=8A=E4=B8=AD=EF=BC=89=E5=87=BA=E7=8E=B0=E7=
+=9A=84=E5=85=B6=E4=BB=96=E7=A9=BA=E6=A0=BC=E5=AD=97=E7=AC=A6=E9=9C=80=E8=A6=
+=81=E8=BD=AC=E4=B9=89,=E4=BE=8B=E5=A6=82Tab=E7=94=A8\t=E8=A1=A8=E7=A4=BA=E3=
+=80=82</li>
+<li>=E7=BC=A9=E8=BF=9B=E5=BF=85=E9=A1=BB=E4=BD=BF=E7=94=A8=E7=A9=BA=E6=A0=
+=BC=E8=80=8C=E4=B8=8D=E6=98=AFTab</li>
+</ul>
+<p>[=E5=BC=BA=E5=88=B6] [JAVA004] =E5=AF=B9=E4=BA=8E=E6=9C=89=E7=89=B9=E6=
+=AE=8A=E8=BD=AC=E4=B9=89=E8=A1=A8=E7=A4=BA=E7=9A=84=E5=AD=97=E7=AC=A6=EF=BC=
+=88\b,&nbsp;\t,&nbsp;\n,&nbsp;\f,&nbsp;\r,&nbsp;\",&nbsp;\',&nbsp;\\=EF=BC=
+=89=EF=BC=8C=E7=A6=81=E6=AD=A2=E4=BD=BF=E7=94=A8=E5=85=B6=E5=AE=83=E7=AD=89=
+=E4=BB=B7=E8=BD=AC=E4=B9=89=E6=96=B9=E5=BC=8F=E3=80=82=E4=BE=8B=E5=A6=82\01=
+2=E6=88=96=E8=80=85\u00a=E8=A1=A8=E7=A4=BA=E3=80=82</p>
+<p>[=E5=BC=BA=E5=88=B6] [JAVA005]=E6=96=87=E4=BB=B6=E7=9A=84=E6=8D=A2=E8=A1=
+=8C=E7=AC=A6=E4=BD=BF=E7=94=A8 Unix =E6=A0=BC=E5=BC=8F=EF=BC=8C=E4=B8=8D=E8=
+=A6=81=E4=BD=BF=E7=94=A8 Windows =E6=A0=BC=E5=BC=8F=E3=80=82</p>
+<h1 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-2.=E6=BA=90=E6=96=87=E4=BB=B6=E7=BB=84=E7=BB=87=E7=BB=93=E6=9E=84"><str=
+ong>2. </strong><strong>=E6=BA=90=E6=96=87=E4=BB=B6=E7=BB=84=E7=BB=87=E7=BB=
+=93=E6=9E=84</strong></h1>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA006] =E6=BA=90=E6=96=87=E4=BB=
+=B6=E5=BF=85=E9=A1=BB=E6=8C=89=E9=A1=BA=E5=BA=8F=E7=94=B1=E4=BB=A5=E4=B8=8B=
+=E9=83=A8=E5=88=86=E7=BB=84=E6=88=90=EF=BC=9A</p>
+<ul>
+<li>=E8=AE=B8=E5=8F=AF=E8=AF=81=EF=BC=88License=EF=BC=89=E6=88=96=E7=89=88=
+=E6=9D=83=E5=A3=B0=E6=98=8E=EF=BC=88Copyright=EF=BC=89</li>
+<li>package=E8=AF=AD=E5=8F=A5</li>
+<li>import=E8=AF=AD=E5=8F=A5</li>
+<li>=E5=94=AF=E4=B8=80=E7=9A=84=E9=A1=B6=E5=B1=82=E7=B1=BB</li>
+</ul>
+<p align=3D"left">=E6=AF=8F=E4=B8=A4=E9=83=A8=E5=88=86=E4=B9=8B=E9=97=B4=E7=
+=94=A8=E4=B8=80=E4=B8=AA=E7=A9=BA=E8=A1=8C=E5=88=86=E9=9A=94=EF=BC=8C=E4=B8=
+=8D=E5=85=81=E8=AE=B8=E5=A4=9A=E4=B8=AA=E7=A9=BA=E8=A1=8C=E3=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-2.1.=E8=AE=B8=E5=8F=AF=E8=AF=81=EF=BC=88License=EF=BC=89=E6=88=96=E7=89=
+=88=E6=9D=83=E5=A3=B0=E6=98=8E=EF=BC=88Copyright=EF=BC=89"><strong>2.1. </s=
+trong><strong>=E8=AE=B8=E5=8F=AF=E8=AF=81=EF=BC=88</strong><strong>License<=
+/strong><strong>=EF=BC=89=E6=88=96=E7=89=88=E6=9D=83=E5=A3=B0=E6=98=8E=EF=
+=BC=88</strong><strong>Copyright</strong><strong>=EF=BC=89</strong></h2>
+<p align=3D"left">=E5=A6=82=E6=9E=9C=E6=96=87=E4=BB=B6=E6=9C=89=E8=AE=B8=E5=
+=8F=AF=E8=AF=81=EF=BC=88License=EF=BC=89=E6=88=96=E7=89=88=E6=9D=83=E5=A3=
+=B0=E6=98=8E=EF=BC=88Copyright=EF=BC=89=EF=BC=8C=E6=94=BE=E5=9C=A8=E6=9C=80=
+=E5=BC=80=E5=A4=B4=E3=80=82=E5=A6=82=E6=9E=9C=E6=B2=A1=E6=9C=89=E7=9A=84=E8=
+=AF=9D=EF=BC=8C=E6=AD=A4=E9=83=A8=E5=88=86=E5=8F=AF=E4=BB=A5=E5=BF=BD=E7=95=
+=A5=E3=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-2.2.package=E8=AF=AD=E5=8F=A5"><strong>2.2. package</strong><strong>=E8=
+=AF=AD=E5=8F=A5</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA007] package=E8=AF=AD=E5=8F=A5=
+=E5=8D=A0=E6=8D=AE=E5=8D=95=E7=8B=AC=E4=B8=80=E8=A1=8C=E4=B8=8D=E6=8D=A2=E8=
+=A1=8C=EF=BC=8C=E5=85=81=E8=AE=B8=E8=B6=85=E5=87=BA120=E5=AD=97=E7=AC=A6=E5=
+=88=97=E5=AE=BD=E9=99=90=E5=88=B6=E3=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-2.3.import=E8=AF=AD=E5=8F=A5"><strong>2.3. import</strong><strong>=E8=
+=AF=AD=E5=8F=A5</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA008] =E9=9D=9Estatic imports=EF=
+=BC=8C=E7=A6=81=E6=AD=A2=E4=BD=BF=E7=94=A8=E9=80=9A=E9=85=8D=E7=AC=A6import=
+=E3=80=82</p>
+<p>[=E5=BC=BA=E5=88=B6] [JAVA009] =E6=AF=8F=E6=9D=A1import=E8=AF=AD=E5=8F=
+=A5=E5=8D=A0=E6=8D=AE=E5=8D=95=E7=8B=AC=E4=B8=80=E8=A1=8C=E4=B8=8D=E6=8D=A2=
+=E8=A1=8C=EF=BC=8C=E5=85=81=E8=AE=B8=E8=B6=85=E5=87=BA120=E5=AD=97=E7=AC=A6=
+=E5=88=97=E5=AE=BD=E9=99=90=E5=88=B6=E3=80=82</p>
+<p>[=E5=BC=BA=E5=88=B6] [JAVA010] =E6=89=80=E6=9C=89=E6=9C=AA=E4=BD=BF=E7=
+=94=A8=E7=9A=84import=E8=AF=AD=E5=8F=A5=E5=BA=94=E8=AF=A5=E8=A2=AB=E5=88=A0=
+=E9=99=A4=E3=80=82</p>
+<p align=3D"left">[=E6=8E=A8=E8=8D=90] [JAVA011] import=E8=AF=AD=E5=8F=A5=
+=E9=9C=80=E6=8C=89=E7=85=A7=E4=B8=80=E5=AE=9A=E7=9A=84=E9=80=BB=E8=BE=91=E9=
+=A1=BA=E5=BA=8F=E7=BB=84=E7=BB=87=E3=80=82</p>
+<p style=3D"margin-left: 120.0px;" align=3D"left">=E5=8F=AF=E5=8F=82=E8=80=
+=83=E4=BB=A5=E4=B8=8B=E9=A1=BA=E5=BA=8F=E8=BF=9B=E8=A1=8C=E5=88=86=E7=BB=84=
+=EF=BC=8C=E6=AF=8F=E4=B8=A4=E7=BB=84=E4=B9=8B=E9=97=B4=E7=94=A8=E4=B8=80=E4=
+=B8=AA=E7=A9=BA=E8=A1=8C=E5=88=86=E9=9A=94=EF=BC=9A</p>
+<ul>
+<li style=3D"list-style-type: none;background-image: none;">
+<ul>
+<li style=3D"list-style-type: none;background-image: none;">
+<ul>
+<li style=3D"list-style-type: none;background-image: none;">
+<ul>
+<li style=3D"list-style-type: none;background-image: none;">
+<ul>
+<li>=E6=89=80=E6=9C=89=E7=9A=84static import=E8=AF=AD=E5=8F=A5</li>
+<li>=E6=AF=8F=E4=B8=AA=E9=A1=B6=E5=B1=82=E5=8C=85=E7=8B=AC=E7=AB=8B=E4=B8=
+=80=E7=BB=84=EF=BC=8C=E6=8C=89ASCII=E9=A1=BA=E5=BA=8F=E6=8E=92=E5=88=97=EF=
+=BC=8C=E6=8C=89=E7=85=A7=E7=AC=AC=E4=B8=89=E6=96=B9=E5=8C=85=E3=80=81java=
+=E3=80=81javax=E3=80=81baidu=E5=86=85=E5=85=AC=E5=85=B1=E5=BA=93=E5=88=86=
+=E7=BB=84=E3=80=82</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p style=3D"margin-left: 120.0px;" align=3D"left">=E7=BB=84=E5=86=85=E4=B8=
+=8D=E5=8C=85=E5=90=AB=E7=A9=BA=E8=A1=8C=EF=BC=8C=E6=8C=89=E7=85=A7=E6=89=80=
+import=E7=9A=84=E5=8C=85=E5=90=8D=E7=9A=84ASCII=E7=A0=81=E9=A1=BA=E5=BA=8F=
+=E6=8E=92=E5=88=97=E3=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-2.4.=E7=B1=BB=E5=A3=B0=E6=98=8E"><strong>2.4. </strong><strong>=E7=B1=
+=BB=E5=A3=B0=E6=98=8E</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA012] =E6=AF=8F=E4=B8=AA=E6=BA=
+=90=E6=96=87=E4=BB=B6=E5=8F=AA=E5=85=81=E8=AE=B8=E5=8C=85=E5=90=AB=E5=94=AF=
+=E4=B8=80=E4=B8=80=E4=B8=AA=E9=A1=B6=E5=B1=82=E7=B1=BB=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA013] =E9=87=8D=E8=BD=BD=E7=9A=
+=84=E6=96=B9=E6=B3=95=E5=BF=85=E9=A1=BB=E6=94=BE=E5=9C=A8=E4=B8=80=E8=B5=B7=
+=EF=BC=8C=E5=8D=B3=E5=90=8C=E5=90=8D=E7=9A=84=E6=9E=84=E9=80=A0=E5=87=BD=E6=
+=95=B0=E6=88=96=E6=96=B9=E6=B3=95=E4=B9=8B=E9=97=B4=E7=A6=81=E6=AD=A2=E6=8F=
+=92=E5=85=A5=E5=85=B6=E4=BB=96=E6=88=90=E5=91=98=E3=80=82</p>
+<h1 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-3.=E4=BB=A3=E7=A0=81=E6=A0=BC=E5=BC=8F"><strong>3. </strong><strong>=E4=
+=BB=A3=E7=A0=81=E6=A0=BC=E5=BC=8F</strong></h1>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-3.1.=E8=8A=B1=E6=8B=AC=E5=8F=B7"><strong>3.1. </strong><strong>=E8=8A=
+=B1=E6=8B=AC=E5=8F=B7</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA014] =E5=9C=A8=E9=9D=9E=E7=A9=
+=BA=E4=BB=A3=E7=A0=81=E5=9D=97=E4=B8=AD=E4=BD=BF=E7=94=A8=E8=8A=B1=E6=8B=AC=
+=E5=8F=B7=E6=97=B6=E8=A6=81=E9=81=B5=E5=BE=AAK&amp;R=E9=A3=8E=E6=A0=BC=EF=
+=BC=88Kernighan and Ritchie Style=EF=BC=89=EF=BC=9A</p>
+<ul>
+<li>=E5=B7=A6=E8=8A=B1=E6=8B=AC=E5=8F=B7=EF=BC=88{=EF=BC=89=E5=89=8D=E4=B8=
+=8D=E8=83=BD=E6=8D=A2=E8=A1=8C=EF=BC=8C=E5=9C=A8=E5=85=B6=E5=90=8E=E6=8D=A2=
+=E8=A1=8C=E3=80=82</li>
+<li>=E5=9C=A8=E5=8F=B3=E8=8A=B1=E6=8B=AC=E5=8F=B7=EF=BC=88}=EF=BC=89=E5=89=
+=8D=E8=A6=81=E6=9C=89=E6=8D=A2=E8=A1=8C=E3=80=82</li>
+<li>=E5=8F=B3=E5=A4=A7=E6=8B=AC=E5=8F=B7=E5=90=8E=E8=BF=98=E6=9C=89 else =
+=E7=AD=89=E4=BB=A3=E7=A0=81=E5=88=99=E4=B8=8D=E6=8D=A2=E8=A1=8C =E8=A1=A8=
+=E7=A4=BA=E7=BB=88=E6=AD=A2=E7=9A=84=E5=8F=B3=E5=A4=A7=E6=8B=AC=E5=8F=B7=E5=
+=90=8E=E5=BF=85=E9=A1=BB=E6=8D=A2=E8=A1=8C=E3=80=82</li>
+</ul>
+<p align=3D"left"><br></p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">return =
+new MyClass() { // =E5=B7=A6=E8=8A=B1=E6=8B=AC=E5=8F=B7=E5=89=8D=E4=B8=8D=
+=E8=83=BD=E6=8D=A2=E8=A1=8C=EF=BC=8C=E5=9C=A8=E5=85=B6=E5=90=8E=E6=8D=A2=E8=
+=A1=8C
+
+&nbsp;&nbsp;&nbsp; @Override
+&nbsp;&nbsp;&nbsp; public void method() {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (condition()) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp; do {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; something();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp; } while (!stop()); // do-while=E4=B8=AD=E9=97=B4=E7=9A=84=
+=E5=8F=B3=E8=8A=B1=E6=8B=AC=E5=8F=B7=E5=90=8E
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch =
+(ProblemException e) { // try-catch=E4=B8=AD=E9=97=B4=E7=9A=84=E5=8F=B3=E8=
+=8A=B1=E6=8B=AC=E5=8F=B7=E5=90=8E=E6=97=A0=E9=9C=80=E6=8D=A2=E8=A1=8C
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp; recover();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } // try=
+-catch=E7=BB=93=E6=9D=9F=EF=BC=8C=E5=8F=B3=E8=8A=B1=E6=8B=AC=E5=8F=B7=E5=90=
+=8E=E9=9C=80=E8=A6=81=E6=8D=A2=E8=A1=8C
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } else { // if-else=E4=B8=AD=E9=
+=97=B4=E7=9A=84=E5=8F=B3=E8=8A=B1=E6=8B=AC=E5=8F=B7=E5=90=8E=E6=97=A0=E9=9C=
+=80=E6=8D=A2=E8=A1=8C
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doSometh=
+ingElese();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } // if-else=E7=BB=93=E6=9D=9F=
+=EF=BC=8C=E5=8F=B3=E8=8A=B1=E6=8B=AC=E5=8F=B7=E5=90=8E=E9=9C=80=E8=A6=81=E6=
+=8D=A2=E8=A1=8C
+&nbsp;&nbsp;&nbsp; }
+}; // =E5=8C=BF=E5=90=8D=E7=B1=BB=E7=BB=93=E5=B0=BE=E7=9A=84=E5=8F=B3=E8=8A=
+=B1=E6=8B=AC=E5=8F=B7=E5=90=8E=E6=97=A0=E9=9C=80=E6=8D=A2=E8=A1=8C</pre>=20
+</div>
+</div>
+<p>[=E5=BC=BA=E5=88=B6] [JAVA015] =E5=A6=82=E6=9E=9C=E4=B8=80=E4=B8=AA=E4=
+=BB=A3=E7=A0=81=E5=9D=97=E6=98=AF=E7=A9=BA=E7=9A=84=EF=BC=8C=E5=8F=AF=E4=BB=
+=A5=E7=9B=B4=E6=8E=A5=E4=BD=BF=E7=94=A8{}=E3=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-3.2.=E5=9D=97=E7=BC=A9=E8=BF=9B=EF=BC=9A4=E4=B8=AA=E7=A9=BA=E6=A0=BC"><=
+strong>3.2. </strong><strong>=E5=9D=97=E7=BC=A9=E8=BF=9B=EF=BC=9A</strong><=
+strong>4</strong><strong>=E4=B8=AA=E7=A9=BA=E6=A0=BC</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA016] =E6=AF=8F=E6=AC=A1=E5=BC=
+=80=E5=A7=8B=E4=B9=A6=E5=86=99=E4=B8=80=E4=B8=AA=E6=96=B0=E7=9A=84=E4=BB=A3=
+=E7=A0=81=E5=9D=97=E6=97=B6=EF=BC=8C=E4=BD=BF=E7=94=A84=E4=B8=AA=E7=A9=BA=
+=E6=A0=BC=E8=BF=9B=E8=A1=8C=E7=BC=A9=E8=BF=9B=EF=BC=8C=E5=9C=A8=E4=BB=A3=E7=
+=A0=81=E5=9D=97=E7=BB=93=E6=9D=9F=E6=97=B6=EF=BC=8C=E6=81=A2=E5=A4=8D=E4=B9=
+=8B=E5=89=8D=E7=9A=84=E7=BC=A9=E8=BF=9B=E7=BA=A7=E5=88=AB=E3=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-3.3.=E6=AF=8F=E8=A1=8C=E5=8F=AA=E5=86=99=E4=B8=80=E6=9D=A1=E8=AF=AD=E5=
+=8F=A5"><strong>3.3. </strong><strong>=E6=AF=8F=E8=A1=8C=E5=8F=AA=E5=86=99=
+=E4=B8=80=E6=9D=A1=E8=AF=AD=E5=8F=A5</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA017] =E6=AF=8F=E6=9D=A1=E8=AF=
+=AD=E5=8F=A5=E4=B9=8B=E5=90=8E=E9=83=BD=E8=A6=81=E6=8D=A2=E8=A1=8C=E3=80=82=
+</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-3.4.=E5=88=97=E5=AE=BD=E5=92=8C=E6=8D=A2=E8=A1=8C"><strong>3.4. </stron=
+g><strong>=E5=88=97=E5=AE=BD=E5=92=8C=E6=8D=A2=E8=A1=8C</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA018] =E5=8D=95=E8=A1=8C=E5=AD=
+=97=E7=AC=A6=E6=95=B0=E9=99=90=E5=88=B6=E4=B8=8D=E8=B6=85=E8=BF=87120=E4=B8=
+=AA=EF=BC=8C=E8=B6=85=E5=87=BA=E9=9C=80=E8=A6=81=E6=8D=A2=E8=A1=8C=EF=BC=8C=
+=E6=8D=A2=E8=A1=8C=E6=97=B6=E9=81=B5=E5=BE=AA=E5=A6=82=E4=B8=8B=E5=8E=9F=E5=
+=88=99=EF=BC=9A</p>
+<ul>
+<li>=E7=AC=AC=E4=BA=8C=E8=A1=8C=E7=9B=B8=E5=AF=B9=E7=AC=AC=E4=B8=80=E8=A1=
+=8C=E7=BC=A9=E8=BF=9B4=E4=B8=AA=E7=A9=BA=E6=A0=BC=EF=BC=8C=E4=BB=8E=E7=AC=
+=AC=E4=B8=89=E8=A1=8C=E5=BC=80=E5=A7=8B=EF=BC=8C=E4=B8=8D=E5=86=8D=E7=BB=A7=
+=E7=BB=AD=E7=BC=A9=E8=BF=9B=EF=BC=8C=E5=8F=82=E8=80=83=E7=A4=BA=E4=BE=8B=E3=
+=80=82</li>
+<li>=E8=BF=90=E7=AE=97=E7=AC=A6=E4=B8=8E=E4=B8=8B=E6=96=87=E4=B8=80=E8=B5=
+=B7=E6=8D=A2=E8=A1=8C=E3=80=82</li>
+<li>=E6=96=B9=E6=B3=95=E8=B0=83=E7=94=A8=E7=9A=84=E7=82=B9=E7=AC=A6=E5=8F=
+=B7=E4=B8=8E=E4=B8=8B=E6=96=87=E4=B8=80=E8=B5=B7=E6=8D=A2=E8=A1=8C=E3=80=82=
+</li>
+<li>=E6=96=B9=E6=B3=95=E8=B0=83=E7=94=A8=E4=B8=AD=E7=9A=84=E5=A4=9A=E4=B8=
+=AA=E5=8F=82=E6=95=B0=E9=9C=80=E8=A6=81=E6=8D=A2=E8=A1=8C=E6=97=B6=EF=BC=8C=
+=E5=9C=A8=E9=80=97=E5=8F=B7=E5=90=8E=E8=BF=9B=E8=A1=8C=E3=80=82</li>
+<li>=E5=9C=A8=E6=8B=AC=E5=8F=B7=E5=89=8D=E4=B8=8D=E8=A6=81=E6=8D=A2=E8=A1=
+=8C=EF=BC=8C=E8=A7=81=E5=8F=8D=E4=BE=8B=E3=80=82</li>
+</ul>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">// =E6=
+=AD=A3=E4=BE=8B
+StringBuffer buffer =3D new StringBuffer();
+// =E8=B6=85=E8=BF=87120=E4=B8=AA=E5=AD=97=E7=AC=A6=E6=83=85=E5=86=B5=E4=B8=
+=8B=EF=BC=8C=E6=8D=A2=E8=A1=8C=E7=BC=A9=E8=BF=9B4=E4=B8=AA=E7=A9=BA=E6=A0=
+=BC=EF=BC=8C=E7=82=B9=E5=8F=B7=E5=92=8C=E6=96=B9=E6=B3=95=E5=90=8D=E7=A7=B0=
+=E4=B8=80=E8=B5=B7=E6=8D=A2=E8=A1=8C
+buffer.append("abc").append("bcd")...
+    .append("ert")...
+    .append("dfg")...
+    .append("fds");
+
+
+// =E5=8F=8D=E4=BE=8B
+StringBuffer buffer =3D new StringBuffer();
+// =E8=B6=85=E8=BF=87120=E4=B8=AA=E5=AD=97=E7=AC=A6=E7=9A=84=E6=83=85=E5=86=
+=B5=E4=B8=8B=EF=BC=8C=E4=B8=8D=E8=A6=81=E5=9C=A8=E6=8B=AC=E5=8F=B7=E5=89=8D=
+=E6=8D=A2=E8=A1=8C
+buffer.append("abc").append("bcd")...append
+    ("abc");
+
+
+// =E5=8F=82=E6=95=B0=E5=BE=88=E5=A4=9A=E7=9A=84=E6=96=B9=E6=B3=95=E8=B0=83=
+=E7=94=A8=E5=8F=AF=E8=83=BD=E8=B6=85=E8=BF=87120=E4=B8=AA=E5=AD=97=E7=AC=A6=
+=EF=BC=8C=E4=B8=8D=E8=A6=81=E5=9C=A8=E9=80=97=E5=8F=B7=E5=89=8D=E6=8D=A2=E8=
+=A1=8C
+method(args1, args2, args3, ...
+    , argsX);</pre>=20
+</div>
+</div>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-3.5.=E7=A9=BA=E7=99=BD"><strong style=3D"font-size: 20.0px;">3.5.&nbsp;=
+</strong><strong style=3D"font-size: 20.0px;">=E7=A9=BA=E7=99=BD</strong></=
+h2>
+<p>[=E5=BC=BA=E5=88=B6] [JAVA019] =E5=9C=A8=E4=BB=A5=E4=B8=8B=E6=83=85=E5=
+=86=B5=E4=B8=8B=E5=A2=9E=E5=8A=A0=E7=A9=BA=E8=A1=8C=EF=BC=9A</p>
+<ul>
+<li>=E5=9C=A8=E7=B1=BB=E7=9A=84=E4=B8=8D=E5=90=8C=E7=9A=84=E6=88=90=E5=91=
+=98=E9=97=B4=E5=A2=9E=E5=8A=A0=E7=A9=BA=E8=A1=8C=EF=BC=8C=E5=8C=85=E6=8B=AC=
+=EF=BC=9A=E6=88=90=E5=91=98=E5=8F=98=E9=87=8F=E3=80=81=E6=9E=84=E9=80=A0=E5=
+=87=BD=E6=95=B0=E3=80=81=E6=96=B9=E6=B3=95=E3=80=81=E5=86=85=E9=83=A8=E7=B1=
+=BB=E3=80=81=E9=9D=99=E6=80=81=E5=88=9D=E5=A7=8B=E5=8C=96=E5=9D=97=E3=80=81=
+=E5=AE=9E=E4=BE=8B=E5=88=9D=E5=A7=8B=E5=8C=96=E5=9D=97=E7=AD=89</li>
+<li>=E4=B8=A4=E4=B8=AA=E6=88=90=E5=91=98=E5=8F=98=E9=87=8F=E5=A3=B0=E6=98=
+=8E=E4=B9=8B=E9=97=B4=E5=8F=AF=E4=BB=A5=E4=B8=8D=E5=8A=A0=E7=A9=BA=E8=A1=8C=
+=E3=80=82=E7=A9=BA=E8=A1=8C=E9=80=9A=E5=B8=B8=E7=94=A8=E4=BA=8E=E5=AF=B9=E6=
+=88=90=E5=91=98=E5=8F=98=E9=87=8F=E8=BF=9B=E8=A1=8C=E9=80=BB=E8=BE=91=E5=88=
+=86=E7=BB=84=E3=80=82</li>
+<li>=E6=96=B9=E6=B3=95=E4=BD=93=E5=86=85=EF=BC=8C=E6=8C=89=E9=9C=80=E5=A2=
+=9E=E5=8A=A0=E7=A9=BA=E8=A1=8C=EF=BC=8C=E4=BB=A5=E4=BE=BF=E4=BB=8E=E9=80=BB=
+=E8=BE=91=E4=B8=8A=E5=AF=B9=E8=AF=AD=E5=8F=A5=E8=BF=9B=E8=A1=8C=E5=88=86=E7=
+=BB=84</li>
+</ul>
+<div class=3D"confluence-information-macro confluence-information-macro-not=
+e">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-warning confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+=E7=A6=81=E6=AD=A2=E4=BD=BF=E7=94=A8=E8=BF=9E=E7=BB=AD=E7=9A=84=E7=A9=BA=E8=
+=A1=8C=E3=80=82
+</div>
+</div>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA020] =E9=99=A4=E4=BA=86=E8=AF=
+=AD=E6=B3=95=E8=A6=81=E6=B1=82=EF=BC=8C=E5=AD=97=E7=AC=A6=E4=B8=B2=E5=86=85=
+=E7=9A=84=E7=A9=BA=E6=A0=BC=EF=BC=8C=E4=BB=A5=E5=8F=8AJavaDoc=E9=87=8C=E7=
+=9A=84=E7=A9=BA=E6=A0=BC=EF=BC=8C=E9=9C=80=E8=A6=81=E5=9C=A8=E4=B8=8B=E5=88=
+=97=E6=83=85=E5=86=B5=E9=87=8C=E4=BD=BF=E7=94=A8=E7=A9=BA=E6=A0=BC</p>
+<ul>
+<li>if/for/while/switch/do/else/catch =E7=AD=89=E4=BF=9D=E7=95=99=E5=AD=97=
+=E4=B8=8E=E6=8B=AC=E5=8F=B7=E4=B9=8B=E9=97=B4=E9=83=BD=E5=BF=85=E9=A1=BB=E5=
+=8A=A0=E7=A9=BA=E6=A0=BC=E3=80=82</li>
+<li>=E5=B7=A6=E5=B0=8F=E6=8B=AC=E5=8F=B7=E5=92=8C=E5=AD=97=E7=AC=A6=E4=B9=
+=8B=E9=97=B4=E4=B8=8D=E5=87=BA=E7=8E=B0=E7=A9=BA=E6=A0=BC=EF=BC=9B=E5=90=8C=
+=E6=A0=B7=EF=BC=8C=E5=8F=B3=E5=B0=8F=E6=8B=AC=E5=8F=B7=E5=92=8C=E5=AD=97=E7=
+=AC=A6=E4=B9=8B=E9=97=B4=E4=B9=9F=E4=B8=8D=E5=87=BA=E7=8E=B0=E7=A9=BA=E6=A0=
+=BC=EF=BC=9B</li>
+<li>=E6=96=B9=E6=B3=95=E5=8F=82=E6=95=B0=E5=9C=A8=E5=AE=9A=E4=B9=89=E5=92=
+=8C=E4=BC=A0=E5=85=A5=E6=97=B6=EF=BC=8C=E5=A4=9A=E4=B8=AA=E5=8F=82=E6=95=B0=
+=E9=80=97=E5=8F=B7=E5=90=8E=E8=BE=B9=E5=BF=85=E9=A1=BB=E5=8A=A0=E7=A9=BA=E6=
+=A0=BC=E3=80=82</li>
+<li>=E5=9C=A8=E4=BB=BB=E6=84=8F=E5=B7=A6=E8=8A=B1=E6=8B=AC=E5=8F=B7=EF=BC=
+=88{=EF=BC=89=E4=B9=8B=E5=89=8D=E8=A6=81=E6=9C=89=E4=B8=80=E4=B8=AA=E7=A9=
+=BA=E6=A0=BC=E3=80=82@SomeAnnotation({a,&nbsp;b})=E5=92=8CString[][]&nbsp;x=
+&nbsp;=3D&nbsp;{{"foo"}};=E8=BF=99=E4=B8=A4=E7=A7=8D=E6=83=85=E5=86=B5=E9=
+=99=A4=E5=A4=96=E3=80=82</li>
+<li>=E5=9C=A8=E4=BA=8C=E7=9B=AE=E5=92=8C=E4=B8=89=E7=9B=AE=E8=BF=90=E7=AE=
+=97=E7=AC=A6=E4=B8=A4=E8=BE=B9=E5=90=84=E8=A6=81=E6=9C=89=E4=B8=80=E4=B8=AA=
+=E7=A9=BA=E6=A0=BC=E3=80=82=E8=AF=A5=E8=A7=84=E5=88=99=E5=90=8C=E6=A0=B7=E9=
+=80=82=E7=94=A8=E4=BA=8E&lt;T&nbsp;extends&nbsp;Foo&nbsp;&amp;&nbsp;Bar&gt;=
+=E4=B8=AD=E7=9A=84&amp;=EF=BC=8Ccatch&nbsp;(FooException&nbsp;|&nbsp;BarExc=
+eption&nbsp;e)=E4=B8=AD=E7=9A=84|=EF=BC=8C=E4=BB=A5=E5=8F=8Aforeach=E4=B8=
+=AD=E7=9A=84:</li>
+<li>=E5=9C=A8=E9=80=97=E5=8F=B7=EF=BC=88,=EF=BC=89=E3=80=81=E5=86=92=E5=8F=
+=B7=EF=BC=88:=EF=BC=89=E5=92=8C=E7=B1=BB=E5=9E=8B=E8=BD=AC=E6=8D=A2=E7=94=
+=A8=E7=9A=84=E5=8F=B3=E5=9C=86=E6=8B=AC=E5=8F=B7=EF=BC=88)=EF=BC=89=E5=90=
+=8E=E8=A6=81=E6=9C=89=E4=B8=80=E4=B8=AA=E7=A9=BA=E6=A0=BC</li>
+<li>=E5=9C=A8=E7=94=A8=E4=BA=8E=E8=A1=8C=E6=9C=AB=E6=B3=A8=E9=87=8A=E7=9A=
+=84//=E5=89=8D=E5=90=8E=E5=90=84=E8=A6=81=E6=9C=89=E4=B8=80=E4=B8=AA=E7=A9=
+=BA=E6=A0=BC</li>
+<li>=E5=9C=A8=E5=A3=B0=E6=98=8E=E8=AF=AD=E5=8F=A5=E7=9A=84=E7=B1=BB=E5=9E=
+=8B=E5=92=8C=E5=90=8D=E7=A7=B0=E4=B9=8B=E9=97=B4=E8=A6=81=E6=9C=89=E4=B8=80=
+=E4=B8=AA=E7=A9=BA=E6=A0=BC=EF=BC=8C=E6=AF=94=E5=A6=82List&lt;String&gt;&nb=
+sp;list</li>
+<li>=E5=88=9D=E5=A7=8B=E5=8C=96=E6=95=B0=E7=BB=84=E7=9A=84=E5=BD=A2=E5=BC=
+=8F=E5=8F=AA=E5=8F=AF=E4=BD=BF=E7=94=A8=E5=A6=82=E4=B8=8B=E6=96=B9=E5=BC=8F=
+=EF=BC=9A</li>
+</ul>
+<p><br></p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">new int=
+[] {5, 6}</pre>=20
+</div>
+</div>
+<ul>
+<li>=E9=99=A4=E8=A1=8C=E9=A6=96=E7=BC=A9=E8=BF=9B=E3=80=81=E6=B3=A8=E9=87=
+=8A=E5=92=8C=E5=AD=97=E7=AC=A6=E4=B8=B2=E5=86=85=E7=9A=84=E7=A9=BA=E6=A0=BC=
+=E4=BB=A5=E5=A4=96=EF=BC=8C=E7=A6=81=E6=AD=A2=E4=BD=BF=E7=94=A8=E8=BF=9E=E7=
+=BB=AD=E7=9A=84=E7=A9=BA=E6=A0=BC</li>
+</ul>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">public =
+class Example {
+&nbsp;&nbsp;&nbsp; public List&lt;Element&gt; getAllValidElements(String[] =
+nodes) throws PermissionDeniedException {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List&lt;Element&gt; result;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int i =3D 0; i &lt; nodes.l=
+ength; ++i) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (chec=
+kPermission(nodes[i])) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp; for (int id : getAllElementIdList(nodes[i])) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Element e =3D (Element) getElement(=
+id);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (isValidElement(e)) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result.add(=
+e);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } else {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp; throw new PermissionDeniedException("Can not access node " =
++ nodes[i]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return result;
+&nbsp;&nbsp;&nbsp; }
+}</pre>=20
+</div>
+</div>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-3.6.=E8=A1=A8=E8=BE=BE=E5=BC=8F=E5=9C=86=E6=8B=AC=E5=8F=B7"><strong sty=
+le=3D"font-size: 20.0px;">3.6. </strong><strong style=3D"font-size: 20.0px;=
+">=E8=A1=A8=E8=BE=BE=E5=BC=8F=E5=9C=86=E6=8B=AC=E5=8F=B7</strong></h2>
+<p align=3D"left">=E7=94=B1=E4=BA=8E=E4=B8=8D=E8=83=BD=E4=BF=9D=E8=AF=81=E6=
+=89=80=E6=9C=89=E4=BA=BA=E9=83=BD=E6=B8=85=E6=A5=9AJava=E6=93=8D=E4=BD=9C=
+=E7=AC=A6=E4=BC=98=E5=85=88=E7=BA=A7=EF=BC=8C=E5=9B=A0=E6=AD=A4=E6=8E=A8=E8=
+=8D=90=E5=9C=A8=E8=A1=A8=E8=BE=BE=E5=BC=8F=E4=B8=AD=E5=A2=9E=E5=8A=A0=E5=9C=
+=86=E6=8B=AC=E5=8F=B7=E7=94=A8=E6=9D=A5=E6=98=8E=E7=A1=AE=E5=85=B6=E4=B8=AD=
+=E8=BF=90=E7=AE=97=E7=9A=84=E4=BC=98=E5=85=88=E7=BA=A7=EF=BC=8C=E4=B8=8D=E5=
+=81=9A=E5=BC=BA=E5=88=B6=E8=A6=81=E6=B1=82=E3=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-3.7.=E5=85=B6=E4=BB=96=E8=AF=B4=E6=98=8E"><strong>3.7. </strong><strong=
+>=E5=85=B6=E4=BB=96=E8=AF=B4=E6=98=8E</strong></h2>
+<p>[=E5=BC=BA=E5=88=B6] [JAVA021] =E4=B8=80=E8=A1=8C=E5=8F=AA=E5=A3=B0=E6=
+=98=8E=E4=B8=80=E4=B8=AA=E5=8F=98=E9=87=8F=EF=BC=8C=E5=9C=A8=E9=9C=80=E8=A6=
+=81=E6=97=B6=E5=A3=B0=E6=98=8E=E5=8F=98=E9=87=8F=EF=BC=8C=E5=A3=B0=E6=98=8E=
+=E5=90=8E=E5=B0=BD=E5=BF=AB=E5=88=9D=E5=A7=8B=E5=8C=96=E3=80=82</p>
+<p>[=E5=BC=BA=E5=88=B6] [JAVA022] =E7=B1=BB=E5=9E=8B=E4=B8=8E=E4=B8=AD=E6=
+=8B=AC=E5=8F=B7=E7=B4=A7=E6=8C=A8=E7=9B=B8=E8=BF=9E=E6=9D=A5 =E8=A1=A8=E7=
+=A4=BA =E6=95=B0=E7=BB=84=E3=80=82=E7=94=A8String[]&nbsp;args=E7=9A=84=E6=
+=96=B9=E5=BC=8F=E6=9D=A5=E5=A3=B0=E6=98=8E=E6=95=B0=E7=BB=84=EF=BC=8C=E8=80=
+=8C=E9=9D=9EString&nbsp;args[]=E3=80=82</p>
+<p>[=E5=BC=BA=E5=88=B6] [JAVA023] =E6=B7=BB=E5=8A=A0=E5=9C=A8=E7=B1=BB=E3=
+=80=81=E6=96=B9=E6=B3=95=E3=80=81=E6=9E=84=E9=80=A0=E5=87=BD=E6=95=B0=E3=80=
+=81=E6=88=90=E5=91=98=E5=B1=9E=E6=80=A7=E4=B8=8A=E7=9A=84=E6=B3=A8=E8=A7=A3=
+=EF=BC=88Annotation=EF=BC=89=E7=9B=B4=E6=8E=A5=E5=86=99=E5=9C=A8=E6=B3=A8=
+=E9=87=8A=E5=9D=97=E4=B9=8B=E5=90=8E=EF=BC=8C=E6=AF=8F=E4=B8=AA=E6=B3=A8=E8=
+=A7=A3=E7=8B=AC=E5=8D=A0=E4=B8=80=E8=A1=8C=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA024] =E5=BD=93=E5=90=8C=E6=97=
+=B6=E4=BD=BF=E7=94=A8=E5=A4=9A=E4=B8=AA=E4=BF=AE=E9=A5=B0=E7=AC=A6=E6=97=B6=
+=EF=BC=8C=E6=8C=89=E7=85=A7=E4=B8=8B=E5=88=97=E9=A1=BA=E5=BA=8F=EF=BC=9A</p=
+>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">public =
+protected private abstract static final transient volatile synchronized nat=
+ive strictfp</pre>=20
+</div>
+</div>
+<p>[=E5=BC=BA=E5=88=B6] [JAVA025] =E9=95=BF=E6=95=B4=E5=9E=8B=E6=95=B0=E5=
+=AD=97=E5=BF=85=E9=A1=BB=E4=BD=BF=E7=94=A8=E5=A4=A7=E5=86=99=E5=AD=97=E6=AF=
+=8DL=E7=BB=93=E5=B0=BE=EF=BC=8C=E4=B8=8D=E8=83=BD=E4=BD=BF=E7=94=A8=E5=B0=
+=8F=E5=86=99=E5=AD=97=E6=AF=8Dl=EF=BC=8C=E4=BB=A5=E4=BE=BF=E5=92=8C=E6=95=
+=B0=E5=AD=971=E8=BF=9B=E8=A1=8C=E5=8C=BA=E5=88=86=E3=80=82=E4=BE=8B=E5=A6=
+=82=E4=BD=BF=E7=94=A83000000000L=E8=80=8C=E4=B8=8D=E6=98=AF3000000000l</p>
+<h1 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-4.=E5=91=BD=E5=90=8D"><strong>4. </strong><strong>=E5=91=BD=E5=90=8D</s=
+trong></h1>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-4.1.=E9=80=9A=E7=94=A8=E5=91=BD=E5=90=8D=E8=A7=84=E8=8C=83"><strong>4.1=
+. </strong><strong>=E9=80=9A=E7=94=A8=E5=91=BD=E5=90=8D=E8=A7=84=E8=8C=83</=
+strong></h2>
+<p align=3D"left">=E6=89=80=E6=9C=89=E7=9A=84=E6=A0=87=E8=AF=86=E7=AC=A6=E5=
+=8F=AA=E5=85=81=E8=AE=B8=E4=BD=BF=E7=94=A8ASCII=E5=AD=97=E7=AC=A6=E5=92=8C=
+=E6=95=B0=E5=AD=97=E5=90=88=E6=B3=95=E7=9A=84=EF=BC=8C=E6=A0=87=E8=AF=86=E7=
+=AC=A6=E5=91=BD=E5=90=8D=E5=BF=85=E9=A1=BB=E8=83=BD=E5=A4=9F=E5=8C=B9=E9=85=
+=8D=E6=AD=A3=E5=88=99=E8=A1=A8=E8=BE=BE=E5=BC=8F=EF=BC=9A\w ([0-9a-zA-Z_])=
+=E3=80=82</p>
+<p align=3D"left">=E7=A6=81=E6=AD=A2=E4=BD=BF=E7=94=A8=E4=B8=80=E4=BA=9B=E7=
+=89=B9=E5=AE=9A=E7=9A=84=E5=89=8D=E7=BC=80=E5=92=8C=E5=90=8E=E7=BC=80=EF=BC=
+=8C=E6=AF=94=E5=A6=82=EF=BC=9Aname_=E3=80=81mName=E3=80=81m_name=E3=80=82</=
+p>
+<p align=3D"left">=E4=B8=8D=E5=BB=BA=E8=AE=AE=E4=BD=BF=E7=94=A8=E4=B8=AD=E6=
+=96=87=E6=8B=BC=E9=9F=B3=E6=9D=A5=E5=91=BD=E5=90=8D=E3=80=82=E4=BE=8B=E5=A4=
+=96=EF=BC=9A</p>
+<ul>
+<li>=E5=BE=97=E5=88=B0=E5=B9=BF=E6=B3=9B=E8=AE=A4=E5=8F=AF=E7=9A=84=E4=B8=
+=AD=E6=96=87=E4=BA=A7=E5=93=81=E5=90=8D=EF=BC=8C=E5=83=8F=E8=B4=B4=E5=90=A7=
+=E3=80=81=E5=87=A4=E5=B7=A2=E7=AD=89</li>
+<li>=E4=BB=A5=E4=B8=AA=E4=BA=BA=E5=91=BD=E5=90=8D=E7=9A=84=E7=AE=97=E6=B3=
+=95=E6=88=96=E6=95=B0=E6=8D=AE=E7=BB=93=E6=9E=84=E7=9A=84=E5=AE=9E=E7=8E=B0=
+</li>
+</ul>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-4.2.=E7=89=B9=E5=AE=9A=E7=B1=BB=E5=9E=8B=E5=91=BD=E5=90=8D=E8=A7=84=E8=
+=8C=83"><strong>4.2. </strong><strong>=E7=89=B9=E5=AE=9A=E7=B1=BB=E5=9E=8B=
+=E5=91=BD=E5=90=8D=E8=A7=84=E8=8C=83</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA026] =E4=BB=A3=E7=A0=81=E4=B8=
+=AD=E7=9A=84=E4=B8=8B=E5=88=92=E7=BA=BF=E6=88=96=E7=BE=8E=E5=85=83=E7=AC=A6=
+=E5=8F=B7=E7=BB=93=E6=9D=9F=E3=80=82=E5=91=BD=E5=90=8D=E5=9D=87=E4=B8=8D=E8=
+=83=BD=E4=BB=A5=E4=B8=8B=E5=88=92=E7=BA=BF=E6=88=96=E7=BE=8E=E5=85=83=E7=AC=
+=A6=E5=8F=B7=E5=BC=80=E5=A7=8B=EF=BC=8C=E4=B9=9F=E4=B8=8D=E8=83=BD=E4=BB=A5=
+=E4=B8=8B=E5=88=92=E7=BA=BF=E6=88=96=E7=BE=8E=E5=85=83=E7=AC=A6=E5=8F=B7=E7=
+=BB=93=E6=9D=9F=E3=80=82=E6=89=80=E6=9C=89=E7=9A=84=E6=A0=87=E8=AF=86=E7=AC=
+=A6=E5=8F=AA=E5=85=81=E8=AE=B8=E4=BD=BF=E7=94=A8ASCII=E5=AD=97=E7=AC=A6=E5=
+=92=8C=E6=95=B0=E5=AD=97=E3=80=82=E5=90=88=E6=B3=95=E7=9A=84=E6=A0=87=E8=AF=
+=86=E7=AC=A6=E5=91=BD=E5=90=8D=E5=BF=85=E9=A1=BB=E8=83=BD=E5=A4=9F=E5=8C=B9=
+=E9=85=8D=E6=AD=A3=E5=88=99=E8=A1=A8=E8=BE=BE=E5=BC=8F=EF=BC=9A\w ([0-9a-zA=
+-Z_])</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA027] =E7=B1=BB=E5=90=8D=E4=BD=
+=BF=E7=94=A8 UpperCamelCase =E9=A3=8E=E6=A0=BC=EF=BC=8C=E4=BD=86=E4=BB=A5=
+=E4=B8=8B=E6=83=85=E5=BD=A2=E4=BE=8B=E5=A4=96=EF=BC=9ADO / BO / DTO / VO / =
+AO / PO / UID =E7=AD=89=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA028] =E6=96=B9=E6=B3=95=E5=90=
+=8D=E3=80=81=E5=8F=82=E6=95=B0=E5=90=8D=E3=80=81=E6=88=90=E5=91=98=E5=8F=98=
+=E9=87=8F=E3=80=81=E5=B1=80=E9=83=A8=E5=8F=98=E9=87=8F=E9=83=BD=E7=BB=9F=E4=
+=B8=80=E4=BD=BF=E7=94=A8 lowerCamelCase =E9=A3=8E=E6=A0=BC=EF=BC=8C=E5=BF=
+=85=E9=A1=BB=E9=81=B5=E4=BB=8E =E9=A9=BC=E5=B3=B0=E5=BD=A2=E5=BC=8F=E3=80=
+=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA029] =E5=B8=B8=E9=87=8F=E5=91=
+=BD=E5=90=8D=E5=85=A8=E9=83=A8=E5=A4=A7=E5=86=99=EF=BC=8C=E5=8D=95=E8=AF=8D=
+=E9=97=B4=E7=94=A8=E4=B8=8B=E5=88=92=E7=BA=BF=E9=9A=94=E5=BC=80=EF=BC=8C=E5=
+=8A=9B=E6=B1=82=E8=AF=AD=E4=B9=89=E8=A1=A8=E8=BE=BE=E5=AE=8C=E6=95=B4=E6=B8=
+=85=E6=A5=9A=EF=BC=8C=E4=B8=8D=E8=A6=81=E5=AB=8C=E5=90=8D=E5=AD=97=E9=95=BF=
+=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA030] =E6=8A=BD=E8=B1=A1=E7=B1=
+=BB=E5=91=BD=E5=90=8D=E4=BD=BF=E7=94=A8 Abstract =E6=88=96 Base =E5=BC=80=
+=E5=A4=B4=EF=BC=9B=E5=BC=82=E5=B8=B8=E7=B1=BB=E5=91=BD=E5=90=8D=E4=BD=BF=E7=
+=94=A8 Exception =E7=BB=93=E5=B0=BE=EF=BC=9B=E6=B5=8B=E8=AF=95=E7=B1=BB =E5=
+=91=BD=E5=90=8D=E4=BB=A5=E5=AE=83=E8=A6=81=E6=B5=8B=E8=AF=95=E7=9A=84=E7=B1=
+=BB=E7=9A=84=E5=90=8D=E7=A7=B0=E5=BC=80=E5=A7=8B=EF=BC=8C=E4=BB=A5 Test =E7=
+=BB=93=E5=B0=BE=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA031] POJO =E7=B1=BB=E4=B8=AD=E5=
+=B8=83=E5=B0=94=E7=B1=BB=E5=9E=8B=E7=9A=84=E5=8F=98=E9=87=8F=EF=BC=8C=E9=83=
+=BD=E4=B8=8D=E8=A6=81=E5=8A=A0 is =E5=89=8D=E7=BC=80=EF=BC=8C=E5=90=A6=E5=
+=88=99=E9=83=A8=E5=88=86=E6=A1=86=E6=9E=B6=E8=A7=A3=E6=9E=90=E4=BC=9A=E5=BC=
+=95=E8=B5=B7=E5=BA=8F=E5=88=97=E5=8C=96=E9=94=99=E8=AF=AF=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA032] =E5=8C=85=E5=90=8D=E7=BB=
+=9F=E4=B8=80=E4=BD=BF=E7=94=A8=E5=B0=8F=E5=86=99=EF=BC=8C=E7=82=B9=E5=88=86=
+=E9=9A=94=E7=AC=A6=E4=B9=8B=E9=97=B4=E6=9C=89=E4=B8=94=E4=BB=85=E6=9C=89=E4=
+=B8=80=E4=B8=AA=E8=87=AA=E7=84=B6=E8=AF=AD=E4=B9=89=E7=9A=84=E8=8B=B1=E8=AF=
+=AD=E5=8D=95=E8=AF=8D=E3=80=82=E5=8C=85=E5=90=8D=E7=BB=9F=E4=B8=80=E4=BD=BF=
+=E7=94=A8 =E5=8D=95=E6=95=B0=E5=BD=A2=E5=BC=8F=EF=BC=8C=E4=BD=86=E6=98=AF=
+=E7=B1=BB=E5=90=8D=E5=A6=82=E6=9E=9C=E6=9C=89=E5=A4=8D=E6=95=B0=E5=90=AB=E4=
+=B9=89=EF=BC=8C=E7=B1=BB=E5=90=8D=E5=8F=AF=E4=BB=A5=E4=BD=BF=E7=94=A8=E5=A4=
+=8D=E6=95=B0=E5=BD=A2=E5=BC=8F=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA033] =E6=9D=9C=E7=BB=9D=E5=AE=
+=8C=E5=85=A8=E4=B8=8D=E8=A7=84=E8=8C=83=E7=9A=84=E7=BC=A9=E5=86=99=EF=BC=8C=
+=E9=81=BF=E5=85=8D=E6=9C=9B=E6=96=87=E4=B8=8D=E7=9F=A5=E4=B9=89=E3=80=82</p=
+>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA034] =E5=AF=B9=E4=BA=8E Service=
+ =E5=92=8C DAO =E7=B1=BB=EF=BC=8C=E5=9F=BA=E4=BA=8E SOA =E7=9A=84=E7=90=86=
+=E5=BF=B5=EF=BC=8C=E6=9A=B4=E9=9C=B2=E5=87=BA=E6=9D=A5=E7=9A=84=E6=9C=8D=E5=
+=8A=A1=E4=B8=80=E5=AE=9A=E6=98=AF=E6=8E=A5=E5=8F=A3=EF=BC=8C=E5=86=85=E9=83=
+=A8 =E7=9A=84=E5=AE=9E=E7=8E=B0=E7=B1=BB=E7=94=A8 Impl =E7=9A=84=E5=90=8E=
+=E7=BC=80=E4=B8=8E=E6=8E=A5=E5=8F=A3=E5=8C=BA=E5=88=AB=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA035] =E4=B8=8D=E5=85=81=E8=AE=
+=B8=E4=BB=BB=E4=BD=95=E9=AD=94=E6=B3=95=E5=80=BC=EF=BC=88=E5=8D=B3=E6=9C=AA=
+=E7=BB=8F=E9=A2=84=E5=85=88=E5=AE=9A=E4=B9=89=E7=9A=84=E5=B8=B8=E9=87=8F=EF=
+=BC=89=E7=9B=B4=E6=8E=A5=E5=87=BA=E7=8E=B0=E5=9C=A8=E4=BB=A3=E7=A0=81=E4=B8=
+=AD=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA036] =E6=B3=9B=E5=9E=8B=E7=B1=
+=BB=E5=9E=8B=E5=8F=98=E9=87=8F=E5=90=8D=E5=BF=85=E9=A1=BB=E9=81=B5=E5=BE=AA=
+=E4=BB=A5=E4=B8=8B=E4=B8=A4=E7=A7=8D=E6=96=B9=E5=BC=8F=E4=B9=8B=E4=B8=80=EF=
+=BC=9A</p>
+<ul>
+<li>=E5=8D=95=E7=8B=AC=E4=B8=80=E4=B8=AA=E5=A4=A7=E5=86=99=E5=AD=97=E6=AF=
+=8D=EF=BC=8C=E6=9C=89=E6=97=B6=E5=90=8E=E9=9D=A2=E5=86=8D=E8=B7=9F=E4=B8=80=
+=E4=B8=AA=E6=95=B0=E5=AD=97=E3=80=82=EF=BC=88=E4=BE=8B=E5=A6=82=EF=BC=8CE=
+=E3=80=81T2=EF=BC=89=E3=80=82</li>
+<li>=E7=B1=BB=E5=91=BD=E5=90=8D=E7=9A=84=E6=9C=80=E5=90=8E=E6=8E=A5=E4=B8=
+=80=E4=B8=AA=E5=A4=A7=E5=86=99=E5=AD=97=E6=AF=8D=E3=80=82=EF=BC=88=E4=BE=8B=
+=E5=A6=82=EF=BC=8CRequestT=EF=BC=89=E3=80=82</li>
+</ul>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-4.3.=E9=A9=BC=E5=B3=B0=E5=91=BD=E5=90=8D=E6=96=B9=E5=BC=8F=E5=AE=9A=E4=
+=B9=89"><strong>4.3. </strong><strong>=E9=A9=BC=E5=B3=B0=E5=91=BD=E5=90=8D=
+=E6=96=B9=E5=BC=8F=E5=AE=9A=E4=B9=89</strong></h2>
+<p align=3D"left">=E9=80=9A=E5=B8=B8=E6=9C=89=E5=A4=9A=E7=A7=8D=E6=96=B9=E5=
+=BC=8F=E5=B0=86=E7=9F=AD=E8=AF=AD=E7=BB=84=E7=BB=87=E6=88=90=E9=A9=BC=E5=B3=
+=B0=E6=96=B9=E5=BC=8F=EF=BC=8C=E5=83=8F=E4=B8=80=E4=BA=9B=E7=BC=A9=E5=86=99=
+=E8=AF=8D=EF=BC=9AIPv6=E3=80=81iOS=E7=AD=89=E3=80=82=E4=B8=BA=E4=BA=86=E7=
+=BB=9F=E4=B8=80=EF=BC=8C=E5=BF=85=E9=A1=BB=E9=81=B5=E5=BE=AA=E4=BB=A5=E4=B8=
+=8B=E5=87=A0=E7=82=B9=E8=A7=84=E5=88=99=E3=80=82</p>
+<ul>
+<li>=E5=B0=86=E5=AD=97=E7=AC=A6=E5=85=A8=E9=83=A8=E8=BD=AC=E6=8D=A2=E4=B8=
+=BAASCII=E5=AD=97=E7=AC=A6=EF=BC=8C=E5=B9=B6=E4=B8=94=E5=8E=BB=E6=8E=89=E2=
+=80=99=E7=AD=89=E7=AC=A6=E5=8F=B7=E3=80=82=E4=BE=8B=E5=A6=82=EF=BC=8CM=C3=
+=BCller's&nbsp;algorithm=E8=A2=AB=E8=BD=AC=E6=8D=A2=E4=B8=BAMuellers&nbsp;a=
+lgorithm</li>
+<li><p>=E5=9C=A8=E7=A9=BA=E6=A0=BC=E5=92=8C=E6=A0=87=E7=82=B9=E7=AC=A6=E5=
+=8F=B7=E5=A4=84=E5=AF=B9=E4=B8=8A=E4=B8=80=E6=AD=A5=E7=9A=84=E7=BB=93=E6=9E=
+=9C=E8=BF=9B=E8=A1=8C=E5=88=87=E5=88=86=EF=BC=8C=E7=BB=84=E6=88=90=E4=B8=80=
+=E4=B8=AA=E8=AF=8D=E7=BB=84=E3=80=82</p>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+=E6=8E=A8=E8=8D=90=EF=BC=9A=E4=B8=80=E4=BA=9B=E5=B7=B2=E7=BB=8F=E6=98=AF=E9=
+=A9=BC=E5=B3=B0=E5=91=BD=E5=90=8D=E7=9A=84=E8=AF=8D=E8=AF=AD=EF=BC=8C=E4=B9=
+=9F=E5=BA=94=E8=AF=A5=E5=9C=A8=E8=BF=99=E4=B8=AA=E6=97=B6=E5=80=99=E8=A2=AB=
+=E6=8B=86=E5=88=86=E3=80=82=EF=BC=88=E4=BE=8B=E5=A6=82 AdWords =E8=A2=AB=E6=
+=8B=86=E5=88=86=E4=B8=BA ad words=EF=BC=89=E3=80=82=E4=BD=86=E6=98=AF=E4=BE=
+=8B=E5=A6=82iOS=E4=B9=8B=E7=B1=BB=E7=9A=84=E8=AF=8D=E8=AF=AD=EF=BC=8C=E5=AE=
+=83=E5=85=B6=E5=AE=9E=E4=B8=8D=E6=98=AF=E4=B8=80=E4=B8=AA=E9=A9=BC=E5=B3=B0=
+=E5=BD=A2=E5=BC=8F=E7=9A=84=E8=AF=8D=E8=AF=AD=EF=BC=8C=E8=80=8C=E6=98=AF=E4=
+=BA=BA=E4=BB=AC=E6=83=AF=E4=BE=8B=E4=BD=BF=E7=94=A8=E7=9A=84=E4=B8=80=E4=B8=
+=AA=E8=AF=8D=E8=AF=AD=EF=BC=8C=E5=9B=A0=E6=AD=A4=E4=B8=8D=E7=94=A8=E5=81=9A=
+=E6=8B=86=E5=88=86=E3=80=82
+</div>
+</div></li>
+<li>=E7=BB=8F=E8=BF=87=E4=B8=8A=E9=9D=A2=E4=B8=A4=E6=AD=A5=E5=90=8E=EF=BC=
+=8C=E5=85=88=E5=B0=86=E6=89=80=E6=9C=89=E7=9A=84=E5=AD=97=E6=AF=8D=E8=BD=AC=
+=E6=8D=A2=E4=B8=BA=E5=B0=8F=E5=86=99=EF=BC=8C=E5=86=8D=E6=8A=8A=E6=AF=8F=E4=
+=B8=AA=E8=AF=8D=E8=AF=AD=E7=9A=84=E7=AC=AC=E4=B8=80=E4=B8=AA=E5=AD=97=E6=AF=
+=8D=E8=BD=AC=E6=8D=A2=E4=B8=BA=E5=A4=A7=E5=86=99=E3=80=82</li>
+<li>=E6=9C=80=E5=90=8E=EF=BC=8C=E5=B0=86=E6=89=80=E6=9C=89=E8=AF=8D=E8=AF=
+=AD=E8=BF=9E=E5=9C=A8=E4=B8=80=E8=B5=B7=EF=BC=8C=E5=BD=A2=E6=88=90=E4=B8=80=
+=E4=B8=AA=E6=A0=87=E8=AF=86=E7=AC=A6=E3=80=82</li>
+</ul>
+<p align=3D"left">=E6=B3=A8=E6=84=8F=EF=BC=9A=E8=AF=8D=E8=AF=AD=E5=8E=9F=E6=
+=9D=A5=E7=9A=84=E5=A4=A7=E5=B0=8F=E5=86=99=E8=A7=84=E5=88=99=EF=BC=8C=E5=BA=
+=94=E8=AF=A5=E8=A2=AB=E5=AE=8C=E5=85=A8=E5=BF=BD=E7=95=A5=E3=80=82=E4=BB=A5=
+=E4=B8=8B=E6=98=AF=E4=B8=80=E4=BA=9B=E4=BE=8B=E5=AD=90=EF=BC=9A</p>
+<div class=3D"table-wrap">
+<table class=3D"relative-table wrapped confluenceTable" style=3D"width: 37.=
+663%;">
+<colgroup>
+<col style=3D"width: 36.2759%;">
+<col style=3D"width: 34.5393%;">
+<col style=3D"width: 28.9436%;">
+</colgroup>
+<tbody>
+<tr>
+<th style=3D"text-align: center;" class=3D"confluenceTh">=E5=8E=9F=E5=A7=8B=
+=E8=AF=AD=E5=8F=A5</th>
+<th style=3D"text-align: center;" class=3D"confluenceTh">=E6=AD=A3=E7=A1=AE=
+=E5=86=99=E6=B3=95</th>
+<th style=3D"text-align: center;" class=3D"confluenceTh">=E9=9D=9E=E6=B3=95=
+=E5=86=99=E6=B3=95</th>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><pre>"XML HTTP request"</pre></td>
+<td class=3D"confluenceTd"><pre>XmlHttpRequest</pre></td>
+<td class=3D"confluenceTd"><pre>XMLHTTPRequest</pre></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><pre>"new customer ID"</pre></td>
+<td colspan=3D"1" class=3D"confluenceTd"><pre>newCustomerId</pre></td>
+<td colspan=3D"1" class=3D"confluenceTd"><pre>newCustomerID</pre></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><pre>"inner stopwatch"</pre></td>
+<td colspan=3D"1" class=3D"confluenceTd"><pre>innerStopwatch</pre></td>
+<td colspan=3D"1" class=3D"confluenceTd"><pre>innerStopWatch</pre></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><pre>"supports IPv6 on iOS?"</pre>=
+</td>
+<td colspan=3D"1" class=3D"confluenceTd"><pre>supportsIpv6OnIos</pre></td>
+<td colspan=3D"1" class=3D"confluenceTd"><pre>supportsIPv6OnIOS</pre></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><pre>"YouTube importer"</pre></td>
+<td colspan=3D"1" class=3D"confluenceTd"><pre>YouTubeImporter</pre><pre>or =
+YoutubeImporter[1]</pre></td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p align=3D"left">[1]=E5=8F=B7=E8=A1=A8=E7=A4=BA=E5=8F=AF=E4=BB=A5=E6=8E=A5=
+=E5=8F=97=EF=BC=8C=E4=BD=86=E6=98=AF=E4=B8=8D=E5=BB=BA=E8=AE=AE=E4=BD=BF=E7=
+=94=A8=E3=80=82</p>
+<div class=3D"confluence-information-macro confluence-information-macro-not=
+e">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-warning confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+=E6=B3=A8=E6=84=8F=EF=BC=9A=E6=9C=89=E4=BA=9B=E8=AF=8D=E8=AF=AD=E5=9C=A8=E8=
+=8B=B1=E6=96=87=E4=B8=AD=EF=BC=8C=E5=8F=AF=E4=BB=A5=E7=94=A8[-]=E8=BF=9E=E6=
+=8E=A5=E4=BD=BF=E7=94=A8=EF=BC=8C=E4=B9=9F=E5=8F=AF=E4=BB=A5=E4=B8=8D=E4=BD=
+=BF=E7=94=A8[-]=E7=9B=B4=E6=8E=A5=E4=BD=BF=E7=94=A8=E3=80=82=E4=BE=8B=E5=A6=
+=82=E2=80=9Cnonempty=E2=80=9D=E5=92=8C=E2=80=9Cnon-empty=E2=80=9D=E9=83=BD=
+=E5=8F=AF=E4=BB=A5=E3=80=82=E5=9B=A0=E6=AD=A4=E6=96=B9=E6=B3=95=E5=90=8D=E5=
+=AD=97=E4=B8=BAcheckNonempty=E6=88=96=E8=80=85checkNonEmpty=E9=83=BD=E6=98=
+=AF=E5=90=88=E6=B3=95=E7=9A=84=E5=86=99=E6=B3=95=E3=80=82
+</div>
+</div>
+<h1 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-5.=E7=BC=96=E7=A8=8B=E5=AE=9E=E8=B7=B5"><strong>5. </strong><strong>=E7=
+=BC=96=E7=A8=8B=E5=AE=9E=E8=B7=B5</strong></h1>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-5.1.OOP=E8=A7=84=E7=BA=A6"><strong>5.1. OOP</strong><strong>=E8=A7=84=
+=E7=BA=A6</strong></h2>
+<p align=3D"left">=E5=85=B3=E4=BA=8E=E5=9F=BA=E6=9C=AC=E6=95=B0=E6=8D=AE=E7=
+=B1=BB=E5=9E=8B=E4=B8=8E=E5=8C=85=E8=A3=85=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=
+=8B=E7=9A=84=E4=BD=BF=E7=94=A8=E6=A0=87=E5=87=86=E5=A6=82=E4=B8=8B=EF=BC=9A=
+</p>
+<p align=3D"left">1=EF=BC=89 [=E5=BC=BA=E5=88=B6] [JAVA037] =E6=89=80=E6=9C=
+=89=E7=9A=84 POJO =E7=B1=BB=E5=B1=9E=E6=80=A7=E5=BF=85=E9=A1=BB=E4=BD=BF=E7=
+=94=A8=E5=8C=85=E8=A3=85=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=8B=E3=80=82</p>
+<p align=3D"left">2=EF=BC=89 [=E5=BC=BA=E5=88=B6] [JAVA038] RPC =E6=96=B9=
+=E6=B3=95=E7=9A=84=E8=BF=94=E5=9B=9E=E5=80=BC=E5=92=8C=E5=8F=82=E6=95=B0=E5=
+=BF=85=E9=A1=BB=E4=BD=BF=E7=94=A8=E5=8C=85=E8=A3=85=E6=95=B0=E6=8D=AE=E7=B1=
+=BB=E5=9E=8B=E3=80=82</p>
+<p align=3D"left">3=EF=BC=89 [=E6=8E=A8=E8=8D=90] [JAVA039] =E6=89=80=E6=9C=
+=89=E7=9A=84=E5=B1=80=E9=83=A8=E5=8F=98=E9=87=8F=E4=BD=BF=E7=94=A8=E5=9F=BA=
+=E6=9C=AC=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=8B=E3=80=82</p>
+<p align=3D"left"><br></p>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p align=3D"left">=E8=AF=B4=E6=98=8E=EF=BC=9APOJO =E7=B1=BB=E5=B1=9E=E6=80=
+=A7=E6=B2=A1=E6=9C=89=E5=88=9D=E5=80=BC=E6=98=AF=E6=8F=90=E9=86=92=E4=BD=BF=
+=E7=94=A8=E8=80=85=E5=9C=A8=E9=9C=80=E8=A6=81=E4=BD=BF=E7=94=A8=E6=97=B6=EF=
+=BC=8C=E5=BF=85=E9=A1=BB=E8=87=AA=E5=B7=B1=E6=98=BE=E5=BC=8F=E5=9C=B0=E8=BF=
+=9B=E8=A1=8C=E8=B5=8B=E5=80=BC=EF=BC=8C=E4=BB=BB=E4=BD=95 NPE =E9=97=AE=E9=
+=A2=98=EF=BC=8C=E6=88=96=E8=80=85=E5=85=A5=E5=BA=93=E6=A3=80=E6=9F=A5=EF=BC=
+=8C=E9=83=BD=E7=94=B1=E4=BD=BF=E7=94=A8=E8=80=85=E6=9D=A5=E4=BF=9D=E8=AF=81=
+=E3=80=82</p>
+</div>
+</div>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA040] =E9=81=BF=E5=85=8D=E9=80=
+=9A=E8=BF=87=E4=B8=80=E4=B8=AA=E7=B1=BB=E7=9A=84=E5=AF=B9=E8=B1=A1=E5=BC=95=
+=E7=94=A8=E8=AE=BF=E9=97=AE=E6=AD=A4=E7=B1=BB=E7=9A=84=E9=9D=99=E6=80=81=E5=
+=8F=98=E9=87=8F=E6=88=96=E9=9D=99=E6=80=81=E6=96=B9=E6=B3=95=EF=BC=8C=E6=97=
+=A0=E8=B0=93=E5=A2=9E=E5=8A=A0=E7=BC=96=E8=AF=91=E5=99=A8=E8=A7=A3=E6=9E=90=
+=E6=88=90=E6=9C=AC=EF=BC=8C=E7=9B=B4=E6=8E=A5=E7=94=A8=E7=B1=BB=E5=90=8D=E6=
+=9D=A5=E8=AE=BF=E9=97=AE=E5=8D=B3=E5=8F=AF=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA041] =E6=89=80=E6=9C=89=E7=9A=
+=84=E8=A6=86=E5=86=99=E6=96=B9=E6=B3=95=EF=BC=8C=E5=BF=85=E9=A1=BB=E5=8A=A0=
+@Override =E6=B3=A8=E8=A7=A3=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA042] =E7=9B=B8=E5=90=8C=E5=8F=
+=82=E6=95=B0=E7=B1=BB=E5=9E=8B=EF=BC=8C=E7=9B=B8=E5=90=8C=E4=B8=9A=E5=8A=A1=
+=E5=90=AB=E4=B9=89=EF=BC=8C=E6=89=8D=E5=8F=AF=E4=BB=A5=E4=BD=BF=E7=94=A8 Ja=
+va =E7=9A=84=E5=8F=AF=E5=8F=98=E5=8F=82=E6=95=B0=EF=BC=8C=E9=81=BF=E5=85=8D=
+=E4=BD=BF=E7=94=A8 Object=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA043] =E4=B8=8D=E8=83=BD=E4=BD=
+=BF=E7=94=A8=E8=BF=87=E6=97=B6=E7=9A=84=E7=B1=BB=E6=88=96=E6=96=B9=E6=B3=95=
+=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA044] Object =E7=9A=84 equals =
+=E6=96=B9=E6=B3=95=E5=AE=B9=E6=98=93=E6=8A=9B=E7=A9=BA=E6=8C=87=E9=92=88=E5=
+=BC=82=E5=B8=B8=EF=BC=8C=E5=BA=94=E4=BD=BF=E7=94=A8=E5=B8=B8=E9=87=8F=E6=88=
+=96=E7=A1=AE=E5=AE=9A=E6=9C=89=E5=80=BC=E7=9A=84=E5=AF=B9=E8=B1=A1=E6=9D=A5=
+=E8=B0=83=E7=94=A8 equals=E3=80=82&nbsp;</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">// =E6=
+=AD=A3=E4=BE=8B=20
+"test".equals(object);
+// =E5=8F=8D=E4=BE=8B
+object.equals("test");
+// =E8=AF=B4=E6=98=8E=EF=BC=9A=E6=8E=A8=E8=8D=90=E4=BD=BF=E7=94=A8 java.uti=
+l.Objects#equals=EF=BC=88JDK7 =E5=BC=95=E5=85=A5=E7=9A=84=E5=B7=A5=E5=85=B7=
+=E7=B1=BB=EF=BC=89
+</pre>=20
+</div>
+</div>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA045] =E6=89=80=E6=9C=89=E7=9A=
+=84=E7=9B=B8=E5=90=8C=E7=B1=BB=E5=9E=8B=E7=9A=84=E5=8C=85=E8=A3=85=E7=B1=BB=
+=E5=AF=B9=E8=B1=A1=E4=B9=8B=E9=97=B4=E5=80=BC=E7=9A=84=E6=AF=94=E8=BE=83=EF=
+=BC=8C=E5=85=A8=E9=83=A8=E4=BD=BF=E7=94=A8 equals =E6=96=B9=E6=B3=95=E6=AF=
+=94=E8=BE=83=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA046] =E5=AE=9A=E4=B9=89 DO/DTO/=
+VO =E7=AD=89 POJO =E7=B1=BB=E6=97=B6=EF=BC=8C=E4=B8=8D=E8=A6=81=E8=AE=BE=E5=
+=AE=9A=E4=BB=BB=E4=BD=95=E5=B1=9E=E6=80=A7=E9=BB=98=E8=AE=A4=E5=80=BC=E3=80=
+=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA047] =E5=BA=8F=E5=88=97=E5=8C=
+=96=E7=B1=BB=E6=96=B0=E5=A2=9E=E5=B1=9E=E6=80=A7=E6=97=B6=EF=BC=8C=E8=AF=B7=
+=E4=B8=8D=E8=A6=81=E4=BF=AE=E6=94=B9 serialVersionUID =E5=AD=97=E6=AE=B5=EF=
+=BC=8C=E9=81=BF=E5=85=8D=E5=8F=8D=E5=BA=8F=E5=88=97=E5=A4=B1=E8=B4=A5=EF=BC=
+=9B=E5=A6=82=E6=9E=9C=E5=AE=8C=E5=85=A8=E4=B8=8D=E5=85=BC=E5=AE=B9=E5=8D=87=
+=E7=BA=A7=EF=BC=8C=E9=81=BF=E5=85=8D=E5=8F=8D=E5=BA=8F=E5=88=97=E5=8C=96=E6=
+=B7=B7=E4=B9=B1=EF=BC=8C=E9=82=A3=E4=B9=88=E8=AF=B7=E4=BF=AE=E6=94=B9 seria=
+lVersionUID =E5=80=BC=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA048] =E6=9E=84=E9=80=A0=E6=96=
+=B9=E6=B3=95=E9=87=8C=E9=9D=A2=E7=A6=81=E6=AD=A2=E5=8A=A0=E5=85=A5=E4=BB=BB=
+=E4=BD=95=E4=B8=9A=E5=8A=A1=E9=80=BB=E8=BE=91=EF=BC=8C=E5=A6=82=E6=9E=9C=E6=
+=9C=89=E5=88=9D=E5=A7=8B=E5=8C=96=E9=80=BB=E8=BE=91=EF=BC=8C=E8=AF=B7=E6=94=
+=BE=E5=9C=A8 init =E6=96=B9=E6=B3=95=E4=B8=AD=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA049] POJO =E7=B1=BB=E5=BF=85=E9=
+=A1=BB=E5=86=99 toString =E6=96=B9=E6=B3=95=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA050] =E7=A6=81=E6=AD=A2=E5=9C=
+=A8=E7=B1=BB=E4=B8=AD=EF=BC=8C=E5=90=8C=E6=97=B6=E5=AD=98=E5=9C=A8=E5=AF=B9=
+=E5=BA=94=E5=B1=9E=E6=80=A7 xxx =E7=9A=84 isXxx() =E5=92=8C getXxx() =E6=96=
+=B9=E6=B3=95=E3=80=82</p>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+=E8=AF=B4=E6=98=8E=EF=BC=9A=E6=A1=86=E6=9E=B6=E5=9C=A8=E8=B0=83=E7=94=A8=E5=
+=B1=9E=E6=80=A7 xxx =E7=9A=84=E6=8F=90=E5=8F=96=E6=96=B9=E6=B3=95=E6=97=B6=
+=EF=BC=8C=E5=B9=B6=E4=B8=8D=E8=83=BD=E7=A1=AE=E5=AE=9A=E5=93=AA=E4=B8=AA=E6=
+=96=B9=E6=B3=95=E4=B8=80=E5=AE=9A=E6=98=AF=E8=A2=AB=E4=BC=98=E5=85=88=E8=B0=
+=83=E7=94=A8=E5=88=B0=E3=80=82
+</div>
+</div>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA051] =E7=A6=81=E6=AD=A2=E8=A6=
+=86=E7=9B=96=EF=BC=88Override=EF=BC=89Object.finalize=E6=96=B9=E6=B3=95=E3=
+=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-5.2.=E9=9B=86=E5=90=88=E5=A4=84=E7=90=86"><strong style=3D"font-size: 2=
+0.0px;">5.2. </strong><strong style=3D"font-size: 20.0px;">=E9=9B=86=E5=90=
+=88=E5=A4=84=E7=90=86</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA052] =E5=85=B3=E4=BA=8E hashCod=
+e =E5=92=8C equals =E7=9A=84=E5=A4=84=E7=90=86=EF=BC=8C=E5=8F=AA=E8=A6=81=
+=E9=87=8D=E5=86=99 equals=EF=BC=8C=E5=B0=B1=E5=BF=85=E9=A1=BB=E9=87=8D=E5=
+=86=99 hashCode=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA053] ArrayList =E7=9A=84 subLis=
+t =E7=BB=93=E6=9E=9C=E4=B8=8D=E5=8F=AF=E5=BC=BA=E8=BD=AC=E6=88=90 ArrayList=
+=EF=BC=8C=E5=90=A6=E5=88=99=E4=BC=9A=E6=8A=9B=E5=87=BA ClassCastException =
+=E5=BC=82=E5=B8=B8=EF=BC=8C=E5=8D=B3 java.util.RandomAccessSubList cannot b=
+e cast to java.util.ArrayList=E3=80=82=E5=9C=A8 subList =E5=9C=BA=E6=99=AF=
+=E4=B8=AD=EF=BC=8C=E9=AB=98=E5=BA=A6=E6=B3=A8=E6=84=8F=E5=AF=B9=E5=8E=9F=E9=
+=9B=86=E5=90=88=E5=85=83=E7=B4=A0=E7=9A=84=E5=A2=9E=E5=8A=A0=E6=88=96=E5=88=
+=A0=E9=99=A4=EF=BC=8C=E5=9D=87=E4=BC=9A=E5=AF=BC=E8=87=B4=E5=AD=90=E5=88=97=
+=E8=A1=A8=E7=9A=84=E9=81=8D=E5=8E=86=E3=80=81 =E5=A2=9E=E5=8A=A0=E3=80=81=
+=E5=88=A0=E9=99=A4=E4=BA=A7=E7=94=9F ConcurrentModificationException =E5=BC=
+=82=E5=B8=B8=E3=80=82</p>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+=E8=AF=B4=E6=98=8E=EF=BC=9AsubList =E8=BF=94=E5=9B=9E=E7=9A=84=E6=98=AF Arr=
+ayList =E7=9A=84=E5=86=85=E9=83=A8=E7=B1=BB SubList=EF=BC=8C=E5=B9=B6=E4=B8=
+=8D=E6=98=AF ArrayList =E8=80=8C=E6=98=AF ArrayList =E7=9A=84=E4=B8=80=E4=
+=B8=AA=E8=A7=86=E5=9B=BE=EF=BC=8C=E5=AF=B9=E4=BA=8E SubList =E5=AD=90=E5=88=
+=97=E8=A1=A8=E7=9A=84=E6=89=80=E6=9C=89=E6=93=8D=E4=BD=9C=E6=9C=80=E7=BB=88=
+=E4=BC=9A=E5=8F=8D=E6=98=A0=E5=88=B0=E5=8E=9F=E5=88=97=E8=A1=A8=E4=B8=8A=E3=
+=80=82
+</div>
+</div>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA054] =E4=BD=BF=E7=94=A8=E9=9B=
+=86=E5=90=88=E8=BD=AC=E6=95=B0=E7=BB=84=E7=9A=84=E6=96=B9=E6=B3=95=EF=BC=8C=
+=E5=BF=85=E9=A1=BB=E4=BD=BF=E7=94=A8=E9=9B=86=E5=90=88=E7=9A=84 toArray(T[]=
+ array)=EF=BC=8C=E4=BC=A0=E5=85=A5=E7=9A=84=E6=98=AF=E7=B1=BB=E5=9E=8B=E5=
+=AE=8C=E5=85=A8 =E4=B8=80=E6=A0=B7=E7=9A=84=E6=95=B0=E7=BB=84=EF=BC=8C=E5=
+=A4=A7=E5=B0=8F=E5=B0=B1=E6=98=AF list.size()=E3=80=82</p>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+=E8=AF=B4=E6=98=8E=EF=BC=9A=E4=BD=BF=E7=94=A8 toArray =E5=B8=A6=E5=8F=82=E6=
+=96=B9=E6=B3=95=EF=BC=8C=E5=85=A5=E5=8F=82=E5=88=86=E9=85=8D=E7=9A=84=E6=95=
+=B0=E7=BB=84=E7=A9=BA=E9=97=B4=E4=B8=8D=E5=A4=9F=E5=A4=A7=E6=97=B6=EF=BC=8C=
+toArray =E6=96=B9=E6=B3=95=E5=86=85=E9=83=A8=E5=B0=86=E9=87=8D=E6=96=B0=E5=
+=88=86=E9=85=8D =E5=86=85=E5=AD=98=E7=A9=BA=E9=97=B4=EF=BC=8C=E5=B9=B6=E8=
+=BF=94=E5=9B=9E=E6=96=B0=E6=95=B0=E7=BB=84=E5=9C=B0=E5=9D=80=EF=BC=9B=E5=A6=
+=82=E6=9E=9C=E6=95=B0=E7=BB=84=E5=85=83=E7=B4=A0=E4=B8=AA=E6=95=B0=E5=A4=A7=
+=E4=BA=8E=E5=AE=9E=E9=99=85=E6=89=80=E9=9C=80=EF=BC=8C=E4=B8=8B=E6=A0=87=E4=
+=B8=BA[ list.size() ] =E7=9A=84=E6=95=B0=E7=BB=84=E5=85=83=E7=B4=A0=E5=B0=
+=86=E8=A2=AB=E7=BD=AE=E4=B8=BA null=EF=BC=8C=E5=85=B6=E5=AE=83=E6=95=B0=E7=
+=BB=84=E5=85=83=E7=B4=A0=E4=BF=9D=E6=8C=81=E5=8E=9F=E5=80=BC=EF=BC=8C=E5=9B=
+=A0=E6=AD=A4=E6=9C=80=E5=A5=BD=E5=B0=86=E6=96=B9=E6=B3=95=E5=85=A5=E5=8F=82=
+=E6=95=B0=E7=BB=84=E5=A4=A7=E5=B0=8F=E5=AE=9A=E4=B9=89=E4=B8=8E=E9=9B=86 =
+=E5=90=88=E5=85=83=E7=B4=A0=E4=B8=AA=E6=95=B0=E4=B8=80=E8=87=B4=E3=80=82&nb=
+sp;
+</div>
+</div>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">// =E6=
+=AD=A3=E4=BE=8B=20
+List list =3D new ArrayList(2);=20
+list.add("guan");=20
+list.add("bao");=20
+String[] array =3D new String[list.size()];=20
+array =3D list.toArray(array);=20
+
+
+// =E5=8F=8D=E4=BE=8B
+// =E7=9B=B4=E6=8E=A5=E4=BD=BF=E7=94=A8 toArray =E6=97=A0=E5=8F=82=E6=96=B9=
+=E6=B3=95=E5=AD=98=E5=9C=A8=E9=97=AE=E9=A2=98=EF=BC=8C=E6=AD=A4=E6=96=B9=E6=
+=B3=95=E8=BF=94=E5=9B=9E=E5=80=BC=E5=8F=AA=E8=83=BD=E6=98=AF Object[]=E7=B1=
+=BB=EF=BC=8C=E8=8B=A5=E5=BC=BA=E8=BD=AC=E5=85=B6=E5=AE=83=E7=B1=BB=E5=9E=8B=
+=E6=95=B0=E7=BB=84=E5=B0=86=E5=87=BA=E7=8E=B0 ClassCastException =E9=94=99=
+=E8=AF=AF=E3=80=82</pre>=20
+</div>
+</div>
+<p>[=E5=BC=BA=E5=88=B6] [JAVA055] =E4=BD=BF=E7=94=A8=E5=B7=A5=E5=85=B7=E7=
+=B1=BB Arrays.asList()=E6=8A=8A=E6=95=B0=E7=BB=84=E8=BD=AC=E6=8D=A2=E6=88=
+=90=E9=9B=86=E5=90=88=E6=97=B6=EF=BC=8C=E4=B8=8D=E8=83=BD=E4=BD=BF=E7=94=A8=
+=E5=85=B6=E4=BF=AE=E6=94=B9=E9=9B=86=E5=90=88=E7=9B=B8=E5=85=B3=E7=9A=84=E6=
+=96=B9=E6=B3=95=EF=BC=8C=E5=AE=83=E7=9A=84 add/remove/clear =E6=96=B9=E6=B3=
+=95=E4=BC=9A=E6=8A=9B=E5=87=BA UnsupportedOperationException =E5=BC=82=E5=
+=B8=B8=E3=80=82</p>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+=E8=AF=B4=E6=98=8E=EF=BC=9AasList =E7=9A=84=E8=BF=94=E5=9B=9E=E5=AF=B9=E8=
+=B1=A1=E6=98=AF=E4=B8=80=E4=B8=AA Arrays =E5=86=85=E9=83=A8=E7=B1=BB=EF=BC=
+=8C=E5=B9=B6=E6=B2=A1=E6=9C=89=E5=AE=9E=E7=8E=B0=E9=9B=86=E5=90=88=E7=9A=84=
+=E4=BF=AE=E6=94=B9=E6=96=B9=E6=B3=95=E3=80=82Arrays.asList =E4=BD=93=E7=8E=
+=B0=E7=9A=84=E6=98=AF=E9=80=82=E9=85=8D=E5=99=A8=E6=A8=A1=E5=BC=8F=EF=BC=8C=
+=E5=8F=AA=E6=98=AF=E8=BD=AC=E6=8D=A2=E6=8E=A5=E5=8F=A3=EF=BC=8C=E5=90=8E=E5=
+=8F=B0=E7=9A=84=E6=95=B0=E6=8D=AE=E4=BB=8D=E6=98=AF=E6=95=B0=E7=BB=84=E3=80=
+=82
+</div>
+</div>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">String[=
+] str =3D new String[] { "you", "wu" };
+List list =3D Arrays.asList(str);
+// =E7=AC=AC=E4=B8=80=E7=A7=8D=E6=83=85=E5=86=B5=EF=BC=9Alist.add("yangguan=
+bao"); =E8=BF=90=E8=A1=8C=E6=97=B6=E5=BC=82=E5=B8=B8=E3=80=82
+// =E7=AC=AC=E4=BA=8C=E7=A7=8D=E6=83=85=E5=86=B5=EF=BC=9Astr[0] =3D "gujin"=
+; =E9=82=A3=E4=B9=88 list.get(0)=E4=B9=9F=E4=BC=9A=E9=9A=8F=E4=B9=8B=E4=BF=
+=AE=E6=94=B9=E3=80=82&nbsp;</pre>=20
+</div>
+</div>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA056] =E6=B3=9B=E5=9E=8B=E9=80=
+=9A=E9=85=8D=E7=AC=A6&lt;? extends T&gt;=E6=9D=A5=E6=8E=A5=E6=94=B6=E8=BF=
+=94=E5=9B=9E=E7=9A=84=E6=95=B0=E6=8D=AE=EF=BC=8C=E6=AD=A4=E5=86=99=E6=B3=95=
+=E7=9A=84=E6=B3=9B=E5=9E=8B=E9=9B=86=E5=90=88=E4=B8=8D=E8=83=BD=E4=BD=BF=E7=
+=94=A8 add =E6=96=B9 =E6=B3=95=EF=BC=8C=E8=80=8C&lt;? super T&gt;=E4=B8=8D=
+=E8=83=BD=E4=BD=BF=E7=94=A8 get =E6=96=B9=E6=B3=95=EF=BC=8C=E4=BD=9C=E4=B8=
+=BA=E6=8E=A5=E5=8F=A3=E8=B0=83=E7=94=A8=E8=B5=8B=E5=80=BC=E6=97=B6=E6=98=93=
+=E5=87=BA=E9=94=99=E3=80=82</p>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+=E8=AF=B4=E6=98=8E=EF=BC=9A=E6=89=A9=E5=B1=95=E8=AF=B4=E4=B8=80=E4=B8=8B PE=
+CS(Producer Extends Consumer Super)=E5=8E=9F=E5=88=99=EF=BC=9A=E7=AC=AC=E4=
+=B8=80=E3=80=81=E9=A2=91=E7=B9=81=E5=BE=80=E5=A4=96=E8=AF=BB=E5=8F=96=E5=86=
+=85 =E5=AE=B9=E7=9A=84=EF=BC=8C=E9=80=82=E5=90=88=E7=94=A8&lt;? extends T&g=
+t;=E3=80=82=E7=AC=AC=E4=BA=8C=E3=80=81=E7=BB=8F=E5=B8=B8=E5=BE=80=E9=87=8C=
+=E6=8F=92=E5=85=A5=E7=9A=84=EF=BC=8C=E9=80=82=E5=90=88=E7=94=A8&lt;? super =
+T&gt;=E3=80=82
+</div>
+</div>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA057] =E4=B8=8D=E8=A6=81=E5=9C=
+=A8 foreach =E5=BE=AA=E7=8E=AF=E9=87=8C=E8=BF=9B=E8=A1=8C=E5=85=83=E7=B4=A0=
+=E7=9A=84 remove/add =E6=93=8D=E4=BD=9C=E3=80=82remove =E5=85=83=E7=B4=A0=
+=E8=AF=B7=E4=BD=BF=E7=94=A8 Iterator =E6=96=B9=E5=BC=8F=EF=BC=8C=E5=A6=82=
+=E6=9E=9C=E5=B9=B6=E5=8F=91=E6=93=8D=E4=BD=9C=EF=BC=8C=E9=9C=80=E8=A6=81=E5=
+=AF=B9 Iterator =E5=AF=B9=E8=B1=A1=E5=8A=A0=E9=94=81=E3=80=82</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">// =E6=
+=AD=A3=E4=BE=8B
+List list =3D new ArrayList&lt;&gt;();
+list.add("1");
+list.add("2");
+Iterator iterator =3D list.iterator();
+while (iterator.hasNext()) {
+    String item =3D iterator.next();
+=09if (=E5=88=A0=E9=99=A4=E5=85=83=E7=B4=A0=E7=9A=84=E6=9D=A1=E4=BB=B6) {
+=09    iterator.remove();
+=09}
+}
+// =E5=8F=8D=E4=BE=8B
+for (String item : list) {
+    if ("1".equals(item)) {
+        list.remove(item);
+    }
+} </pre>=20
+</div>
+</div>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-5.3.=E5=B9=B6=E5=8F=91=E5=A4=84=E7=90=86"><strong style=3D"font-size: 2=
+0.0px;">5.3. </strong><strong style=3D"font-size: 20.0px;">=E5=B9=B6=E5=8F=
+=91=E5=A4=84=E7=90=86</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA058] =E8=8E=B7=E5=8F=96=E5=8D=
+=95=E4=BE=8B=E5=AF=B9=E8=B1=A1=E9=9C=80=E8=A6=81=E4=BF=9D=E8=AF=81=E7=BA=BF=
+=E7=A8=8B=E5=AE=89=E5=85=A8=EF=BC=8C=E5=85=B6=E4=B8=AD=E7=9A=84=E6=96=B9=E6=
+=B3=95=E4=B9=9F=E8=A6=81=E4=BF=9D=E8=AF=81=E7=BA=BF=E7=A8=8B=E5=AE=89=E5=85=
+=A8 (Immutable=E5=AF=B9=E8=B1=A1=E9=99=A4=E5=A4=96)=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA059] =E5=88=9B=E5=BB=BA=E7=BA=
+=BF=E7=A8=8B=E6=88=96=E7=BA=BF=E7=A8=8B=E6=B1=A0=E6=97=B6=E8=AF=B7=E6=8C=87=
+=E5=AE=9A=E6=9C=89=E6=84=8F=E4=B9=89=E7=9A=84=E7=BA=BF=E7=A8=8B=E5=90=8D=E7=
+=A7=B0=EF=BC=8C=E6=96=B9=E4=BE=BF=E5=87=BA=E9=94=99=E6=97=B6=E5=9B=9E=E6=BA=
+=AF=EF=BC=8C=E5=B9=B6=E8=AE=BE=E7=BD=AE=E4=B8=BAdaemon=E7=8A=B6=E6=80=81=E3=
+=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA060] =E7=BA=BF=E7=A8=8B=E8=B5=
+=84=E6=BA=90=E5=BF=85=E9=A1=BB=E9=80=9A=E8=BF=87=E7=BA=BF=E7=A8=8B=E6=B1=A0=
+=E6=8F=90=E4=BE=9B=EF=BC=8C=E4=B8=8D=E5=85=81=E8=AE=B8=E5=9C=A8=E5=BA=94=E7=
+=94=A8=E4=B8=AD=E8=87=AA=E8=A1=8C=E6=98=BE=E5=BC=8F=E5=88=9B=E5=BB=BA=E7=BA=
+=BF=E7=A8=8B=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA061] =E7=BA=BF=E7=A8=8B=E6=B1=
+=A0=E4=B8=8D=E5=85=81=E8=AE=B8=E4=BD=BF=E7=94=A8 Executors =E5=8E=BB=E5=88=
+=9B=E5=BB=BA=EF=BC=8C=E8=80=8C=E6=98=AF=E9=80=9A=E8=BF=87 ThreadPoolExecuto=
+r =E7=9A=84=E6=96=B9=E5=BC=8F=EF=BC=8C=E8=BF=99=E6=A0=B7=E7=9A=84=E5=A4=84=
+=E7=90=86=E6=96=B9=E5=BC=8F=E8=AE=A9=E5=86=99=E7=9A=84=E5=90=8C=E5=AD=A6=E6=
+=9B=B4=E5=8A=A0=E6=98=8E=E7=A1=AE=E7=BA=BF=E7=A8=8B=E6=B1=A0=E7=9A=84=E8=BF=
+=90=E8=A1=8C=E8=A7=84=E5=88=99=EF=BC=8C=E8=A7=84=E9=81=BF=E8=B5=84=E6=BA=90=
+=E8=80=97=E5=B0=BD=E7=9A=84=E9=A3=8E=E9=99=A9=E3=80=82</p>
+<p align=3D"left"><br></p>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p align=3D"left">=E8=AF=B4=E6=98=8E=EF=BC=9AExecutors =E8=BF=94=E5=9B=9E=
+=E7=9A=84=E7=BA=BF=E7=A8=8B=E6=B1=A0=E5=AF=B9=E8=B1=A1=E7=9A=84=E5=BC=8A=E7=
+=AB=AF=E5=A6=82=E4=B8=8B=EF=BC=9A</p>
+<ul>
+<li>FixedThreadPool =E5=92=8C SingleThreadPool: =E5=85=81=E8=AE=B8=E7=9A=84=
+=E8=AF=B7=E6=B1=82=E9=98=9F=E5=88=97=E9=95=BF=E5=BA=A6=E4=B8=BA Integer.MAX=
+_VALUE=EF=BC=8C=E5=8F=AF=E8=83=BD=E4=BC=9A=E5=A0=86=E7=A7=AF=E5=A4=A7=E9=87=
+=8F=E7=9A=84=E8=AF=B7=E6=B1=82=EF=BC=8C=E4=BB=8E=E8=80=8C=E5=AF=BC=E8=87=B4=
+ OOM=E3=80=82</li>
+<li>CachedThreadPool =E5=92=8C ScheduledThreadPool: =E5=85=81=E8=AE=B8=E7=
+=9A=84=E5=88=9B=E5=BB=BA=E7=BA=BF=E7=A8=8B=E6=95=B0=E9=87=8F=E4=B8=BA Integ=
+er.MAX_VALUE=EF=BC=8C=E5=8F=AF=E8=83=BD=E4=BC=9A=E5=88=9B=E5=BB=BA=E5=A4=A7=
+=E9=87=8F=E7=9A=84=E7=BA=BF=E7=A8=8B=EF=BC=8C=E4=BB=8E=E8=80=8C=E5=AF=BC=E8=
+=87=B4 OOM=E3=80=82</li>
+</ul>
+</div>
+</div>
+<p><br></p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA062] SimpleDateFormat =E6=98=AF=
+=E7=BA=BF=E7=A8=8B=E4=B8=8D=E5=AE=89=E5=85=A8=E7=9A=84=E7=B1=BB=EF=BC=8C=E4=
+=B8=80=E8=88=AC=E4=B8=8D=E8=A6=81=E5=AE=9A=E4=B9=89=E4=B8=BA static =E5=8F=
+=98=E9=87=8F=EF=BC=8C=E5=A6=82=E6=9E=9C=E5=AE=9A=E4=B9=89=E4=B8=BA static=
+=EF=BC=8C=E5=BF=85=E9=A1=BB=E5=8A=A0=E9=94=81=EF=BC=8C=E6=88=96=E8=80=85=E4=
+=BD=BF=E7=94=A8 DateUtils =E5=B7=A5=E5=85=B7=E7=B1=BB=E3=80=82</p>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+=E8=AF=B4=E6=98=8E=EF=BC=9A=E5=A6=82=E6=9E=9C=E6=98=AF JDK8 =E7=9A=84=E5=BA=
+=94=E7=94=A8=EF=BC=8C=E5=8F=AF=E4=BB=A5=E4=BD=BF=E7=94=A8 Instant =E4=BB=A3=
+=E6=9B=BF Date=EF=BC=8CLocalDateTime =E4=BB=A3=E6=9B=BF Calendar=EF=BC=8C D=
+ateTimeFormatter =E4=BB=A3=E6=9B=BF SimpleDateFormat=EF=BC=8C=E5=AE=98=E6=
+=96=B9=E7=BB=99=E5=87=BA=E7=9A=84=E8=A7=A3=E9=87=8A=EF=BC=9Asimple beautifu=
+l strong immutable thread-safe=E3=80=82
+</div>
+</div>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA063] =E9=AB=98=E5=B9=B6=E5=8F=
+=91=E6=97=B6=EF=BC=8C=E5=90=8C=E6=AD=A5=E8=B0=83=E7=94=A8=E5=BA=94=E8=AF=A5=
+=E5=8E=BB=E8=80=83=E9=87=8F=E9=94=81=E7=9A=84=E6=80=A7=E8=83=BD=E6=8D=9F=E8=
+=80=97=E3=80=82=E8=83=BD=E7=94=A8=E6=97=A0=E9=94=81=E6=95=B0=E6=8D=AE=E7=BB=
+=93=E6=9E=84=EF=BC=8C=E5=B0=B1=E4=B8=8D=E8=A6=81=E7=94=A8=E9=94=81=EF=BC=9B=
+=E8=83=BD=E9=94=81=E5=8C=BA=E5=9D=97=EF=BC=8C=E5=B0=B1=E4=B8=8D=E8=A6=81=E9=
+=94=81=E6=95=B4=E4=B8=AA=E6=96=B9=E6=B3=95=E4=BD=93=EF=BC=9B=E8=83=BD=E7=94=
+=A8=E5=AF=B9=E8=B1=A1=E9=94=81=EF=BC=8C=E5=B0=B1=E4=B8=8D=E8=A6=81=E7=94=A8=
+=E7=B1=BB=E9=94=81=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA064] =E5=AF=B9=E5=A4=9A=E4=B8=
+=AA=E8=B5=84=E6=BA=90=E3=80=81=E6=95=B0=E6=8D=AE=E5=BA=93=E8=A1=A8=E3=80=81=
+=E5=AF=B9=E8=B1=A1=E5=90=8C=E6=97=B6=E5=8A=A0=E9=94=81=E6=97=B6=EF=BC=8C=E9=
+=9C=80=E8=A6=81=E4=BF=9D=E6=8C=81=E4=B8=80=E8=87=B4=E7=9A=84=E5=8A=A0=E9=94=
+=81=E9=A1=BA=E5=BA=8F=EF=BC=8C=E5=90=A6=E5=88=99=E5=8F=AF=E8=83=BD=E4=BC=9A=
+=E9=80=A0=E6=88=90=E6=AD=BB=E9=94=81=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA065] =E5=B9=B6=E5=8F=91=E4=BF=
+=AE=E6=94=B9=E5=90=8C=E4=B8=80=E8=AE=B0=E5=BD=95=E6=97=B6=EF=BC=8C=E9=81=BF=
+=E5=85=8D=E6=9B=B4=E6=96=B0=E4=B8=A2=E5=A4=B1=EF=BC=8C=E9=9C=80=E8=A6=81=E5=
+=8A=A0=E9=94=81=E3=80=82=E8=A6=81=E4=B9=88=E5=9C=A8=E5=BA=94=E7=94=A8=E5=B1=
+=82=E5=8A=A0=E9=94=81=EF=BC=8C=E8=A6=81=E4=B9=88=E5=9C=A8=E7=BC=93=E5=AD=98=
+=E5=8A=A0 =E9=94=81=EF=BC=8C=E8=A6=81=E4=B9=88=E5=9C=A8=E6=95=B0=E6=8D=AE=
+=E5=BA=93=E5=B1=82=E4=BD=BF=E7=94=A8=E4=B9=90=E8=A7=82=E9=94=81=EF=BC=8C=E4=
+=BD=BF=E7=94=A8 version =E4=BD=9C=E4=B8=BA=E6=9B=B4=E6=96=B0=E4=BE=9D=E6=8D=
+=AE=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA066] =E5=A4=9A=E7=BA=BF=E7=A8=
+=8B=E5=B9=B6=E8=A1=8C=E5=A4=84=E7=90=86=E5=AE=9A=E6=97=B6=E4=BB=BB=E5=8A=A1=
+=E6=97=B6=EF=BC=8CTimer =E8=BF=90=E8=A1=8C=E5=A4=9A=E4=B8=AA TimeTask =E6=
+=97=B6=EF=BC=8C=E5=8F=AA=E8=A6=81=E5=85=B6=E4=B8=AD=E4=B9=8B=E4=B8=80=E6=B2=
+=A1=E6=9C=89=E6=8D=95=E8=8E=B7 =E6=8A=9B=E5=87=BA=E7=9A=84=E5=BC=82=E5=B8=
+=B8=EF=BC=8C=E5=85=B6=E5=AE=83=E4=BB=BB=E5=8A=A1=E4=BE=BF=E4=BC=9A=E8=87=AA=
+=E5=8A=A8=E7=BB=88=E6=AD=A2=E8=BF=90=E8=A1=8C=EF=BC=8C=E4=BD=BF=E7=94=A8 Sc=
+heduledExecutorService =E5=88=99=E6=B2=A1=E6=9C=89=E8=BF=99=E4=B8=AA=E9=97=
+=AE=E9=A2=98=E3=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-5.4.=E6=8E=A7=E5=88=B6=E8=AF=AD=E5=8F=A5"><strong style=3D"font-size: 2=
+0.0px;">5.4. </strong><strong style=3D"font-size: 20.0px;">=E6=8E=A7=E5=88=
+=B6=E8=AF=AD=E5=8F=A5</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA067] =E5=9C=A8=E4=B8=80=E4=B8=
+=AA switch =E5=9D=97=E5=86=85=EF=BC=8C=E6=AF=8F=E4=B8=AA case =E8=A6=81=E4=
+=B9=88=E9=80=9A=E8=BF=87 break/return =E7=AD=89=E6=9D=A5=E7=BB=88=E6=AD=A2=
+=EF=BC=8C=E8=A6=81=E4=B9=88=E6=B3=A8=E9=87=8A=E8=AF=B4=E6=98=8E=E7=A8=8B=E5=
+=BA=8F=E5=B0=86=E7=BB=A7=E7=BB=AD=E6=89=A7=E8=A1=8C=E5=88=B0=E5=93=AA=E4=B8=
+=80=E4=B8=AA case =E4=B8=BA=E6=AD=A2=EF=BC=9B=E5=9C=A8=E4=B8=80=E4=B8=AA sw=
+itch =E5=9D=97=E5=86=85=EF=BC=8C=E9=83=BD=E5=BF=85=E9=A1=BB=E5=8C=85=E5=90=
+=AB=E4=B8=80=E4=B8=AA default =E8=AF=AD=E5=8F=A5=E5=B9=B6=E4=B8=94 =E6=94=
+=BE=E5=9C=A8=E6=9C=80=E5=90=8E=EF=BC=8C=E5=8D=B3=E4=BD=BF=E7=A9=BA=E4=BB=A3=
+=E7=A0=81=E3=80=82</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">switch =
+(expression) {
+    case "value0": // =E6=AD=A3=E4=BE=8B
+        System.out.print("0");
+        break;
+    case "value1": // =E6=AD=A3=E4=BE=8B
+        System.out.print("2");
+        return;
+    case "value2": // =E5=8F=8D=E4=BE=8B =E6=B2=A1=E6=9C=89 return/break =
+=E6=88=96 =E6=B3=A8=E9=87=8A
+    case "value3": // =E5=8F=8D=E4=BE=8B =E6=B2=A1=E6=9C=89 return/break
+        System.out.print("3");
+    case "value4": // =E6=AD=A3=E4=BE=8B =E7=A9=BF=E9=80=8F=E5=88=B0 case v=
+alue8 (=E6=B3=A8=E9=87=8A=E5=B9=B6=E6=A0=87=E6=98=8E case label)
+    case "value5":=20
+        // =E6=AD=A3=E4=BE=8B =E7=A9=BF=E9=80=8F=E5=88=B0 case 8
+    case "value6": // =E5=8F=8D=E4=BE=8B =E7=A9=BF=E9=80=8F=E5=88=B0 value8=
+ (=E6=B2=A1=E6=9C=89=E6=8C=87=E5=AE=9A case label)
+    case "value7":=20
+        // =E5=8F=8D=E4=BE=8B =E7=A9=BF=E9=80=8F=E5=88=B0 xxx (=E6=B2=A1=E6=
+=9C=89=E6=8C=87=E5=AE=9A case label)
+    case "value8": // good
+        System.out.println("8");
+        break;
+    default: // ignore check
+}
+
+
+</pre>=20
+</div>
+</div>
+<p align=3D"left"><br></p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA068] =E5=9C=A8 if/else/for/whil=
+e/do =E8=AF=AD=E5=8F=A5=E4=B8=AD=E5=BF=85=E9=A1=BB=E4=BD=BF=E7=94=A8=E8=8A=
+=B1=E6=8B=AC=E5=8F=B7=E3=80=82=E5=8D=B3=E4=BD=BF=E5=8F=AA=E6=9C=89=E4=B8=80=
+=E8=A1=8C=E4=BB=A3=E7=A0=81=EF=BC=8C=E9=81=BF=E5=85=8D=E9=87=87=E7=94=A8 =
+=E5=8D=95=E8=A1=8C=E7=9A=84=E7=BC=96=E7=A0=81=E6=96=B9=E5=BC=8F=EF=BC=9Aif =
+(condition) statements;</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA069] =E5=9C=A8=E9=AB=98=E5=B9=
+=B6=E5=8F=91=E5=9C=BA=E6=99=AF=E4=B8=AD=EF=BC=8C=E9=81=BF=E5=85=8D=E4=BD=BF=
+=E7=94=A8 =E2=80=9D =E7=AD=89=E4=BA=8E =E2=80=9D =E5=88=A4=E6=96=AD=E4=BD=
+=9C=E4=B8=BA=E4=B8=AD=E6=96=AD=E6=88=96=E9=80=80=E5=87=BA=E7=9A=84=E6=9D=A1=
+=E4=BB=B6=E3=80=82=E8=AF=B4=E6=98=8E=EF=BC=9A =E5=A6=82=E6=9E=9C=E5=B9=B6=
+=E5=8F=91=E6=8E=A7=E5=88=B6=E6=B2=A1=E6=9C=89=E5=A4=84=E7=90=86=E5=A5=BD=EF=
+=BC=8C=E5=AE=B9=E6=98=93=E4=BA=A7=E7=94=9F=E7=AD=89=E5=80=BC=E5=88=A4=E6=96=
+=AD=E8=A2=AB =E2=80=9C =E5=87=BB=E7=A9=BF =E2=80=9D =E7=9A=84=E6=83=85=E5=
+=86=B5=EF=BC=8C=E4=BD=BF=E7=94=A8=E5=A4=A7=E4=BA=8E=E6=88=96=E5=B0=8F=E4=BA=
+=8E=E7=9A=84=E5=8C=BA=E9=97=B4 =E5=88=A4=E6=96=AD=E6=9D=A1=E4=BB=B6=E6=9D=
+=A5=E4=BB=A3=E6=9B=BF=E3=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-5.5.=E6=B3=A8=E9=87=8A=E8=A7=84=E7=BA=A6"><strong style=3D"font-size: 2=
+0.0px;">5.5. </strong><strong style=3D"font-size: 20.0px;">=E6=B3=A8=E9=87=
+=8A=E8=A7=84=E7=BA=A6</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA070] =E7=B1=BB=E3=80=81=E7=B1=
+=BB=E5=B1=9E=E6=80=A7=E3=80=81=E7=B1=BB=E6=96=B9=E6=B3=95=E7=9A=84=E6=B3=A8=
+=E9=87=8A=E5=BF=85=E9=A1=BB=E4=BD=BF=E7=94=A8 Javadoc =E8=A7=84=E8=8C=83=EF=
+=BC=8C=E4=BD=BF=E7=94=A8/**=E5=86=85=E5=AE=B9*/=E6=A0=BC=E5=BC=8F=EF=BC=8C=
+=E4=B8=8D=E5=BE=97=E4=BD=BF=E7=94=A8 // xxx =E6=96=B9=E5=BC=8F=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA071] =E6=89=80=E6=9C=89=E7=9A=
+=84=E6=8A=BD=E8=B1=A1=E6=96=B9=E6=B3=95=EF=BC=88=E5=8C=85=E6=8B=AC=E6=8E=A5=
+=E5=8F=A3=E4=B8=AD=E7=9A=84=E6=96=B9=E6=B3=95=EF=BC=89=E5=BF=85=E9=A1=BB=E8=
+=A6=81=E7=94=A8 Javadoc =E6=B3=A8=E9=87=8A=E3=80=81=E9=99=A4=E4=BA=86=E8=BF=
+=94=E5=9B=9E=E5=80=BC=E3=80=81=E5=8F=82=E6=95=B0=E3=80=81 =E5=BC=82=E5=B8=
+=B8=E8=AF=B4=E6=98=8E=E5=A4=96=EF=BC=8C=E8=BF=98=E5=BF=85=E9=A1=BB=E6=8C=87=
+=E5=87=BA=E8=AF=A5=E6=96=B9=E6=B3=95=E5=81=9A=E4=BB=80=E4=B9=88=E4=BA=8B=E6=
+=83=85=EF=BC=8C=E5=AE=9E=E7=8E=B0=E4=BB=80=E4=B9=88=E5=8A=9F=E8=83=BD=E3=80=
+=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA072] =E6=96=B9=E6=B3=95=E5=86=
+=85=E9=83=A8=E5=8D=95=E8=A1=8C=E6=B3=A8=E9=87=8A=EF=BC=8C=E5=9C=A8=E8=A2=AB=
+=E6=B3=A8=E9=87=8A=E8=AF=AD=E5=8F=A5=E4=B8=8A=E6=96=B9=E5=8F=A6=E8=B5=B7=E4=
+=B8=80=E8=A1=8C=EF=BC=8C=E4=BD=BF=E7=94=A8//=E6=B3=A8=E9=87=8A=E3=80=82=E6=
+=96=B9=E6=B3=95=E5=86=85=E9=83=A8=E5=A4=9A=E8=A1=8C=E6=B3=A8=E9=87=8A =E4=
+=BD=BF=E7=94=A8/* */=E6=B3=A8=E9=87=8A=EF=BC=8C=E6=B3=A8=E6=84=8F=E4=B8=8E=
+=E4=BB=A3=E7=A0=81=E5=AF=B9=E9=BD=90=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA073] =E6=89=80=E6=9C=89=E7=9A=
+=84=E6=9E=9A=E4=B8=BE=E7=B1=BB=E5=9E=8B=E5=AD=97=E6=AE=B5=E5=BF=85=E9=A1=BB=
+=E8=A6=81=E6=9C=89=E6=B3=A8=E9=87=8A=EF=BC=8C=E8=AF=B4=E6=98=8E=E6=AF=8F=E4=
+=B8=AA=E6=95=B0=E6=8D=AE=E9=A1=B9=E7=9A=84=E7=94=A8=E9=80=94=E3=80=82</p>
+<p align=3D"left">[=E6=8E=A8=E8=8D=90] [JAVA074] =E6=89=80=E6=9C=89=E7=9A=
+=84=E7=B1=BB=E9=83=BD=E5=BF=85=E9=A1=BB=E6=B7=BB=E5=8A=A0=E5=88=9B=E5=BB=BA=
+=E8=80=85=E5=92=8C=E5=88=9B=E5=BB=BA=E6=97=A5=E6=9C=9F=E3=80=82</p>
+<h2 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-5.6.=E5=BC=82=E5=B8=B8=E5=A4=84=E7=90=86"><strong style=3D"font-size: 2=
+0.0px;">5.6. </strong><strong style=3D"font-size: 20.0px;">=E5=BC=82=E5=B8=
+=B8=E5=A4=84=E7=90=86</strong></h2>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA075] Java =E7=B1=BB=E5=BA=93=E4=
+=B8=AD=E5=AE=9A=E4=B9=89=E7=9A=84=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87=E9=A2=
+=84=E6=A3=80=E6=9F=A5=E6=96=B9=E5=BC=8F=E8=A7=84=E9=81=BF=E7=9A=84 RuntimeE=
+xception =E5=BC=82=E5=B8=B8=E4=B8=8D=E5=BA=94=E8=AF=A5=E9=80=9A=E8=BF=87 ca=
+tch =E7=9A=84=E6=96=B9=E5=BC=8F=E6=9D=A5=E5=A4=84=E7=90=86=EF=BC=8C=E6=AF=
+=94=E5=A6=82=EF=BC=9ANullPointerException=EF=BC=8CIndexOutOfBoundsException=
+ =E7=AD=89=E7=AD=89=E3=80=82</p>
+<div class=3D"confluence-information-macro confluence-information-macro-tip=
+">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-approve confluence-info=
+rmation-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+=E8=AF=B4=E6=98=8E=EF=BC=9A=E6=97=A0=E6=B3=95=E9=80=9A=E8=BF=87=E9=A2=84=E6=
+=A3=80=E6=9F=A5=E7=9A=84=E5=BC=82=E5=B8=B8=E9=99=A4=E5=A4=96=EF=BC=8C=E6=AF=
+=94=E5=A6=82=EF=BC=8C=E5=9C=A8=E8=A7=A3=E6=9E=90=E5=AD=97=E7=AC=A6=E4=B8=B2=
+=E5=BD=A2=E5=BC=8F=E7=9A=84=E6=95=B0=E5=AD=97=E6=97=B6=EF=BC=8C=E4=B8=8D=E5=
+=BE=97=E4=B8=8D=E9=80=9A=E8=BF=87 catch NumberFormatException =E6=9D=A5=E5=
+=AE=9E=E7=8E=B0=E3=80=82
+</div>
+</div>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA076] =E5=BC=82=E5=B8=B8=E4=B8=
+=8D=E8=A6=81=E7=94=A8=E6=9D=A5=E5=81=9A=E6=B5=81=E7=A8=8B=E6=8E=A7=E5=88=B6=
+=EF=BC=8C=E6=9D=A1=E4=BB=B6=E6=8E=A7=E5=88=B6=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA077] catch =E6=97=B6=E8=AF=B7=
+=E5=88=86=E6=B8=85=E7=A8=B3=E5=AE=9A=E4=BB=A3=E7=A0=81=E5=92=8C=E9=9D=9E=E7=
+=A8=B3=E5=AE=9A=E4=BB=A3=E7=A0=81=EF=BC=8C=E7=A8=B3=E5=AE=9A=E4=BB=A3=E7=A0=
+=81=E6=8C=87=E7=9A=84=E6=98=AF=E6=97=A0=E8=AE=BA=E5=A6=82=E4=BD=95=E4=B8=8D=
+=E4=BC=9A=E5=87=BA=E9=94=99=E7=9A=84=E4=BB=A3=E7=A0=81=E3=80=82 =E5=AF=B9=
+=E4=BA=8E=E9=9D=9E=E7=A8=B3=E5=AE=9A=E4=BB=A3=E7=A0=81=E7=9A=84 catch =E5=
+=B0=BD=E5=8F=AF=E8=83=BD=E8=BF=9B=E8=A1=8C=E5=8C=BA=E5=88=86=E5=BC=82=E5=B8=
+=B8=E7=B1=BB=E5=9E=8B=EF=BC=8C=E5=86=8D=E5=81=9A=E5=AF=B9=E5=BA=94=E7=9A=84=
+=E5=BC=82=E5=B8=B8=E5=A4=84=E7=90=86=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA078] =E6=8D=95=E8=8E=B7=E5=BC=
+=82=E5=B8=B8=E6=98=AF=E4=B8=BA=E4=BA=86=E5=A4=84=E7=90=86=E5=AE=83=EF=BC=8C=
+=E4=B8=8D=E8=A6=81=E6=8D=95=E8=8E=B7=E4=BA=86=E5=8D=B4=E4=BB=80=E4=B9=88=E9=
+=83=BD=E4=B8=8D=E5=A4=84=E7=90=86=E8=80=8C=E6=8A=9B=E5=BC=83=E4=B9=8B=EF=BC=
+=8C=E5=A6=82=E6=9E=9C=E4=B8=8D=E6=83=B3=E5=A4=84=E7=90=86=E5=AE=83=EF=BC=8C=
+=E8=AF=B7 =E5=B0=86=E8=AF=A5=E5=BC=82=E5=B8=B8=E6=8A=9B=E7=BB=99=E5=AE=83=
+=E7=9A=84=E8=B0=83=E7=94=A8=E8=80=85=E3=80=82=E6=9C=80=E5=A4=96=E5=B1=82=E7=
+=9A=84=E4=B8=9A=E5=8A=A1=E4=BD=BF=E7=94=A8=E8=80=85=EF=BC=8C=E5=BF=85=E9=A1=
+=BB=E5=A4=84=E7=90=86=E5=BC=82=E5=B8=B8=EF=BC=8C=E5=B0=86=E5=85=B6=E8=BD=AC=
+=E5=8C=96=E4=B8=BA=E7=94=A8=E6=88=B7=E5=8F=AF=E4=BB=A5=E7=90=86=E8=A7=A3=E7=
+=9A=84=E5=86=85=E5=AE=B9=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA079] =E6=9C=89 try =E5=9D=97=E6=
+=94=BE=E5=88=B0=E4=BA=86=E4=BA=8B=E5=8A=A1=E4=BB=A3=E7=A0=81=E4=B8=AD=EF=BC=
+=8Ccatch =E5=BC=82=E5=B8=B8=E5=90=8E=EF=BC=8C=E5=A6=82=E6=9E=9C=E9=9C=80=E8=
+=A6=81=E5=9B=9E=E6=BB=9A=E4=BA=8B=E5=8A=A1=EF=BC=8C=E4=B8=80=E5=AE=9A=E8=A6=
+=81=E6=B3=A8=E6=84=8F=E6=89=8B=E5=8A=A8=E5=9B=9E =E6=BB=9A=E4=BA=8B=E5=8A=
+=A1=E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA080] finally =E5=9D=97=E5=BF=85=
+=E9=A1=BB=E5=AF=B9=E8=B5=84=E6=BA=90=E5=AF=B9=E8=B1=A1=E3=80=81=E6=B5=81=E5=
+=AF=B9=E8=B1=A1=E8=BF=9B=E8=A1=8C=E5=85=B3=E9=97=AD=EF=BC=8C=E6=9C=89=E5=BC=
+=82=E5=B8=B8=E4=B9=9F=E8=A6=81=E5=81=9A try-catch=E3=80=82 =E8=AF=B4=E6=98=
+=8E=EF=BC=9A=E5=A6=82=E6=9E=9C JDK7 =E5=8F=8A=E4=BB=A5=E4=B8=8A=EF=BC=8C=E5=
+=8F=AF=E4=BB=A5=E4=BD=BF=E7=94=A8 try-with-resources =E6=96=B9=E5=BC=8F=E3=
+=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA081] =E4=B8=8D=E8=A6=81=E5=9C=
+=A8 finally =E5=9D=97=E4=B8=AD=E4=BD=BF=E7=94=A8 return =E3=80=82</p>
+<p align=3D"left">[=E5=BC=BA=E5=88=B6] [JAVA082] =E6=8D=95=E8=8E=B7=E5=BC=
+=82=E5=B8=B8=E4=B8=8E=E6=8A=9B=E5=BC=82=E5=B8=B8=EF=BC=8C=E5=BF=85=E9=A1=BB=
+=E6=98=AF=E5=AE=8C=E5=85=A8=E5=8C=B9=E9=85=8D=EF=BC=8C=E6=88=96=E8=80=85=E6=
+=8D=95=E8=8E=B7=E5=BC=82=E5=B8=B8=E6=98=AF=E6=8A=9B=E5=BC=82=E5=B8=B8=E7=9A=
+=84=E7=88=B6=E7=B1=BB=E3=80=82</p>
+<h1 id=3D"id-1.1=E7=99=BE=E5=BA=A6Java=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83V=
+1.3-6.Java=E5=AE=89=E5=85=A8=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83"><strong>6=
+.&nbsp;Java=E5=AE=89=E5=85=A8=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=83</strong><=
+/h1>
+<p>=E8=AF=A6=E8=A7=81=EF=BC=9A<a href=3D"/pages/viewpage.action?pageId=3D88=
+8282505">Java =E5=AE=89=E5=85=A8=E7=B1=BB=E7=BC=96=E7=A0=81=E8=A7=84=E8=8C=
+=83</a></p>
+    </div>
+</body>
+</html>
+------=_Part_940_1171507106.1630899628573--
