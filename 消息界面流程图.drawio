@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-10-20T03:02:55.548Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="4BTAond938q_63q0uTGo" version="15.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-20T03:11:28.912Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="4qY-9pyPFVKumQMnuwx7" version="15.2.7" type="github">
   <diagram id="IGBvNR7luoZwhaY0mTcs" name="Page-1">
-    <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="788" dy="512" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -19,8 +19,8 @@
         <mxCell id="b08lvIi8KX81niR8Pxyj-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-4" target="b08lvIi8KX81niR8Pxyj-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-4" value="&lt;div&gt;ConversationListAdapter&lt;/div&gt;&lt;div&gt;#processConversationList&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. 处理Conversation时间显示问题(原有逻辑)&lt;/div&gt;&lt;div&gt;2. 添加HeaderView(原有逻辑)&lt;/div&gt;&lt;div&gt;3. 处理label栏HeaderView的数据逻辑&lt;/div&gt;&lt;div&gt;4. 处理expand栏HeaderView的数据逻辑&lt;/div&gt;&lt;div&gt;5. 提交asyncDiffer进行自动处理展示&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;align=left;strokeWidth=2;dashed=1;dashPattern=1 1;" vertex="1" parent="1">
-          <mxGeometry x="102.5" y="260" width="205" height="140" as="geometry" />
+        <mxCell id="b08lvIi8KX81niR8Pxyj-4" value="&lt;div&gt;ConversationListAdapter&lt;/div&gt;&lt;div&gt;#processConversationList&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. 处理Conversation时间显示问题(原有逻辑)&lt;/div&gt;&lt;div&gt;2. 添加HeaderView(原有逻辑)&lt;/div&gt;&lt;div&gt;3. 处理label栏HeaderView的数据逻辑&lt;/div&gt;&lt;div&gt;4. 处理expand栏HeaderView的数据逻辑&lt;/div&gt;&lt;div&gt;5. 提交asyncDiffer进行自动处理展示&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;align=left;strokeWidth=2;dashed=1;dashPattern=1 1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="91.25" y="260" width="227.5" height="140" as="geometry" />
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-6" target="b08lvIi8KX81niR8Pxyj-8">
           <mxGeometry relative="1" as="geometry" />
@@ -115,7 +115,7 @@
         <mxCell id="b08lvIi8KX81niR8Pxyj-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-33" target="b08lvIi8KX81niR8Pxyj-47">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-33" value="&lt;span style=&quot;text-align: center&quot;&gt;ConversationListAdapter&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;#onCreateViewHolder&lt;/span&gt;&lt;br&gt;1.根据Conversation&lt;br&gt;#headerType判断展示的布局&lt;br&gt;2.根据前面统计的数据进行初始化展示" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;align=left;dashed=1;dashPattern=1 1;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-33" value="&lt;span style=&quot;text-align: center&quot;&gt;ConversationListAdapter&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;#onCreateViewHolder&lt;/span&gt;&lt;br&gt;1.根据Conversation#headerType&lt;br&gt;判断展示的布局，设置点击事件&lt;br&gt;2.根据前面统计的数据进行初始化展示" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;align=left;dashed=1;dashPattern=1 1;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="872.5" y="280" width="175" height="100" as="geometry" />
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-34" value="submitList交给AsyncListDiffer&lt;br&gt;处理展示逻辑" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
@@ -143,49 +143,49 @@
         <mxCell id="b08lvIi8KX81niR8Pxyj-43" value="submitList后数据展示逻辑处理" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="930" y="170" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-45" value="ConversationListAdapter&lt;br&gt;#getItemViewType" style="rhombus;whiteSpace=wrap;html=1;rounded=0;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-45" value="ConversationListAdapter&lt;br style=&quot;font-size: 10px;&quot;&gt;#getItemViewType" style="rhombus;whiteSpace=wrap;html=1;rounded=0;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="1090" y="290" width="170" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-47" value="End初始化布局对象" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-47" value="End初始化布局对象" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="930" y="430" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-52" target="b08lvIi8KX81niR8Pxyj-53">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=10;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-52" target="b08lvIi8KX81niR8Pxyj-53">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-52" value="展示处理逻辑" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-52" value="2.根据前面统计的数据进行初始化展示" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="928" y="553" width="64" height="64" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-53" target="b08lvIi8KX81niR8Pxyj-55">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=10;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-53" target="b08lvIi8KX81niR8Pxyj-55">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-53" target="b08lvIi8KX81niR8Pxyj-57">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#000000;fontSize=10;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-53" target="b08lvIi8KX81niR8Pxyj-57">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-53" value="如果是HeaderView类型的Conversation就会触发bind函数进行事件绑定和展示设置" style="whiteSpace=wrap;html=1;strokeWidth=2;dashed=1;dashPattern=1 1;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-53" value="如果是HeaderView类型的Conversation就会触发bind函数进行事件绑定和展示设置" style="whiteSpace=wrap;html=1;strokeWidth=2;dashed=1;dashPattern=1 1;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="885" y="689" width="150" height="81" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-55" value="ConversationListAdapter&lt;br&gt;#onBindViewHolder" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-55" value="ConversationListAdapter&lt;br style=&quot;font-size: 10px;&quot;&gt;#onBindViewHolder" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="1090" y="689" width="170" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-57" value="End展示逻辑和数据处理" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-57" value="End展示逻辑和数据处理" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="928" y="846" width="64" height="64" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-59" target="b08lvIi8KX81niR8Pxyj-60">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=10;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-59" target="b08lvIi8KX81niR8Pxyj-60">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-59" target="b08lvIi8KX81niR8Pxyj-62">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=10;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-59" target="b08lvIi8KX81niR8Pxyj-62">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-59" value="PullRefreshHelper&lt;br&gt;#TYPE_TOPPING_HEADER&lt;br&gt;bindView设置展示效果和点击事件" style="whiteSpace=wrap;html=1;fontSize=12;strokeWidth=2;align=center;verticalAlign=middle;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-59" value="&lt;font style=&quot;font-size: 10px&quot;&gt;PullRefreshHelper&lt;br style=&quot;font-size: 10px&quot;&gt;#TYPE_TOPPING_HEADER&lt;br style=&quot;font-size: 10px&quot;&gt;bindView设置展示效果和点击事件&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=10;strokeWidth=2;align=center;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="1320" y="689" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-60" value="PreferenceUtil&lt;br&gt;#getIsToppingHeaderViewExpand" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="1570" y="679" width="160" height="80" as="geometry" />
+        <mxCell id="b08lvIi8KX81niR8Pxyj-60" value="PreferenceUtil&lt;br style=&quot;font-size: 10px;&quot;&gt;#getIsToppingHeaderViewExpand" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="679" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-62" target="b08lvIi8KX81niR8Pxyj-66">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=10;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-62" target="b08lvIi8KX81niR8Pxyj-66">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-62" value="ConversationListAdapter&lt;br&gt;#setConvToppingHeaderView&lt;br&gt;收起和展示逻辑，收起状态下需要展示置顶收缩的条目" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-62" value="ConversationListAdapter&lt;br style=&quot;font-size: 10px;&quot;&gt;#setConvToppingHeaderView&lt;br style=&quot;font-size: 10px;&quot;&gt;收起和展示逻辑，收起状态下需要展示置顶收缩的条目" style="whiteSpace=wrap;html=1;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="1295" y="836" width="210" height="60" as="geometry" />
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-64" value="" style="shape=link;html=1;labelBackgroundColor=#000000;strokeWidth=1;" edge="1" parent="1">
@@ -194,16 +194,16 @@
             <mxPoint x="1720" y="930" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-66" target="b08lvIi8KX81niR8Pxyj-68">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#000000;fontSize=10;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-66" target="b08lvIi8KX81niR8Pxyj-68">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-66" value="PullRefreshHelper&lt;br&gt;#TYPE_LABEL_HEADER&lt;br&gt;展示方法同上" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-66" value="PullRefreshHelper&lt;br style=&quot;font-size: 10px;&quot;&gt;#TYPE_LABEL_HEADER&lt;br style=&quot;font-size: 10px;&quot;&gt;展示方法同上" style="whiteSpace=wrap;html=1;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="1315" y="980" width="170" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-68" value="End展示逻辑" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-68" value="End展示逻辑" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="1370" y="1105" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-70" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;labelBackgroundColor=#000000;fontSize=12;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-53" target="b08lvIi8KX81niR8Pxyj-59">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-70" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;labelBackgroundColor=#000000;fontSize=10;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-53" target="b08lvIi8KX81niR8Pxyj-59">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1190" y="660" as="sourcePoint" />
             <mxPoint x="1240" y="610" as="targetPoint" />
@@ -213,10 +213,37 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-71" value="分析bindView处理Item" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;fontStyle=2" vertex="1" connectable="0" parent="b08lvIi8KX81niR8Pxyj-70">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-71" value="分析bindView处理Item" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=2" vertex="1" connectable="0" parent="b08lvIi8KX81niR8Pxyj-70">
           <mxGeometry x="-0.16" y="3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-74" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=13;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-72" target="b08lvIi8KX81niR8Pxyj-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-72" value="1.设置点击事件" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=13;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="270" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=10;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-73" target="b08lvIi8KX81niR8Pxyj-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-78" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=10;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-73" target="b08lvIi8KX81niR8Pxyj-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-73" value="ConversationListAdapter&lt;br style=&quot;font-size: 10px&quot;&gt;.ConversationHeaderViewHolder&lt;br style=&quot;font-size: 10px&quot;&gt;#ConversationHeaderViewHolder&lt;br&gt;设置点击事件" style="whiteSpace=wrap;html=1;fontSize=10;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1346.25" y="360" width="182.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-75" value="&lt;span style=&quot;font-size: 10px&quot;&gt;PullRefreshHelper&lt;br&gt;#TYPE_LABEL_HEADER&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="350" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#000000;fontSize=10;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-77" target="b08lvIi8KX81niR8Pxyj-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-77" value="&lt;span style=&quot;font-size: 10px&quot;&gt;ConversationListAdapter&lt;br&gt;#convLabelBarClickListener&lt;br&gt;点击事件在此处进行处理和展示变化&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=10;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1341.25" y="480" width="192.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-79" value="End点击事件设置" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="583" width="55" height="55" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
