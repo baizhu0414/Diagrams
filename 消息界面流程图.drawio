@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-20T02:02:23.720Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="iv-6piskr17xBcurSdF8" version="15.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-20T02:11:10.365Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="TsPmMY-z_qaM2ndGPpI2" version="15.2.7" type="github">
   <diagram id="IGBvNR7luoZwhaY0mTcs" name="Page-1">
     <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -76,6 +76,9 @@
         <mxCell id="b08lvIi8KX81niR8Pxyj-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-22" target="b08lvIi8KX81niR8Pxyj-26">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-22" target="b08lvIi8KX81niR8Pxyj-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-22" value="&lt;span&gt;根据Preference确认上次退出软件展开与否的状态&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontStyle=0;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="400" y="776" width="120" height="60" as="geometry" />
         </mxCell>
@@ -84,6 +87,15 @@
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-26" value="PreferenceUtil&lt;br&gt;#getIsToppingHeaderViewExpand" style="rhombus;whiteSpace=wrap;html=1;fontStyle=0;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="620" y="766" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-28" value="&lt;p class=&quot;p1&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 13px ; line-height: normal ; font-family: &amp;#34;helvetica neue&amp;#34;&quot;&gt;1.置顶条目大于8，继续执行&lt;/p&gt;&lt;p class=&quot;p1&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 13px ; line-height: normal ; font-family: &amp;#34;helvetica neue&amp;#34;&quot;&gt;2.收缩时，展示置顶且未读消息。&lt;/p&gt;&lt;p class=&quot;p1&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 13px ; line-height: normal ; font-family: &amp;#34;helvetica neue&amp;#34;&quot;&gt;3.不收缩时，展示所有&lt;/p&gt;&lt;p class=&quot;p2&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 13px ; line-height: normal ; font-family: &amp;#34;pingfang sc&amp;#34;&quot;&gt;&lt;span class=&quot;s1&quot; style=&quot;font-stretch: normal ; line-height: normal ; font-family: &amp;#34;helvetica neue&amp;#34;&quot;&gt;4.&lt;/span&gt;收缩不收缩都展示其他非置顶消息&lt;/p&gt;&lt;p class=&quot;p2&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 13px ; line-height: normal ; font-family: &amp;#34;pingfang sc&amp;#34;&quot;&gt;5.添加置顶条目到合适位置，addHeaderView&lt;/p&gt;" style="whiteSpace=wrap;html=1;fontStyle=0;strokeWidth=2;align=left;" vertex="1" parent="1">
+          <mxGeometry x="355" y="890" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-30" value="" style="shape=link;html=1;labelBackgroundColor=#000000;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="340" y="610" as="sourcePoint" />
+            <mxPoint x="800" y="610" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
