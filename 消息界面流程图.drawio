@@ -1,1 +1,37 @@
-<mxfile host="app.diagrams.net" modified="2021-10-19T05:28:57.560Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" version="15.2.7" etag="_HjqAX3eY-HjNwCc_N4A" type="github"><diagram id="IGBvNR7luoZwhaY0mTcs">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-10-20T01:46:19.815Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="2522NcA258mkxEIVcif_" version="15.2.7" type="github">
+  <diagram id="IGBvNR7luoZwhaY0mTcs" name="Page-1">
+    <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="b08lvIi8KX81niR8Pxyj-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-1" target="b08lvIi8KX81niR8Pxyj-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-1" value="分类展示逻辑&lt;br&gt;从ConversationListAdapter&lt;br&gt;#submitList(list, int)&lt;br&gt;开始分析" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="140" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-2" target="b08lvIi8KX81niR8Pxyj-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-2" value="云端拉数据" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="180" y="40" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-4" target="b08lvIi8KX81niR8Pxyj-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-4" value="&lt;div&gt;1. 处理Conversation时间显示问题&lt;/div&gt;&lt;div&gt;2. 添加HeaderView&lt;/div&gt;&lt;div&gt;3. 处理label栏HeaderView的展示逻辑&lt;/div&gt;&lt;div&gt;4. 处理expand栏HeaderView的展示逻辑&lt;/div&gt;&lt;div&gt;5. 提交asyncDiffer进行自动处理展示&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="102.5" y="260" width="205" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-6" target="b08lvIi8KX81niR8Pxyj-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-6" value="原有逻辑，更新未读红点等" style="whiteSpace=wrap;html=1;rounded=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="145" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-8" value="End展示结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=center;" vertex="1" parent="1">
+          <mxGeometry x="178.5" y="583" width="53" height="53" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
