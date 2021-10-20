@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-20T02:51:13.665Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="lDTajpWxr6oiE74LruZ5" version="15.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-20T03:02:55.548Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="4BTAond938q_63q0uTGo" version="15.2.7" type="github">
   <diagram id="IGBvNR7luoZwhaY0mTcs" name="Page-1">
     <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -144,7 +144,7 @@
           <mxGeometry x="930" y="170" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-45" value="ConversationListAdapter&lt;br&gt;#getItemViewType" style="rhombus;whiteSpace=wrap;html=1;rounded=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="1120" y="290" width="170" height="80" as="geometry" />
+          <mxGeometry x="1090" y="290" width="170" height="80" as="geometry" />
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-47" value="End初始化布局对象" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="930" y="430" width="60" height="60" as="geometry" />
@@ -165,10 +165,58 @@
           <mxGeometry x="885" y="689" width="150" height="81" as="geometry" />
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-55" value="ConversationListAdapter&lt;br&gt;#onBindViewHolder" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="1120" y="689" width="170" height="80" as="geometry" />
+          <mxGeometry x="1090" y="689" width="170" height="80" as="geometry" />
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-57" value="End展示逻辑和数据处理" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="928" y="846" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-59" target="b08lvIi8KX81niR8Pxyj-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-59" target="b08lvIi8KX81niR8Pxyj-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-59" value="PullRefreshHelper&lt;br&gt;#TYPE_TOPPING_HEADER&lt;br&gt;bindView设置展示效果和点击事件" style="whiteSpace=wrap;html=1;fontSize=12;strokeWidth=2;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="689" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-60" value="PreferenceUtil&lt;br&gt;#getIsToppingHeaderViewExpand" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1570" y="679" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-62" target="b08lvIi8KX81niR8Pxyj-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-62" value="ConversationListAdapter&lt;br&gt;#setConvToppingHeaderView&lt;br&gt;收起和展示逻辑，收起状态下需要展示置顶收缩的条目" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1295" y="836" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-64" value="" style="shape=link;html=1;labelBackgroundColor=#000000;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="1260" y="930" as="sourcePoint" />
+            <mxPoint x="1720" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#000000;fontSize=12;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-66" target="b08lvIi8KX81niR8Pxyj-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-66" value="PullRefreshHelper&lt;br&gt;#TYPE_LABEL_HEADER&lt;br&gt;展示方法同上" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1315" y="980" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-68" value="End展示逻辑" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="1105" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-70" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;labelBackgroundColor=#000000;fontSize=12;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-53" target="b08lvIi8KX81niR8Pxyj-59">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1190" y="660" as="sourcePoint" />
+            <mxPoint x="1240" y="610" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="998" y="640" />
+              <mxPoint x="1400" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-71" value="分析bindView处理Item" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;fontStyle=2" vertex="1" connectable="0" parent="b08lvIi8KX81niR8Pxyj-70">
+          <mxGeometry x="-0.16" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
