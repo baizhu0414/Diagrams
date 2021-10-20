@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-20T02:11:10.365Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="TsPmMY-z_qaM2ndGPpI2" version="15.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-20T02:15:54.203Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="ow7IZyRyVhY2vfmYKZKN" version="15.2.7" type="github">
   <diagram id="IGBvNR7luoZwhaY0mTcs" name="Page-1">
     <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -28,7 +28,7 @@
         <mxCell id="b08lvIi8KX81niR8Pxyj-6" value="原有逻辑，更新未读红点等" style="whiteSpace=wrap;html=1;rounded=0;align=left;" vertex="1" parent="1">
           <mxGeometry x="145" y="460" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-8" value="End展示结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=center;" vertex="1" parent="1">
+        <mxCell id="b08lvIi8KX81niR8Pxyj-8" value="End数据处理结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=center;" vertex="1" parent="1">
           <mxGeometry x="178.5" y="583" width="53" height="53" as="geometry" />
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-10" target="b08lvIi8KX81niR8Pxyj-11">
@@ -56,6 +56,9 @@
           <mxGeometry x="400" y="400" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-17" target="b08lvIi8KX81niR8Pxyj-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#000000;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-17" target="b08lvIi8KX81niR8Pxyj-21">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-17" value="统一处理List数据异常(此处主要是空数据集)的情况，进行UI的更新" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -88,6 +91,9 @@
         <mxCell id="b08lvIi8KX81niR8Pxyj-26" value="PreferenceUtil&lt;br&gt;#getIsToppingHeaderViewExpand" style="rhombus;whiteSpace=wrap;html=1;fontStyle=0;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="620" y="766" width="140" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#000000;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-28" target="b08lvIi8KX81niR8Pxyj-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-28" value="&lt;p class=&quot;p1&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 13px ; line-height: normal ; font-family: &amp;#34;helvetica neue&amp;#34;&quot;&gt;1.置顶条目大于8，继续执行&lt;/p&gt;&lt;p class=&quot;p1&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 13px ; line-height: normal ; font-family: &amp;#34;helvetica neue&amp;#34;&quot;&gt;2.收缩时，展示置顶且未读消息。&lt;/p&gt;&lt;p class=&quot;p1&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 13px ; line-height: normal ; font-family: &amp;#34;helvetica neue&amp;#34;&quot;&gt;3.不收缩时，展示所有&lt;/p&gt;&lt;p class=&quot;p2&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 13px ; line-height: normal ; font-family: &amp;#34;pingfang sc&amp;#34;&quot;&gt;&lt;span class=&quot;s1&quot; style=&quot;font-stretch: normal ; line-height: normal ; font-family: &amp;#34;helvetica neue&amp;#34;&quot;&gt;4.&lt;/span&gt;收缩不收缩都展示其他非置顶消息&lt;/p&gt;&lt;p class=&quot;p2&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 13px ; line-height: normal ; font-family: &amp;#34;pingfang sc&amp;#34;&quot;&gt;5.添加置顶条目到合适位置，addHeaderView&lt;/p&gt;" style="whiteSpace=wrap;html=1;fontStyle=0;strokeWidth=2;align=left;" vertex="1" parent="1">
           <mxGeometry x="355" y="890" width="210" height="110" as="geometry" />
         </mxCell>
@@ -95,6 +101,34 @@
           <mxGeometry width="100" relative="1" as="geometry">
             <mxPoint x="340" y="610" as="sourcePoint" />
             <mxPoint x="800" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#000000;strokeWidth=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-31" target="b08lvIi8KX81niR8Pxyj-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-31" value="End数据处理结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="435" y="1040" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-33" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="900" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-34" value="submitList交给AsyncListDiffer&lt;br&gt;处理展示逻辑" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1025" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-39" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;labelBackgroundColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-4" target="b08lvIi8KX81niR8Pxyj-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="220" as="sourcePoint" />
+            <mxPoint x="380" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="330" />
+              <mxPoint x="350" y="130" />
+              <mxPoint x="460" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-40" value="&lt;font style=&quot;font-size: 11px&quot;&gt;分析&lt;br style=&quot;font-size: 11px&quot;&gt;processConversationList&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];fontSize=15;fontStyle=2;horizontal=1;" vertex="1" connectable="0" parent="b08lvIi8KX81niR8Pxyj-39">
+          <mxGeometry x="0.2649" y="3" relative="1" as="geometry">
+            <mxPoint x="23" y="10" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
