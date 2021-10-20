@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-20T01:46:19.815Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="2522NcA258mkxEIVcif_" version="15.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-20T02:02:23.720Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="iv-6piskr17xBcurSdF8" version="15.2.7" type="github">
   <diagram id="IGBvNR7luoZwhaY0mTcs" name="Page-1">
     <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -19,8 +19,8 @@
         <mxCell id="b08lvIi8KX81niR8Pxyj-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-4" target="b08lvIi8KX81niR8Pxyj-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="b08lvIi8KX81niR8Pxyj-4" value="&lt;div&gt;1. 处理Conversation时间显示问题&lt;/div&gt;&lt;div&gt;2. 添加HeaderView&lt;/div&gt;&lt;div&gt;3. 处理label栏HeaderView的展示逻辑&lt;/div&gt;&lt;div&gt;4. 处理expand栏HeaderView的展示逻辑&lt;/div&gt;&lt;div&gt;5. 提交asyncDiffer进行自动处理展示&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;align=left;" vertex="1" parent="1">
-          <mxGeometry x="102.5" y="260" width="205" height="130" as="geometry" />
+        <mxCell id="b08lvIi8KX81niR8Pxyj-4" value="&lt;div&gt;ConversationListAdapter&lt;/div&gt;&lt;div&gt;#processConversationList&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. 处理Conversation时间显示问题(原有逻辑)&lt;/div&gt;&lt;div&gt;2. 添加HeaderView(原有逻辑)&lt;/div&gt;&lt;div&gt;3. 处理label栏HeaderView的数据逻辑&lt;/div&gt;&lt;div&gt;4. 处理expand栏HeaderView的数据逻辑&lt;/div&gt;&lt;div&gt;5. 提交asyncDiffer进行自动处理展示&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;align=left;strokeWidth=2;dashed=1;dashPattern=1 1;" vertex="1" parent="1">
+          <mxGeometry x="102.5" y="260" width="205" height="140" as="geometry" />
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-6" target="b08lvIi8KX81niR8Pxyj-8">
           <mxGeometry relative="1" as="geometry" />
@@ -30,6 +30,60 @@
         </mxCell>
         <mxCell id="b08lvIi8KX81niR8Pxyj-8" value="End展示结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=center;" vertex="1" parent="1">
           <mxGeometry x="178.5" y="583" width="53" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-10" target="b08lvIi8KX81niR8Pxyj-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-10" value="3.处理label栏HeaderView数据逻辑" style="whiteSpace=wrap;html=1;align=center;dashed=1;dashPattern=1 1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-11" target="b08lvIi8KX81niR8Pxyj-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-11" target="b08lvIi8KX81niR8Pxyj-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-11" value="根据Preference统计label栏目需要的相关数据，如未读计数" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-13" value="PreferenceUtil&lt;br&gt;#TOP_HEADER_VIWE_LABEL" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="270" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-15" target="b08lvIi8KX81niR8Pxyj-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-15" value="过滤List，得到需要展示的全新List" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-17" target="b08lvIi8KX81niR8Pxyj-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-17" value="统一处理List数据异常(此处主要是空数据集)的情况，进行UI的更新" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-19" value="ConversationListAdapter&lt;br&gt;#processConversationListIfEmpty&lt;br&gt;数据至少包含label分类条目" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="510" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-21" target="b08lvIi8KX81niR8Pxyj-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-21" target="b08lvIi8KX81niR8Pxyj-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-21" value="4.处理expand栏目的数据逻辑" style="whiteSpace=wrap;html=1;strokeWidth=2;align=center;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="636" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="b08lvIi8KX81niR8Pxyj-22" target="b08lvIi8KX81niR8Pxyj-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-22" value="&lt;span&gt;根据Preference确认上次退出软件展开与否的状态&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontStyle=0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="776" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-24" value="处理的数据已经过3的处理过滤" style="whiteSpace=wrap;html=1;fontStyle=0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="600" y="636" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b08lvIi8KX81niR8Pxyj-26" value="PreferenceUtil&lt;br&gt;#getIsToppingHeaderViewExpand" style="rhombus;whiteSpace=wrap;html=1;fontStyle=0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="620" y="766" width="140" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
