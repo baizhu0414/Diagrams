@@ -1,1 +1,34 @@
-<mxfile host="app.diagrams.net" modified="2022-01-10T08:22:08.292Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" version="16.2.2" etag="FWW_i6mSUUYfV13ch2cM" type="github"><diagram id="44CiZzlidbB9PoLeioI7">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-01-12T07:58:03.365Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="lkGGCDQo1sPx3LnAhEfJ" version="16.2.2" type="github">
+  <diagram id="44CiZzlidbB9PoLeioI7" name="Page-1">
+    <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mfxZ9xM_oFU-D63e1j2B-1" target="mfxZ9xM_oFU-D63e1j2B-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-1" value="VideoMemberPresenter&lt;br&gt;#getDialogList" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mfxZ9xM_oFU-D63e1j2B-2" target="mfxZ9xM_oFU-D63e1j2B-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-2" value="点击头像" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-4" value="CallProtocolChannel&lt;br&gt;#addMembers" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mfxZ9xM_oFU-D63e1j2B-6" target="mfxZ9xM_oFU-D63e1j2B-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-6" value="长按文件/打印&lt;br&gt;选项" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-7" value="LongClickItemsBuilder&lt;br&gt;#addEappExtensionEntry" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="180" width="160" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
