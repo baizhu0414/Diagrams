@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-12T09:01:26.164Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="TPYrSd6LeX5LMey3pMnc" version="16.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-12T09:02:07.342Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="TUx-T5atvFoblmMw18YN" version="16.2.2" type="github">
   <diagram id="44CiZzlidbB9PoLeioI7" name="Page-1">
     <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -15,6 +15,9 @@
         </mxCell>
         <mxCell id="mfxZ9xM_oFU-D63e1j2B-2" value="点击头像" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="110" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mfxZ9xM_oFU-D63e1j2B-4" target="mfxZ9xM_oFU-D63e1j2B-18">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="mfxZ9xM_oFU-D63e1j2B-4" value="CallProtocolChannel&lt;br&gt;#addMembers" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="110" y="320" width="120" height="60" as="geometry" />
@@ -47,11 +50,20 @@
         <mxCell id="mfxZ9xM_oFU-D63e1j2B-9" value="[{&quot;ext_args&quot;:{&lt;br&gt;&amp;nbsp; &quot;action_url&quot;:&quot;https://icps.spdb.com.cn/cloudprint/?printer_ip=&amp;amp;type=settings&quot;,&lt;br&gt;&amp;nbsp; &quot;desc&quot;:&quot;打印&quot;,&lt;br&gt;&amp;nbsp; &quot;i18n_name&quot;:&quot;print&quot;,&lt;br&gt;&amp;nbsp; &quot;icon&quot;:&quot;https://icps.spdb.com.cn/st0/static/cloudprint.png&quot;,&lt;br&gt;&amp;nbsp; &quot;name&quot;:&quot;打印&quot;,&lt;br&gt;&amp;nbsp; &quot;order&quot;:1,&lt;br&gt;&amp;nbsp; &quot;scope&quot;:[&quot;PL&quot;,&quot;GP&quot;,&quot;TP&quot;]},&lt;br&gt;&amp;nbsp; &quot;ext_funcs&quot;:[3],&lt;br&gt;&amp;nbsp; &quot;ext_id&quot;:&quot;3&quot;,&lt;br&gt;&amp;nbsp; &quot;ext_point&quot;:&quot;msg_menu&quot;}]" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="320" y="290" width="460" height="190" as="geometry" />
         </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mfxZ9xM_oFU-D63e1j2B-11" target="mfxZ9xM_oFU-D63e1j2B-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="mfxZ9xM_oFU-D63e1j2B-11" value="chat.contextmenuevent.LongClickOperation&lt;br&gt;#build(....EappEntity), type=51" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="320" y="520" width="460" height="60" as="geometry" />
         </mxCell>
         <mxCell id="mfxZ9xM_oFU-D63e1j2B-15" value="此处已经用本地图片了" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=6" vertex="1" parent="1">
           <mxGeometry x="600" y="250" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-18" value="完" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-20" value="修改图片，完" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="660" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
