@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-12T07:58:03.365Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="lkGGCDQo1sPx3LnAhEfJ" version="16.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-12T08:04:22.683Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="1-j3entz2gTfrJt7QYA_" version="16.2.2" type="github">
   <diagram id="44CiZzlidbB9PoLeioI7" name="Page-1">
     <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -23,10 +23,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="mfxZ9xM_oFU-D63e1j2B-6" value="长按文件/打印&lt;br&gt;选项" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="390" y="70" width="120" height="60" as="geometry" />
+          <mxGeometry x="320" y="60" width="460" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mfxZ9xM_oFU-D63e1j2B-7" target="mfxZ9xM_oFU-D63e1j2B-9">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="mfxZ9xM_oFU-D63e1j2B-7" value="LongClickItemsBuilder&lt;br&gt;#addEappExtensionEntry" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="180" width="160" height="60" as="geometry" />
+          <mxGeometry x="320" y="170" width="460" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-9" value="[{&quot;ext_args&quot;:{&lt;br&gt;&amp;nbsp; &quot;action_url&quot;:&quot;https://icps.spdb.com.cn/cloudprint/?printer_ip=&amp;amp;type=settings&quot;,&lt;br&gt;&amp;nbsp; &quot;desc&quot;:&quot;打印&quot;,&lt;br&gt;&amp;nbsp; &quot;i18n_name&quot;:&quot;print&quot;,&lt;br&gt;&amp;nbsp; &quot;icon&quot;:&quot;https://icps.spdb.com.cn/st0/static/cloudprint.png&quot;,&lt;br&gt;&amp;nbsp; &quot;name&quot;:&quot;打印&quot;,&lt;br&gt;&amp;nbsp; &quot;order&quot;:1,&lt;br&gt;&amp;nbsp; &quot;scope&quot;:[&quot;PL&quot;,&quot;GP&quot;,&quot;TP&quot;]},&lt;br&gt;&amp;nbsp; &quot;ext_funcs&quot;:[3],&lt;br&gt;&amp;nbsp; &quot;ext_id&quot;:&quot;3&quot;,&lt;br&gt;&amp;nbsp; &quot;ext_point&quot;:&quot;msg_menu&quot;}]" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="320" y="290" width="460" height="190" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
