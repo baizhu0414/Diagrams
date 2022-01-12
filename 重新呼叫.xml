@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-12T08:59:51.158Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="Xt_ucjQoqU5shMzL-08Q" version="16.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-12T09:01:26.164Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="TPYrSd6LeX5LMey3pMnc" version="16.2.2" type="github">
   <diagram id="44CiZzlidbB9PoLeioI7" name="Page-1">
     <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -33,6 +33,11 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.479;entryY=-0.15;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mfxZ9xM_oFU-D63e1j2B-7" target="mfxZ9xM_oFU-D63e1j2B-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="mfxZ9xM_oFU-D63e1j2B-7" value="LongClickItemsBuilder&lt;br&gt;#addEappExtensionEntry:此处就已经有图片初始化&lt;br&gt;在#com.baidu.hi.builder.&lt;b&gt;LongClickItemsBuilder#LongClickItemsBuilder&lt;/b&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="170" width="460" height="60" as="geometry" />
         </mxCell>
@@ -44,6 +49,9 @@
         </mxCell>
         <mxCell id="mfxZ9xM_oFU-D63e1j2B-11" value="chat.contextmenuevent.LongClickOperation&lt;br&gt;#build(....EappEntity), type=51" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="320" y="520" width="460" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-15" value="此处已经用本地图片了" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=6" vertex="1" parent="1">
+          <mxGeometry x="600" y="250" width="140" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
