@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-12T08:19:30.603Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="Rm3oycEHCY3dXiSUu2u6" version="16.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-12T08:59:51.158Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="Xt_ucjQoqU5shMzL-08Q" version="16.2.2" type="github">
   <diagram id="44CiZzlidbB9PoLeioI7" name="Page-1">
     <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -27,6 +27,11 @@
         </mxCell>
         <mxCell id="mfxZ9xM_oFU-D63e1j2B-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mfxZ9xM_oFU-D63e1j2B-7" target="mfxZ9xM_oFU-D63e1j2B-9">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mfxZ9xM_oFU-D63e1j2B-13" value="云端下发内容" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mfxZ9xM_oFU-D63e1j2B-10">
+          <mxGeometry x="-0.1667" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="mfxZ9xM_oFU-D63e1j2B-7" value="LongClickItemsBuilder&lt;br&gt;#addEappExtensionEntry:此处就已经有图片初始化&lt;br&gt;在#com.baidu.hi.builder.&lt;b&gt;LongClickItemsBuilder#LongClickItemsBuilder&lt;/b&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="170" width="460" height="60" as="geometry" />
