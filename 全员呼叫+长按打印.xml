@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-14T08:36:25.333Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="U1-mBz2VTs43cX-mIsB9" version="16.2.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-14T08:49:03.343Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="RLgnZT5o0B0gWDQxUIPw" version="16.2.6" type="github">
   <diagram id="44CiZzlidbB9PoLeioI7" name="Page-1">
     <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -122,11 +122,17 @@
         <mxCell id="Mj2ys60ZoJlHT9C98q-A-15" value="被转移为主持人" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="430" y="760" width="170" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="Mj2ys60ZoJlHT9C98q-A-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Mj2ys60ZoJlHT9C98q-A-16" target="Mj2ys60ZoJlHT9C98q-A-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="Mj2ys60ZoJlHT9C98q-A-16" value="ICallHandlerListener&lt;br&gt;.CallHandlerListener&lt;br&gt;#onAdminChange" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="705" y="760" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Mj2ys60ZoJlHT9C98q-A-18" value="&lt;span&gt;VideoButtonFragment&lt;/span&gt;&lt;br&gt;&lt;span&gt;#onVideoManageEvent&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="455" y="900" width="120" height="60" as="geometry" />
+        <mxCell id="Mj2ys60ZoJlHT9C98q-A-18" value="&lt;span&gt;VideoMemberFragment&lt;br&gt;#onVideoManageEvent&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="445" y="870" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj2ys60ZoJlHT9C98q-A-20" value="VideoPresenter&lt;br&gt;#onAdminChange" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="705" y="870" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
