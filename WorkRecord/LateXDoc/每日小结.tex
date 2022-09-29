@@ -1,0 +1,162 @@
+\documentclass{ctexart}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\title{\heiti 2022工作日报}
+\author{Cuiyang}
+\date{\kaishu 2022年9月27日}
+
+\begin{document}
+	\maketitle
+	\section{2022}
+	\subsection{五月版}
+	\begin{itemize}
+		\item 开发ASR+讯飞SDK
+		\begin{itemize}
+			\item 写Presenter+Logic结构
+		\end{itemize}
+		\item 长链接，待测试
+		\item 长链接:地址是否有问题？生产的语音界面
+		\item 长链接：异常处理
+		\item 分享微信文件到新Call浦
+		\item 拉广告页失败，改连接
+		\item 分栏优化：1⃣️更改Label的存储逻辑2⃣️不展示Label时置顶收缩出问题
+		\item Camera2调研
+		\item 搜索栏增加麦克风
+		\item 有人在呼叫的时候，其他人回到主界面悬浮窗不会展示
+		\item 修改创建群聊接口///不需要finish，群名
+		\item 修改创建群聊同人不同名，需要创建新需求—根据需求单进行建群，有同人可能。
+		\item 飞云流水线重新搭建———
+		
+		\item 1. 调整label字体大小，发视频
+		\item 2. ASR“打开智慧办公”发送两次BUG修改
+		\item 评估SIM需求
+		\item 评估微信通讯需求———需要用到端上聊天能力，不建议
+		\item Camera2使用Demo做一个———放弃，前端做
+		\item WS: 录音超时时间：2min；并发量过大提示语
+		\item 居老师发现的小问题，待修改确认
+		\item 建群发现BUG：拉人失败问题———findExitGroup接口问题
+		\item Dev通讯录问题——建华追踪-解决
+		
+	\end{itemize}
+
+	\newpage
+	\subsection{七月版}
+	\begin{itemize}
+		\item 0525: IM配置问题
+		\item 0525: ASR弹框频繁+onFailure反复回调
+		
+		\item 0607:BUG—会话崩溃，ConcurrentModification
+		\item 0607:BUG—类型强转错误
+		\item 0607:BUG—空指针问题
+		\item 0607：飞云制品库—做不了，需要网管开权限。
+		
+		\item 0609:问卷调研回访
+		\item 0609:enum空指针
+		
+		\item 0613: 1100-ASR生产链接更换——代码待合并
+		\item 0613: 1100-HiAppActivity去除标题的设置级别判断——已修复，待测试合并。
+		\item 0617: ASR前端更改跳转，android出现问题，改————已修复，待测试合并。
+		\item ————————————
+		\item 0622: 新版令牌开发——PRD已出—UI完成开发
+		\item 0614-15: 追踪BUG，切换fragment异常。
+		\begin{itemize}
+			\item 采用埋日志方式，等下次发现
+		\end{itemize}
+		\item 0628-ASR:bug追踪——
+		\item 0627-0701:开发令牌
+		\item 0628-开发JSSDK:调用双击刷新
+		\item 0629:评估开发返回主界面刷新界面的JSSDK-----已有接口
+		\item 0701：ASR申请权限BUG
+		\item 0705:软件闪退，修复空指针BUG---ConversationListAdapter
+		\item 0705、0708:开发群机器人自动添加JSSDK———进度：获取app列表为空
+		\item 0706:测试宁盾令牌,开发令牌设置界面
+		\begin{itemize}
+			\item 修改包名解决问题Base64
+			\item Base.decode使用参数SAFE\_MODE
+		\end{itemize}
+		\item 0706:打包测试ASR，最终生产
+		\item 0708:修复扫码BUG，连接问题
+		\item 0715:Asr首屏问题修复
+		\item 0715:BUG会话列表刷新问题（尝试关闭动画看能否解决）
+		\item 0715:BUG会话分类取消后默认显示全部聊天
+		\item 0705、0718、0725:BUG追踪复现的切换Tab问题
+		\newline
+		\item 0715:BUG全员呼叫“邀请成员失败”
+		\begin{itemize}
+			\item 0715: com.baidu.hi.voice.interactor.CallInteractor\#onAddMemberResponse日志
+		\end{itemize}
+		\item 0718:修改JSSDK添加机器人接口
+		\item 0719:开发手机令牌，完善逻辑——扫码崩溃和相关逻辑
+		\item 0721:手机令牌存储逻辑大改
+		\item 0721:JSSDK添加机器人接口问题———重复调用
+		\item 0721:JSSDK子项目：修改建群接口调用方式—-全局变量在sendCreateGroupReq中赋值
+		\item 0722:制定折叠重构，setExpandItem函数和isExpand变量的调用逻辑
+		\item 0725、0727:重写添加机器人方案
+		\item 0728:修改令牌刷新和弹框
+		\item 0802:开发添加好友发送默认消息
+		\item 0803:调研优化工作站展示的UI
+		\item 0810:手机令牌-SM3加密工号，进行手机令牌鉴权SM3Util.hash()
+		\item 0826:手机令牌加灰度(CopyUtil)
+		\item 0826:UI—修改各种size+ 英文化
+		\item 0826:清空令牌数据后的跳转方式
+	\end{itemize}
+	
+	\newpage
+	\subsection{九月版}
+	\begin{itemize}
+		\item 0810-11:工作站改版-UI开发
+		\item 0812-工作站开发进度：开发Tab切换动画，如何恢复成原来的Text
+		\begin{itemize}
+			\item 参考：https://www.likecs.com/show-205250598.html
+		\end{itemize}
+		\item 点击动画做好后，进行数据展示的处理。
+		\item 0818:完成基本展示
+		\item 0818:添加“空数据”Item-同之前的空界面
+		\item 0818:移除“添加”Item
+		\item 0819:过滤展示的数据
+		\item 0819:TabLayout滚动效果，初始化后自动滚动到中间—每次进入重制
+		\item 0819:点击“确定”后，常用和全部应用中的数据差异计算和提交
+		\item 0818:设置拖动事件
+		\item 0819:搜索添加常用应用后，底部全部应用同步更新
+		\item 0819:删除常用应用后，底部全部应用同步更新
+		\item 0823:清空常用应用出问题，最后一个无法删除。。。
+		\item 0823:最后一个应用删除，然后取消，下面应用变多了。
+		\begin{itemize}
+			\item BUG:状态一致问题
+		\end{itemize}
+		\item 0822:编辑模式切换Tab后，”退出”编辑模式，需要将缓存数据更新（presenter.getBeforeEditEapps()）
+		\item 0822:点击绿色按钮添加应用到常用，状态同步问题。
+		\item 0822:“撤销删除常用”应用，点击事件处理缓存——0826:BUG修复，撤销后应用数据刷新错误
+		\item 0823:点击添加和删除，更新服务端和数据库数据
+		\item 0824:编辑模式过滤没用的应用
+		\item 0824:点击空应用的按钮“添加”，设置编辑模式，而非跳转
+		\item 0824:BUG:ConcurrentModificationException
+		\item 0824:清空数据重新登录看是否保持应用数量！！
+		\item 0824:多点几次，出现单个绿色应用在常用上
+		\item 0826:常用应用拖动排序问题
+		\item 0826:刷新后数据TabPosition更新错误！！！
+		\item 0829:搜索添加数据位置异常修复BUG
+		\item 0830:每次刷新数据后记得刷新全部Tab(onResume刷新缓存数据有问题，在onCreate刷新)
+		\item 0901:拖动后出现绿色按钮。。。。刷新问题——clearView
+		\item 0901:修改空白数据提示文字
+		\item 0902:ListItem修改为自适应高度
+		
+		\item 0902:整理1200代码。
+	\end{itemize}
+	—————————————————
+	\newpage
+	\section{十月版}
+	\begin{itemize}
+		\item 0905-0909:工作站相关刷新BUG、空分类过滤UI展示等
+		\item 0906:手机令牌灰度添加和测试，修改刷新按钮方式
+		\item 0919:查看文档和prd，联系相关人员讨论SIM卡需求，申请账号等
+		\item 0921:Kotlin及联系SIM卡需求
+		\item 0926:未读消息计算错误BUG，服务端下发问题
+		\newline get\_list\_change协议
+		\item 0927:配置Charles抓包+Git复习
+		\item 0928:协助进行会话未读数BUG抓包
+		\item 0929:开发英文化
+		
+	\end{itemize}
+\end{document}

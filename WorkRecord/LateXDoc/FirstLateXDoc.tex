@@ -1,0 +1,45 @@
+% article，ctexart
+\documentclass{ctexart}
+
+% \usepackage{ctex}
+\title{\heiti 我的第一个文档}
+\author{\kaishu 法外狂徒·张三}
+\date{\today}
+
+% 正文区
+\begin{document}
+	\maketitle
+	文件位置：/Users/baizhu/Documents/LateXDoc/FirstLateXDoc.tex
+	第一种函数表达方式：$f(x) = 3x^2 + 2$.
+	
+	第二种函数表达方式: 会形成一个段落。
+	$$f(x) = 3x^2 + 2$$
+	
+	第三种表达方式，这是一个函数（带编号的公式）：
+	\begin{equation}
+		f(x) = 3x^2 + 2
+	\end{equation}
+	这个函数有点用，但是不多～～这里是段落内容，使用ctexart类文档和article区别是：是否需要引用usepackage ctex。
+	
+	注：在命令行使用texdoc ctex可以查看帮助文档，texdoc lshort-zh 查看任何帮助文档
+	
+	"Hello World!" from \LaTeX{}| |||...方括号不忽略后面的空格
+	
+	\section{Section}
+	\subsection{Subsection}
+	\subsubsection{SubSubSection}
+	\subsubsection{SubSubSection}
+	\paragraph{Paragraph}
+	\subparagraph{Subparagraph}
+	
+	\begin{itemize}
+		\item[-] An Item
+		\begin{itemize}
+			\item[~] An Apple
+			\item[~] An Orange
+		\end{itemize}
+		\item Items
+	\end{itemize}
+	
+	
+\end{document}
