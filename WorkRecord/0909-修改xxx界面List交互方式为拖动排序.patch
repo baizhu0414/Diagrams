@@ -1,0 +1,3390 @@
+<--! 以下是某个需求的示例代码，根据保密原则，已将部分代码修改-->
+Index: YYYYduHi/src/HiXXXBank/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/HiXXXBank/res/values/strings.xml	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/HiXXXBank/res/values/strings.xml	(date 1661999954000)
+@@ -392,6 +392,7 @@
+     <string name="gesture_setting_warn_set_too_short">Connect at least 6 points. Please redraw</string>
+ 
+     <string name="eapp_default">默认应用</string>
++    <string name="eapp_no_others_tips">No app in this category temporarily.</string>
+     <!-- 会议全员呼叫-->
+     <string name="voice_call_all">Call all members?</string>
+     <string name="voice_call_all_left">OK</string>
+Index: YYYYduHi/src/HiXXXBank/res/values-zh/strings_zh.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/HiXXXBank/res/values-zh/strings_zh.xml	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/HiXXXBank/res/values-zh/strings_zh.xml	(date 1662022809000)
+@@ -295,6 +295,8 @@
+     <string name="gesture_setting_desc">绘制手势密码，不少于6个点</string>
+     <string name="gesture_setting_warn_set_too_short">至少连接6个点，请重新绘制</string>
+ 
++    <string name="eapp_no_others_tips">暂无数据</string>
++
+     <!-- 会议全员呼叫-->
+     <string name="voice_call_all">确定要一键呼叫全员？</string>
+     <string name="voice_call_all_left">确定</string>
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/json/NoCommonEappEntity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/json/NoCommonEappEntity.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/json/NoCommonEappEntity.java	(date 1661936635000)
+@@ -1,10 +1,40 @@
+ package com.yyyydu.hi.eapp.entity.json;
+ 
+ import com.yyyydu.hi.eapp.datasource.ViewDataSource;
++import com.yyyydu.hi.widget.GifView;
+ 
+ public class NoCommonEappEntity extends ViewDataSource {
++    // GifView.NO_OTHERS_EAPP=16图片和提示语类型
++    private int hintType;
++    // "添加"按钮是否可见，全部应用不可见
++    private boolean btnVisible = true;
+     @Override
+     public int getViewType() {
+         return TYPE_NO_COMMON_EAPP;
+     }
++
++    public NoCommonEappEntity() {
++        this.hintType = GifView.NO_COMMON_EAPP;
++    }
++
++    public NoCommonEappEntity(int hintType, boolean btnVisible) {
++        this.hintType = hintType;
++        this.btnVisible = btnVisible;
++    }
++
++    public int getHintType() {
++        return hintType;
++    }
++
++    public void setHintType(int hintType) {
++        this.hintType = hintType;
++    }
++
++    public void setBtnVisible(boolean btnVisible) {
++        this.btnVisible = btnVisible;
++    }
++
++    public boolean getBtnVisible() {
++        return btnVisible;
++    }
+ }
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/widget/GifView.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/widget/GifView.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/widget/GifView.java	(date 1661936635000)
+@@ -34,10 +34,11 @@
+     private static final int LOADING_NO_DATA = 9;
+     public static final int TODO_LIST_EMPTY = 10;
+     public static final int NO_EMAIL = 11;
+-    public static final int NO_EAPP = 12;
++    public static final int NO_COMMON_EAPP = 12;
+     public static final int RECEIPT_MSG_ALL_READED = 13;
+     public static final int BASECHATER_LIST_EMPTY = 14;
+     public static final int PUBLIC_ACCOUNT_LIST_EMPTY = 15;
++    public static final int NO_OTHERS_EAPP = 16;
+ 
+     private int mCurrentType = 0;
+ 
+@@ -136,9 +137,13 @@
+                     imageResId = R.drawable.no_email;
+                     textResId = R.string.task_unfinished_list_emptyview;
+                     break;
+-                case NO_EAPP:
++                case NO_COMMON_EAPP:
+                     imageResId = R.drawable.no_result;
+                     textResId = R.string.eapp_no_common_tips;
++                    break;
++                case NO_OTHERS_EAPP:
++                    imageResId = R.drawable.no_result;
++                    textResId = R.string.eapp_no_others_tips;
+                     break;
+                 case RECEIPT_MSG_ALL_READED:
+                     imageResId = R.drawable.no_result;
+Index: YYYYduHi/src/HiXXXBank/res/layout/eapp_item_grid.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/HiXXXBank/res/layout/eapp_item_grid.xml	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/HiXXXBank/res/layout/eapp_item_grid.xml	(date 1662098731000)
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<com.yyyydu.hi.widget.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/item_layout"
+     android:layout_width="match_parent"
+-    android:layout_height="match_parent"
++    android:layout_height="wrap_content"
+     android:background="@android:color/transparent"
+     android:gravity="center_vertical"
+     android:padding="2dp">
+@@ -11,8 +11,7 @@
+     <RelativeLayout
+         android:id="@+id/item_divider"
+         android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:background="@drawable/eapp_center_eapp_edit_divider">
++        android:layout_height="wrap_content">
+ 
+         <RelativeLayout
+             android:id="@+id/item_outer"
+@@ -20,7 +19,7 @@
+             android:layout_height="@dimen/eapp_item_logo"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+-            android:layout_marginTop="20dp">
++            android:layout_marginTop="10dp">
+ 
+             <com.facebook.drawee.view.SimpleDraweeView
+                 android:id="@+id/item_logo"
+@@ -67,11 +66,11 @@
+ 
+         <RelativeLayout
+             android:id="@+id/item_delete_icon"
+-            android:layout_width="30dp"
+-            android:layout_height="30dp"
++            android:layout_width="20dp"
++            android:layout_height="20dp"
+             android:layout_above="@+id/item_outer"
+-            android:layout_marginBottom="-35dp"
+             android:layout_marginStart="-10dp"
++            android:layout_marginBottom="-20dp"
+             android:layout_toEndOf="@+id/item_outer"
+             android:gravity="center"
+             android:visibility="gone">
+@@ -82,6 +81,23 @@
+                 android:src="@drawable/eapp_item_delete" />
+         </RelativeLayout>
+ 
++        <RelativeLayout
++            android:id="@+id/item_add_icon"
++            android:layout_width="20dp"
++            android:layout_height="20dp"
++            android:layout_above="@+id/item_outer"
++            android:layout_marginStart="-10dp"
++            android:layout_marginBottom="-20dp"
++            android:layout_toEndOf="@+id/item_outer"
++            android:gravity="center"
++            android:visibility="gone">
++
++            <ImageView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:src="@drawable/eapp_item_add" />
++        </RelativeLayout>
++
+         <ImageView
+             android:id="@+id/item_msg_icon"
+             android:layout_width="wrap_content"
+@@ -110,7 +126,8 @@
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/item_outer"
+             android:layout_centerHorizontal="true"
+-            android:layout_marginTop="5dp">
++            android:layout_marginTop="5dp"
++            android:layout_marginBottom="10dp">
+ 
+             <TextView
+                 android:id="@+id/item_name"
+@@ -125,4 +142,4 @@
+         </RelativeLayout>
+ 
+     </RelativeLayout>
+-</com.yyyydu.hi.widget.SquareLayout>
+\ No newline at end of file
++</LinearLayout>
+\ No newline at end of file
+Index: YYYYduHi/src/androidTest/java/com/yyyydu/hi/eapp/entity/EappEntityTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/androidTest/java/com/yyyydu/hi/eapp/entity/EappEntityTest.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/androidTest/java/com/yyyydu/hi/eapp/entity/EappEntityTest.java	(date 1662628550000)
+@@ -50,7 +50,7 @@
+     public void testIsCommon() {
+         eappEntity.setSpceClassId(EappLogic.SPEC_CLASS_HIDE);
+         Assert.assertEquals(eappEntity.isCommon(), false);
+-        eappEntity.setSpceClassId(EappLogic.SPEC_CLASS_COMMOM);
++        eappEntity.setSpceClassId(EappLogic.SPEC_CLASS_COMMON);
+         Assert.assertEquals(eappEntity.isCommon(), true);
+     }
+ 
+Index: YYYYduHi/src/main/res/layout/eapp_category_title.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/res/layout/eapp_category_title.xml	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/res/layout/eapp_category_title.xml	(date 1662084336000)
+@@ -1,31 +1,45 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:tools="http://schemas.android.com/tools"
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:id="@+id/eapp_category"
+     android:layout_width="match_parent"
+-    android:layout_height="38dp"
+-    android:background="@color/L_12">
++    android:layout_height="wrap_content"
++    android:background="@color/L_12"
++    android:orientation="vertical">
++
++    <!-- 灰色分割线，通过对象中的属性进行展示和隐藏-->
++    <View
++        android:id="@+id/divider_all_category"
++        android:layout_width="match_parent"
++        android:layout_height="7dp"
++        android:background="@color/L_9"
++        android:visibility="invisible"
++        app:layout_constraintTop_toTopOf="parent" />
+ 
+     <TextView
+         android:id="@+id/category_title"
+-        style="@style/f_3_L_1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_centerVertical="true"
+-        android:layout_marginStart="10dp"
+-        android:text="" />
++        android:paddingStart="10dp"
++        android:paddingTop="10dp"
++        android:paddingBottom="5dp"
++        android:text=""
++        android:textColor="@color/L_1"
++        android:textSize="@dimen/sp_15"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/divider_all_category" />
+ 
+     <TextView
+         android:id="@+id/category_setting"
++        style="@style/f_3_C_7"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_alignParentEnd="true"
+-        android:layout_centerVertical="true"
+-        android:paddingBottom="5dp"
+         android:paddingLeft="10dp"
+-        android:paddingRight="10dp"
+         android:paddingTop="5dp"
+-        style="@style/f_3_C_7"
+-        tools:ignore="RelativeOverlap" />
++        android:paddingRight="10dp"
++        android:paddingBottom="5dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/divider_all_category" />
+ 
+-</RelativeLayout>
+\ No newline at end of file
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: YYYYduHi/src/androidTest/java/com/yyyydu/hi/logic/EappLogicTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/androidTest/java/com/yyyydu/hi/logic/EappLogicTest.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/androidTest/java/com/yyyydu/hi/logic/EappLogicTest.java	(date 1662628550000)
+@@ -605,7 +605,7 @@
+         eappEntity3.setCorpId(1);
+         eappEntity3.setAgentId(54);
+         eappEntity3.setNew(true);
+-        eappEntity3.setSpceClassId(EappLogic.SPEC_CLASS_COMMOM);
++        eappEntity3.setSpceClassId(EappLogic.SPEC_CLASS_COMMON);
+         eappDBUtil.insert(eappEntity3);
+ 
+         boolean first = EappLogic.getInstance().setCommonEapp(eappEntity3,null);
+@@ -638,7 +638,7 @@
+         EappEditedResult editedResult = new EappEditedResult();
+         editedResult.setOrder(10);
+         editedResult.setAgentId(53);
+-        editedResult.setClass_id(EappLogic.SPEC_CLASS_COMMOM);
++        editedResult.setClass_id(EappLogic.SPEC_CLASS_COMMON);
+         eappEntities.add(editedResult);
+ 
+         boolean ret = eappDBUtil.updateEapps(eappEntities);
+Index: YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/EappCacheClassified.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/EappCacheClassified.java	(date 1662706778000)
++++ YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/EappCacheClassified.java	(date 1662706778000)
+@@ -0,0 +1,426 @@
++package com.yyyydu.hi.eapp;
++
++import com.yyyydu.hi.eapp.datasource.ViewDataSource;
++import com.yyyydu.hi.eapp.entity.EappCategoryEntity;
++import com.yyyydu.hi.eapp.entity.EappCategoryOthersEntity;
++import com.yyyydu.hi.eapp.entity.EappEntity;
++import com.yyyydu.hi.eapp.logic.EappLogic;
++
++import org.json.JSONArray;
++import org.json.JSONException;
++import org.json.JSONObject;
++
++import java.util.ArrayList;
++import java.util.Collections;
++import java.util.LinkedHashMap;
++import java.util.List;
++import java.util.Map;
++import java.util.Set;
++
++/**
++ * 根据每个分类，存储Eapp数据，这些数据中已经去除了{@link EappCategoryEntity}
++ * 分类Eapp。
++ */
++public class EappCacheClassified {
++    private static volatile EappCacheClassified instance;
++    // 去除"常用应用"分类的Eapp数据，key：classId(Eapp不空)
++    private Map<Integer, List<EappEntity>> othersCategoryEappMap = null;
++    // 去除"常用应用"分类之后的分类数据
++    private List<EappCategoryEntity> othersCategoryEntities = null;
++    // "常用应用"分类中的数据
++    private ArrayList<EappEntity> commonEappList = null;
++    // 保存当前选中的CategoryTab（排除个人常用分类）
++    public static int currentTabPosition = 0;
++    public static int unselectedTabPosition = -1;
++    private static boolean isSelectSuc = false;
++    // 保存"默认应用"(首页中叫"企业级应用")分类的classId
++    public static int defaultCategoryClassId = -1;
++    // 临时保存编辑记录-状态已设置(删除常用和添加常用agentId)
++    private List<EappEntity> recordDeleteCommon = new ArrayList<>(); // 常用应用分类点击删除
++    private List<EappEntity> recordAddCommon = new ArrayList<>(); // 全部应用点击添加
++    // 补充条件：true需要提交数据(常用应用间顺序调整)
++    public static boolean commonMoved = false;
++
++    public static EappCacheClassified getInstance() {
++        if (instance == null) {
++            synchronized (EappCacheClassified.class) {
++                if (instance == null) {
++                    instance = new EappCacheClassified();
++                }
++            }
++        }
++        return instance;
++    }
++
++    // 初始化数据
++    public void setAllData(Map<Integer, List<EappEntity>> othersMap,
++                           List<EappCategoryEntity> othersCategoryList,
++                           List<ViewDataSource> commonEappList) {
++        // 顺序不要变
++        setCommonEappList(commonEappList);
++        setOthersCategoryEappMap(othersMap);
++        setOthersCategoryEntities(othersCategoryList);
++        resetValues();
++    }
++
++    private void resetValues() {
++        unselectedTabPosition = -1;
++        isSelectSuc = false;
++        recordDeleteCommon.clear();
++        recordAddCommon.clear();
++    }
++
++    /**
++     * 通过常用应用来过滤分类
++     */
++    public void setOthersCategoryEappMap(Map<Integer, List<EappEntity>> map) {
++        // 应用数据为空的不展示！有的分类在数据库有agentId但是服务端应用已经没了。
++        Map<Integer, List<EappEntity>> mapTemp = new LinkedHashMap<>();
++        for (Integer key: map.keySet()) {
++            List<EappEntity> eappEntities = map.get(key);
++            if (eappEntities.size() > 0 || !noCommonEappInThisClassId(key)) {
++                mapTemp.put(key, eappEntities);
++            }
++        }
++        this.othersCategoryEappMap = mapTemp;
++    }
++
++    /**
++     * @return false表示此分类中有应用
++     */
++    private boolean noCommonEappInThisClassId(int classId) {
++        for (EappEntity entity: commonEappList) {
++            if (entity.getClassId() == classId) {
++                return false;
++            }
++        }
++        return true;
++    }
++
++    public void setOthersCategoryEntities(List<EappCategoryEntity> othersCategoryEntities) {
++        Set<Integer> keyNotEmpty = othersCategoryEappMap.keySet();
++        List<EappCategoryEntity> result = new ArrayList<>();
++        for (Integer key: keyNotEmpty) {
++            for (EappCategoryEntity entity: othersCategoryEntities) {
++                if (entity.getClassId() == key) {
++                    result.add(entity);
++                    break;
++                }
++            }
++        }
++        this.othersCategoryEntities = result;
++    }
++
++    public void setCommonEappList(List<ViewDataSource> commonEappList) {
++        if (this.commonEappList == null) {
++            this.commonEappList = new ArrayList<>();
++        } else {
++            this.commonEappList.clear();
++        }
++        for (ViewDataSource entity : commonEappList) {
++            // 排出第一个Item：EappCategoryEntity
++            if (entity.getViewType() == ViewDataSource.TYPE_EAPP) {
++                this.commonEappList.add((EappEntity) entity);
++            }
++        }
++    }
++
++    public List<EappEntity> getCurrentEappList() {
++        int classId = getCurrentTabClassId();
++        if (!othersCategoryEappMap.containsKey(classId)) {
++            return new ArrayList<>();
++        }
++        return othersCategoryEappMap.get(classId);
++    }
++
++    /**
++     * 搜索添加应用:添加后获取当前Tab剩余"全部应用"数量
++     *
++     * @return 当前分类去除常用应用分类后剩余的应用数量
++     */
++    public int getCurrentOthersNumRest() {
++        List<EappEntity> currentEappList = getCurrentEappList();
++        int numRest = currentEappList.size();
++        for (EappEntity entity : currentEappList) {
++            for (int i = 0; i < commonEappList.size(); i++) {
++                if (entity.getAgentId() == commonEappList.get(i).getAgentId()) {
++                    numRest--;
++                }
++            }
++        }
++        return numRest;
++    }
++
++    public int getCurrentTabClassId() {
++        return othersCategoryEntities.get(currentTabPosition).getClassId();
++    }
++
++    public List<EappEntity> getCommonEappList() {
++        return commonEappList;
++    }
++
++    /**
++     * 通过搜索添加常用应用后，从"全部应用"中进行删除
++     *
++     * @return true表示删除成功
++     */
++    public boolean removeEntityFromMap(EappEntity entity) {
++        boolean isDeleted = false;
++        for (Integer key : othersCategoryEappMap.keySet()) {
++            if (isDeleted) {
++                break;
++            }
++            List<EappEntity> eappEntities = othersCategoryEappMap.get(key);
++            for (int i = 0; i < eappEntities.size(); i++) {
++                if (eappEntities.get(i).getAgentId() == entity.getAgentId()) {
++                    eappEntities.remove(i);
++                    othersCategoryEappMap.put(key, eappEntities);
++                    isDeleted = true;
++                    break;
++                }
++            }
++        }
++        return isDeleted;
++    }
++
++    public void addEntityToMap(EappEntity entity) {
++        for (Integer key : othersCategoryEappMap.keySet()) {
++            if (entity.getClassId() == key) {
++                List<EappEntity> eappEntities = othersCategoryEappMap.get(key);
++                eappEntities.add(entity);
++                othersCategoryEappMap.put(key, eappEntities);
++                return;
++            }
++        }
++    }
++
++    /**
++     * 1. 主要函数：
++     * "删除常用应用"后，同步到缓存中。
++     * specClassId:{@link EappLogic#SPEC_CLASS_DEFAULT}
++     * editIconType:{@link EappEntity#COLOR_GREEN}
++     */
++    public boolean removeEntityFromCommon(EappEntity entity) {
++        boolean deleted = false;
++        for (int i = 0; i < commonEappList.size(); i++) {
++            if (entity.getAgentId() == commonEappList.get(i).getAgentId()) {
++                commonEappList.remove(i);
++                deleted = true;
++                break;
++            }
++        }
++        if (othersCategoryEappMap.containsKey(entity.getClassId())) {
++            List<EappEntity> classIdEntityList = othersCategoryEappMap.get(entity.getClassId());
++            classIdEntityList.add(entity);
++            Collections.sort(classIdEntityList);
++            othersCategoryEappMap.put(entity.getClassId(), classIdEntityList);
++        }
++        if (deleted) {
++            try {
++                recordDeleteCommon.add(entity.clone());
++            } catch (CloneNotSupportedException e) {
++                e.printStackTrace();
++            }
++        }
++        return deleted;
++    }
++
++    /**
++     * 2. 主要函数：
++     * "添加常用应用"：从全部应用中添加应用到常用。
++     * specClassId:{@link EappLogic#SPEC_CLASS_COMMON}
++     * editIconType:{@link EappEntity#COLOR_RED}
++     */
++    public boolean addEntityToCommon(EappEntity entity) {
++        boolean added = false;
++        if (commonEappList == null) {
++            commonEappList = new ArrayList<>();
++        }
++        commonEappList.add(entity);
++        if (othersCategoryEappMap.containsKey(entity.getClassId())) {
++            List<EappEntity> classIdEntityList = othersCategoryEappMap.get(entity.getClassId());
++            for (int i = 0; i < classIdEntityList.size(); i++) {
++                if (classIdEntityList.get(i).getAgentId() == entity.getAgentId()) {
++                    classIdEntityList.remove(i);
++                    added = true;
++                    break;
++                }
++            }
++            othersCategoryEappMap.put(entity.getClassId(), classIdEntityList);
++        }
++        if (added) {
++            try {
++                recordAddCommon.add(entity.clone());
++            } catch (CloneNotSupportedException e) {
++                e.printStackTrace();
++            }
++        }
++        return added;
++    }
++
++    /**
++     * 3. 主要函数：
++     * 不保存编辑数据，恢复缓存。取消常用数据的添加和删除。
++     */
++    public void backPressed() {
++        // 添加到常用的应用全部恢复
++        for (EappEntity added : recordAddCommon) {
++            for (int i = 0; i < commonEappList.size(); i++) {
++                if (commonEappList.get(i).getAgentId() == added.getAgentId()) {
++                    commonEappList.remove(i);
++                    added.setEditIconType(EappEntity.COLOR_GREEN);
++                    added.setSpceClassId(EappLogic.SPEC_CLASS_DEFAULT);
++                    addEntityToMap(added);
++                    break;
++                }
++            }
++        }
++        // 常用中删除的应用全部恢复
++        for (EappEntity deleted : recordDeleteCommon) {
++            deleted.setEditIconType(EappEntity.COLOR_RED);
++            deleted.setSpceClassId(EappLogic.SPEC_CLASS_COMMON);
++            commonEappList.add(deleted);
++            removeEntityFromMap(deleted);
++        }
++        // 整体排序
++        for (Integer classId : othersCategoryEappMap.keySet()) {
++            List<EappEntity> eappEntities = othersCategoryEappMap.get(classId);
++            Collections.sort(eappEntities);
++            othersCategoryEappMap.put(classId, eappEntities);
++        }
++        recordDeleteCommon.clear();
++        recordAddCommon.clear();
++    }
++
++    // 更新"全部应用"的tab分类
++    public void setCurrentCategoryPos(int position) {
++        if (othersCategoryEntities.size() < position
++                || currentTabPosition == position) {
++            isSelectSuc = false;
++        }
++        unselectedTabPosition = currentTabPosition;
++        currentTabPosition = position;
++        isSelectSuc = true;
++    }
++
++    /**
++     * 只能获取一次，直到下次设置前都为false。
++     */
++    public boolean getIsSelectSuc() {
++        if (isSelectSuc) {
++            isSelectSuc = false;
++            return true;
++        }
++        return false;
++    }
++
++    private static long lastClickTime = 0;
++
++    /**
++     * @return true表示点击太快，false表示点击正常。
++     */
++    public static boolean isClickTooFast(boolean isUpdate) {
++        long clickTime = System.currentTimeMillis();
++        if (clickTime - lastClickTime < 1000) {
++            return true;
++        }
++        if (isUpdate) {
++            lastClickTime = clickTime;
++        }
++        return false;
++    }
++
++    /**
++     * 4. 主要函数：
++     * 去除重复操作，如：
++     * 点击删除了某个常用应用，之后有点击添加，这两个操作分别被记录在了
++     * <tt>recordDeleteCommon和recordAddCommon</tt>中，两个操作相抵消后
++     * 可以从两个list中去除。
++     *
++     * @param isEditable 编辑状态
++     * @return 常用应用是否发生改动，是true
++     */
++    public boolean removeRepeatedActionOnCommon(boolean isEditable) {
++        if (!isEditable) {
++            return false;
++        }
++        if (recordDeleteCommon.size() == 0 && recordAddCommon.size() == 0) {
++            return false;
++        }
++        // 去除两列表中重复的数据
++        List<EappEntity> repeatedDelEntities = new ArrayList<>();
++        for (int i = 0; i < recordDeleteCommon.size(); i++) {
++            for (int j = 0; j < recordAddCommon.size(); j++) {
++                if (recordDeleteCommon.get(i).getAppAgentId()
++                        == recordAddCommon.get(j).getAppAgentId()) {
++                    repeatedDelEntities.add(recordDeleteCommon.get(i));
++                    recordAddCommon.remove(j);
++                    break;
++                }
++            }
++        }
++        recordDeleteCommon.removeAll(repeatedDelEntities);
++        // 如果有任何的改动，都需要重新提交数据
++        return recordDeleteCommon.size() > 0 || recordAddCommon.size() > 0;
++    }
++
++    /**
++     * 获取提交到服务器的常用应用数据。
++     *
++     * @param isEditable 编辑状态
++     */
++    public org.json.JSONObject getCurrentCommon(boolean isEditable) {
++        org.json.JSONObject commonAgentObj = new JSONObject();
++        JSONArray commonArr = new JSONArray();
++        if (removeRepeatedActionOnCommon(isEditable) || commonMoved) {
++            commonMoved = false;
++            for (EappEntity entity : commonEappList) {
++                commonArr.put(entity.getAgentId());
++            }
++        }
++        try {
++            commonAgentObj.put("agent_ids", commonArr);
++        } catch (JSONException e) {
++            e.printStackTrace();
++        }
++        return commonAgentObj;
++    }
++
++    /**
++     * 获取需要更新的App数据，进行数据库更新。
++     * 更新的应用包含从常用中删除和添加到常用中的数据
++     */
++    public List<EappEntity> getUpdateList() {
++        List<EappEntity> result = new ArrayList<>();
++        if (removeRepeatedActionOnCommon(true)) {
++            result.addAll(recordDeleteCommon);
++            result.addAll(recordAddCommon);
++        }
++        return result;
++    }
++
++    /**
++     * 此函数仅供Recall取消常用应用删除使用。
++     * 场景：当前全部应用分类和删除的应用相同。
++     */
++    public List<ViewDataSource> updateAdapterDatas(List<ViewDataSource> datas) {
++        int othersEappIndex = -1;
++        for (int i = 0; i < datas.size(); i++) {
++            if (datas.get(i) instanceof EappCategoryOthersEntity) {
++                othersEappIndex = i;
++                break;
++            }
++        }
++        if (othersEappIndex < 0) {
++            return datas;
++        }
++        List<ViewDataSource> result = new ArrayList<>();
++        result.addAll(datas.subList(0, othersEappIndex + 1));
++        result.addAll(getCurrentEappList());
++        return result;
++    }
++
++    public List<EappCategoryEntity> getOthersCategoryEntities() {
++        return othersCategoryEntities;
++    }
++}
+Index: YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/event/EditModeEvent.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/event/EditModeEvent.java	(date 1662097961000)
++++ YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/event/EditModeEvent.java	(date 1662097961000)
+@@ -0,0 +1,9 @@
++package com.yyyydu.hi.eapp.event;
++
++import com.yyyydu.hi.OttoEvent;
++
++/**
++ * 空应用的Item按钮，点击事件，开启编辑模式。
++ */
++public class EditModeEvent extends OttoEvent {
++}
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/EappPresenter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/EappPresenter.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/EappPresenter.java	(date 1662706778000)
+@@ -18,14 +18,17 @@
+ import com.yyyydu.hi.eapp.database.EappDBUtil;
+ import com.yyyydu.hi.eapp.datasource.ViewDataSource;
+ import com.yyyydu.hi.eapp.entity.EappCategoryEntity;
++import com.yyyydu.hi.eapp.entity.EappCategoryOthersEntity;
+ import com.yyyydu.hi.eapp.entity.EappEntity;
+ import com.yyyydu.hi.eapp.entity.EmptyEappEntity;
+ import com.yyyydu.hi.eapp.entity.EmptyEntity;
+ import com.yyyydu.hi.eapp.entity.json.EappCategoryJsonEntity;
+ import com.yyyydu.hi.eapp.entity.json.NoCommonEappEntity;
++import com.yyyydu.hi.eapp.event.AddEappEvent;
+ import com.yyyydu.hi.eapp.event.ChangeStateEvent;
+ import com.yyyydu.hi.eapp.event.DeleteEappEvent;
+ import com.yyyydu.hi.eapp.event.EappShowHidedEvent;
++import com.yyyydu.hi.eapp.event.EditModeEvent;
+ import com.yyyydu.hi.eapp.event.GetAllEappEvent;
+ import com.yyyydu.hi.eapp.event.GetCorpEvent;
+ import com.yyyydu.hi.eapp.event.StartEditmodeEvent;
+@@ -44,10 +47,9 @@
+ import com.yyyydu.hi.utils.ThreadPoolManager;
+ import com.yyyydu.hi.utils.UIEvent;
+ import com.yyyydu.hi.utils.Utils;
++import com.yyyydu.hi.widget.GifView;
+ import com.squareup.otto.Subscribe;
+ 
+-import org.json.JSONException;
+-
+ import java.util.ArrayList;
+ import java.util.Collections;
+ import java.util.HashSet;
+@@ -78,6 +80,7 @@
+                 List<ViewDataSource> suggestedItems, int eappNums);
+ 
+         void init();
++        void initEdit();
+ 
+         void update();
+ 
+@@ -87,6 +90,8 @@
+ 
+         void delete(DeleteEappEvent event);
+ 
++        void addCommon(AddEappEvent event);
++
+         void startEdit();
+ 
+         void showRecallHint();
+@@ -139,7 +144,8 @@
+                 if (items != null && items.size() > 1) {
+                     isEappRefresh = false;
+                 }
+-                final List<ViewDataSource> suggestedItems = classifySuggestedEappAfterSearchFromDB(items, categories);
++                final List<ViewDataSource> suggestedItems =
++                        classifySuggestedEappAfterSearchFromDB(items, categories);
+                 final List<ViewDataSource> dataSources =
+                         classifyEappAfterSearchFromDB1(items, categories);
+ 
+@@ -176,32 +182,25 @@
+     //    }
+ 
+     /**
+-     * TODO 这里还需要修改  "常用应用"
+-     *
++     * 过滤出全部Entity中的可拖动应用。
+      */
+-    public List<ViewDataSource> getCommonEappsFromNormalMode(List<ViewDataSource> items) {
++    public static List<ViewDataSource> getEditableEapps(final List<ViewDataSource> items) {
+         List<ViewDataSource> result = new ArrayList<>();
+         if (items == null || items.size() == 0) {
+             return result;
+         }
+         for (ViewDataSource dataSource : items) {
+-            if (dataSource instanceof EappEntity) {
+-                if (((EappEntity) dataSource).isCommon()) {
+-                    result.add(dataSource);
+-                } else {
+-                    break;
+-                }
+-            } else if (dataSource instanceof EappCategoryEntity) {
+-                if (((EappCategoryEntity) dataSource).isCommon()) {
+-                    result.add(dataSource);
+-                } else {
+-                    break;
+-                }
+-            }
++            if (dataSource instanceof NoCommonEappEntity) {
++                continue;
++            }
++            if (dataSource instanceof EmptyEappEntity) {
++                continue;
++            }
++            result.add(dataSource);
+         }
+         int size = result.size();
+         if (size == 0) {
+-            LogUtil.e(TAG, "getCommonEappsFromNormalMode :: the count of common eapp is 0.");
++            LogUtil.e(TAG, "getEditableEapps :: the count of common eapp is 0.");
+         }
+         return result;
+     }
+@@ -256,6 +255,13 @@
+         return eappCategoryNames;
+     }
+ 
++    /**
++     * 获取需要展示的数据，并同步缓存{@link EappCacheClassified}。
++     *
++     * @param categories 全部分类
++     * @param items      全部应用
++     * @return 常用应用+当前选中tab的全部应用
++     */
+     @SuppressWarnings("WeakerAccess")
+     List<ViewDataSource> classifyEappAfterSearchFromDB1(List<EappEntity> items,
+             List<EappCategoryJsonEntity> categories) {
+@@ -273,73 +279,98 @@
+             return dataSources;
+         }
+ 
+-        int categoryNum;
+-
+-        List<EappCategoryEntity> categoryEntityList = EappLogic.getInstance().jsonToEntityCategories(categories);
+-        Collections.sort(categoryEntityList);
+-        Map<Integer, List<EappEntity>> categoriedEapps = new LinkedHashMap<>();
+-
+-        Set<Integer> categoriedIds = new HashSet<>();
+-
++        // key:category,val:list<eapp>
++        Map<Integer, List<EappEntity>> categoriedEappMap = new LinkedHashMap<>();
++        // 暂存常用分类对象，用来删除此分类
++        EappCategoryEntity commonCategory = null;
++        // 统计除了common外的应用分类数量
++        Set<Integer> categoriesSet = new HashSet<>();
++        // 要求不展示"默认应用"分类在"全部应用"中，且从"常用应用"中移除默认应用。
++        EappCategoryJsonEntity entityNotShow = null;
+         // 准备分类的eapp数据结构, 并把分类加了进来
+         for (EappCategoryJsonEntity entity : categories) {
+-            categoriedEapps.put(entity.getClassId(), new ArrayList<>());
++            if (entity.getName().equals(
++                    HiApplication.getInstance().getString(R.string.eapp_default))) {
++                EappCacheClassified.defaultCategoryClassId = entity.getClassId();
++                // 删除默认应用，不展示在全部分类中
++                entityNotShow = entity;
++                continue;
++            }
++            categoriedEappMap.put(entity.getClassId(), new ArrayList<>());
+         }
++        categories.remove(entityNotShow);
+ 
+         // 把应用加进去
+         for (EappEntity eappEntity : items) {
+             int classId;
+-            int specClassId = eappEntity.getSpceClassId();
+-            if (specClassId == EappLogic.SPEC_CLASS_COMMOM) {
+-                classId = specClassId;
++            // 去除"默认应用"分类
++            if (eappEntity.getClassId() == EappCacheClassified.defaultCategoryClassId) {
++                continue;
++            }
++            // 常用应用和其他应用区分开
++            if (eappEntity.getSpceClassId() == EappLogic.SPEC_CLASS_COMMON) {
++                classId = eappEntity.getSpceClassId();
++                eappEntity.setEditIconType(EappEntity.COLOR_RED);
+             } else {
+                 classId = eappEntity.getClassId();
++                eappEntity.setEditIconType(EappEntity.COLOR_GREEN);
+             }
+-            if (categoriedEapps.containsKey(classId)) {
+-                List<EappEntity> eappEntities = categoriedEapps.get(classId);
++            if (categoriedEappMap.containsKey(classId)) {
++                List<EappEntity> eappEntities = categoriedEappMap.get(classId);
+                 eappEntities.add(eappEntity);
+-                categoriedEapps.put(classId, eappEntities);
+-                if (classId != EappLogic.SPEC_CLASS_COMMOM) {
+-                    categoriedIds.add(classId);
+-                } else {
+-                    List<EappEntity> eappEntities1 = categoriedEapps.get(eappEntity.getClassId());
+-                    eappEntities1.add(eappEntity);
+-                    categoriedEapps.put(eappEntity.getClassId(), eappEntities1);
+-                    categoriedIds.add(classId);
+-                }
++                categoriedEappMap.put(classId, eappEntities);
++                categoriesSet.add(classId);
+             }
+         }
+ 
+-        categoryNum = categoriedIds.size();
++        int categoryNum = categoriesSet.size();
+ 
++        // 可排序分类列表
++        List<EappCategoryEntity> categoryEntityList =
++                EappLogic.getInstance().jsonToEntityCategories(categories);
++        Collections.sort(categoryEntityList);
+         if (CorpLogic.getInstance().isCorpMemberAuthed()) {
+             for (EappCategoryEntity categoryEntity : categoryEntityList) {
+                 // 当用户是已认证企业用户，获取常用应用的同时，在尾部加入推荐应用的EappCategoryEntity
+                 if (categoryEntity.isCommon() || categoryEntity.isyyyyduSuggested()) {
++                    commonCategory = categoryEntity;
+                     LogUtil.i(TAG, "classifyEappAfterSearchFromDB1:: categoryEntity->" + categoryEntity);
+                     List<EappEntity> temp = EappLogic.getInstance().getEappEntityOrder(
+-                            categoriedEapps.get(categoryEntity.getClassId()), categoryEntity.getAgentIds());
++                            categoriedEappMap.get(categoryEntity.getClassId()), categoryEntity.getAgentIds());
+                     LogUtil.i(TAG, "classifyEappAfterSearchFromDB1:: temp->" + temp);
+                     if (temp.size() > 0) {
++                        // 添加分类(category)到数据集
+                         if (categoryNum >= 1 || categoryEntity.isCommon()) {
++                            categoryEntity.setName("我的常用应用");
+                             dataSources.add(categoryEntity);
+                         }
+                         LogUtil.i(TAG, "classifyEappAfterSearchFromDB1:: eapps->"
+-                                + categoriedEapps.get(categoryEntity.getClassId()));
++                                + categoriedEappMap.get(categoryEntity.getClassId()));
++                        // 追加全部常用应用(entity)到数据集
+                         if (categoryEntity.isCommon()) {
+                             dataSources.addAll(temp);
+-                            dataSources.add(new EmptyEappEntity());
++                            // 20220825：不再显示"添加"项
++//                            dataSources.add(new EmptyEappEntity());
+                         }
+                     } else {
+                         // 不存在常用应用
+                         if (categoryEntity.isCommon()) {
+                             dataSources.add(categoryEntity);
+-                            dataSources.add(new NoCommonEappEntity());
++                            dataSources.add(new NoCommonEappEntity(
++                                    GifView.NO_COMMON_EAPP, true));
+ //                            dataSources.add(new EmptyEntity());
+                         }
+                     }
+                 }
+             }
++            // 保留除了常用外的分类，供EappCategoryOthersEntity进行展示
++            if (commonCategory != null) {
++                categoriedEappMap.remove(commonCategory.getClassId());
++                categoryEntityList.remove(commonCategory);
++            }
++            // 初始化缓存，用来左右切换刷新数据
++            EappCacheClassified.getInstance().setAllData(categoriedEappMap
++                    , categoryEntityList, dataSources);
+         }
+ 
+         // 只有一个默认分类
+@@ -351,10 +382,34 @@
+                 }
+             }
+         }
++        // 添加"全部应用"分类Item，本地初始化，不是云端下发，和"个人常用"不同。
++        dataSources.add(getCategoryOthers());
++        // 存储除了常用之外的全部数据
++        EappCategoryOthersEntity othersEntity = new EappCategoryOthersEntity();
++        othersEntity.setCategoryList(EappCacheClassified.getInstance().getOthersCategoryEntities());
++        dataSources.add(othersEntity);
++        // 附加当前分类的应用
++        List<EappEntity> categoryList = EappCacheClassified.getInstance().getCurrentEappList();
++        if (categoryList != null && categoryList.size() != 0) {
++            dataSources.addAll(categoryList);
++        } else {
++            dataSources.add(new NoCommonEappEntity(GifView.NO_OTHERS_EAPP, false));
++        }
+ 
+         return dataSources;
+     }
+ 
++    // 获取"全部应用"分类Title对象
++    private EappCategoryEntity getCategoryOthers() {
++        EappCategoryEntity category = new EappCategoryEntity();
++        category.setName("全部应用");
++        category.setAgentIds(new ArrayList<>());
++        category.setFirst(false);
++        category.setOrder(1);
++        category.setClassId(EappLogic.SPEC_CLASS_DEFAULT);
++        return category;
++    }
++
+     @SuppressWarnings("WeakerAccess")
+     List<ViewDataSource> classifySuggestedEappAfterSearchFromDB(List<EappEntity> items,
+                                                                 List<EappCategoryJsonEntity> categories) {
+@@ -517,6 +572,26 @@
+         }
+     }
+ 
++    @Subscribe
++    public void onAddEappEvent(final AddEappEvent event) {
++        if (event != null) {
++            final EappPresenter.EappFragmentUi ui = getUi();
++            if (ui != null) {
++                ui.addCommon(event);
++            }
++        }
++    }
++
++    @Subscribe
++    public void onNoCommonBtnEvent(final EditModeEvent event) {
++        if (event != null) {
++            final EappPresenter.EappFragmentUi ui = getUi();
++            if (ui != null) {
++                ui.initEdit();
++            }
++        }
++    }
++
+ //    @Subscribe
+ //    public void onSetCommonEappEvent(SetCommonEappEvent event) {
+ //        LogUtil.I(TAG, "onSetCommonEappEvent:: event->" + event);
+@@ -603,6 +678,7 @@
+         return new ArrayList<>();
+     }
+ 
++    // 保存长按前的数据（clone副本）
+     @SuppressWarnings("WeakerAccess")
+     List<ViewDataSource> beforeEdit = null;
+     @SuppressWarnings("WeakerAccess")
+@@ -654,6 +730,21 @@
+         if (beforeEdit == null) {
+             return new ArrayList<>();
+         }
++        List<ViewDataSource> result = new ArrayList<>();
++        int othersCategoryPos = beforeEdit.size();
++        for (int i=0; i<beforeEdit.size(); i++) {
++            if (beforeEdit.get(i) instanceof EappCategoryOthersEntity) {
++                othersCategoryPos = i;
++                break;
++            }
++        }
++        result.addAll(beforeEdit.subList(0, othersCategoryPos + 1));
++        if (EappCacheClassified.getInstance().getCurrentEappList().size() == 0) {
++            result.add(new NoCommonEappEntity(GifView.NO_OTHERS_EAPP, false));
++        } else {
++            result.addAll(EappCacheClassified.getInstance().getCurrentEappList());
++        }
++        beforeEdit = result;
+         return beforeEdit;
+     }
+ 
+@@ -687,38 +778,32 @@
+         return result;
+     }
+ 
+-    public boolean editEappsFinished(final List<ViewDataSource> afterEdit) {
++    /**
++     * 保存编辑后数据到服务端和数据库。
++     * @return true需要更新数据
++     */
++    public boolean editEappsFinished(final List<ViewDataSource> afterEdit, boolean isEditable) {
+ 
+-        org.json.JSONObject jsonObject = EappLogic.getInstance().getDiff(beforeEdit, afterEdit);
+-        LogUtil.i(TAG, "editEappsFinished:: jsonObject->" + jsonObject.toString());
+-        try {
+-            // 当删除所有常用应用时，afterEdit数量为0
+-            if (afterEdit != null && afterEdit.size() != 0) {
+-                // 常用应用没有变化
+-                if (!jsonObject.has("agent_ids") || jsonObject.getJSONArray("agent_ids").length() == 0) {
+-                    return false;
+-                }
+-            }
+-        } catch (JSONException e) {
+-            e.printStackTrace();
+-        }
+-        LogUtil.i(TAG, "editEappsFinished:: 准备发送请求");
++//        org.json.JSONObject jsonObject = EappLogic.getInstance().getDiff(beforeEdit, afterEdit);
++        org.json.JSONObject jsonObject = EappCacheClassified.getInstance().getCurrentCommon(isEditable);
++        LogUtil.i(TAG, "editEappsFinished:: 准备发送请求->" + jsonObject.toString());
+         EappLogic.getInstance().editEappsFinished(jsonObject, new EappLogic.EappEditFinishCallback() {
+             @Override
+             public void onEditFinish() {
+                 // 更新数据库中常用应用
+-                EappLogic.getInstance().updateCommonEapps(beforeEdit, afterEdit);
++                EappLogic.getInstance().updateCommonEapps();
++                // 统计编辑后的全部常用应用
+                 List<Long> agentIds = new ArrayList<>();
+                 if (afterEdit != null) {
+                     for (ViewDataSource viewDataSource : afterEdit) {
+                         if (viewDataSource instanceof EappEntity
+-                                && ((EappEntity) viewDataSource).getSpceClassId() == EappLogic.SPEC_CLASS_COMMOM) {
++                                && ((EappEntity) viewDataSource).getSpceClassId() == EappLogic.SPEC_CLASS_COMMON) {
+                             agentIds.add(((EappEntity) viewDataSource).getAgentId());
+                         }
+                     }
+                 }
+-                // 更新EappCategory中agentIds
+-                EappCategoryDBUtil.getDB().updateEappCategory(EappLogic.SPEC_CLASS_COMMOM, agentIds);
++                // 设置常用后更新AGENT_IDS
++                EappCategoryDBUtil.getDB().updateEappCategory(EappLogic.SPEC_CLASS_COMMON, agentIds);
+ 
+                 List<EappEntity> items = EappDBUtil.getDB().getInstalledEapp1();
+ //                PersonalActiveCenterLogic.getInstance().delPersonalAcitveApp(items);
+Index: YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/event/AddEappEvent.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/event/AddEappEvent.java	(date 1662084336000)
++++ YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/event/AddEappEvent.java	(date 1662084336000)
+@@ -0,0 +1,18 @@
++package com.yyyydu.hi.eapp.event;
++
++import com.yyyydu.hi.OttoEvent;
++
++/**
++ * EappItem编辑模式下点击绿色添加按钮，添加常用应用。
++ */
++public class AddEappEvent extends OttoEvent {
++    private long agentId;
++
++    public long getAgentId() {
++        return agentId;
++    }
++
++    public void setAgentId(long agentId) {
++        this.agentId = agentId;
++    }
++}
+Index: YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/itemviews/ItemViewCategoryOthers.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/itemviews/ItemViewCategoryOthers.java	(date 1662097961000)
++++ YYYYduHi/src/HiXXXBank/java/com/yyyydu/hi/eapp/itemviews/ItemViewCategoryOthers.java	(date 1662097961000)
+@@ -0,0 +1,91 @@
++package com.yyyydu.hi.eapp.itemviews;
++
++import android.content.Context;
++import android.graphics.Color;
++import android.graphics.Typeface;
++import android.text.TextUtils;
++import android.view.Gravity;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.widget.TextView;
++
++import androidx.core.content.ContextCompat;
++
++import com.yyyydu.hi.R;
++import com.yyyydu.hi.eapp.EappCacheClassified;
++import com.yyyydu.hi.eapp.entity.EappCategoryEntity;
++import com.yyyydu.hi.eapp.entity.EappCategoryOthersEntity;
++import com.yyyydu.hi.eapp.viewholder.ViewHolder;
++import com.google.android.material.tabs.TabLayout;
++
++import java.util.List;
++
++public class ItemViewCategoryOthers<T> extends ItemView<T> {
++    @Override
++    public int getLayoutId() {
++        return R.layout.eapp_category_others_title;
++    }
++
++    @Override
++    public void convert(ViewHolder holder, T t, int position, int mode, boolean isNoCommonEappExited) {
++        List<EappCategoryEntity> categoryList = ((EappCategoryOthersEntity) t).getCategoryList();
++        TabLayout tabLayout = holder.itemView.findViewById(R.id.eapp_category_others_tab);
++        if (tabLayout.getTabCount() != 0) {
++            setChosenTabView(tabLayout.getTabAt(EappCacheClassified.currentTabPosition)
++                    , holder.itemView.getContext());
++            if (EappCacheClassified.unselectedTabPosition >= 0) {
++                setUnChosenTabView(tabLayout.getTabAt(EappCacheClassified.unselectedTabPosition));
++            }
++            return;
++        }
++        for (EappCategoryEntity entity : categoryList) {
++            TabLayout.Tab tab = tabLayout.newTab();
++            if (TextUtils.isEmpty(entity.getName())) {
++                tab.setCustomView(
++                        getTabView(holder.itemView.getContext()
++                                , String.valueOf(entity.getClassId())));
++                tab.setText(entity.getClassId());
++            } else {
++                // 设置每个分类的名称
++                tab.setCustomView(getTabView(holder.itemView.getContext()
++                        , entity.getName()));
++                tab.setText(entity.getName());
++            }
++            tabLayout.addTab(tab);
++            if (categoryList.indexOf(entity) == EappCacheClassified.currentTabPosition) {
++                setChosenTabView(tab, holder.itemView.getContext());
++            }
++        }
++    }
++
++    // 获取除了常用应用外其他分类的TabItem
++    private View getTabView(Context context, String title) {
++        View view = LayoutInflater.from(context)
++                .inflate(R.layout.eapp_category_others_title_item, null);
++        TextView textView = view.findViewById(R.id.tv_category_tab);
++        textView.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
++        textView.setTextColor(Color.parseColor("#11141A"));
++        textView.setText(title);
++        return view;
++    }
++
++    private void setChosenTabView(TabLayout.Tab tab, Context context) {
++        if (tab == null) {
++            return;
++        }
++        TextView tvTab = tab.getCustomView().findViewById(R.id.tv_category_tab);
++        tvTab.setBackground(
++                ContextCompat.getDrawable(context, R.drawable.global_search_tab_indicator));
++        tvTab.setTextColor(Color.parseColor("#11141A"));
++        tvTab.setGravity(Gravity.CENTER);
++        tvTab.setText(tab.getText());
++    }
++
++    private void setUnChosenTabView(TabLayout.Tab tab) {
++        TextView tvTab = tab.getCustomView().findViewById(R.id.tv_category_tab);
++        tvTab.setBackground(null);
++        tvTab.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
++        tvTab.setTextColor(Color.parseColor("#11141A"));
++        tvTab.setText(tab.getText());
++    }
++}
+Index: YYYYduHi/src/HiXXXBank/res/layout/eapp_category_others_title.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/HiXXXBank/res/layout/eapp_category_others_title.xml	(date 1662084336000)
++++ YYYYduHi/src/HiXXXBank/res/layout/eapp_category_others_title.xml	(date 1662084336000)
+@@ -0,0 +1,30 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="wrap_content"
++    android:orientation="vertical">
++
++    <!-- 全部应用的分类Tab（Entity），与全部应用分类Title（Category）区分开-->
++    <com.google.android.material.tabs.TabLayout
++        android:id="@+id/eapp_category_others_tab"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:layout_alignParentBottom="true"
++        android:background="@color/L_11"
++        android:paddingStart="4dp"
++        app:tabBackground="@null"
++        app:tabIndicatorHeight="0dp"
++        app:tabMinWidth="0dp"
++        app:tabMode="scrollable"
++        app:tabPaddingEnd="12dp"
++        app:tabPaddingStart="12dp"
++        app:tabRippleColor="@null"
++        app:tabSelectedTextColor="#11141A"
++        app:tabTextAppearance="@style/global_search_tab_layout"
++        app:tabTextColor="#11141A" />
++
++    <View
++        android:id="@+id/view_bottom_divider"
++        style="@style/divider_8_0_personal_frag" />
++</LinearLayout>
+\ No newline at end of file
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/adapter/AllEappAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/adapter/AllEappAdapter.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/adapter/AllEappAdapter.java	(date 1662628550000)
+@@ -183,7 +183,7 @@
+                             event.setSuccess(true);
+                             event.setAgentId(entity.getAgentId());
+                             HiApplication.getInstance().ottoEventPost(event);
+-                            entity.setSpceClassId(EappLogic.SPEC_CLASS_COMMOM);
++                            entity.setSpceClassId(EappLogic.SPEC_CLASS_COMMON);
+                             HiApplication.getInstance().runOnUIThread(new Runnable() {
+                                 @Override
+                                 public void run() {
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/adapter/EappCenterAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/adapter/EappCenterAdapter.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/adapter/EappCenterAdapter.java	(date 1662690784000)
+@@ -5,22 +5,30 @@
+ import static com.yyyydu.hi.eapp.datasource.ViewDataSource.TYPE_EMPTY_EAPP;
+ import static com.yyyydu.hi.eapp.datasource.ViewDataSource.TYPE_NO_COMMON_EAPP;
+ import static com.yyyydu.hi.eapp.datasource.ViewDataSource.TYPE_TITLE;
++import static com.yyyydu.hi.eapp.datasource.ViewDataSource.TYPE_TITLE_OTHERS;
+ 
+ import java.util.List;
+ 
++import com.yyyydu.hi.R;
++import com.yyyydu.hi.eapp.EappCacheClassified;
+ import com.yyyydu.hi.eapp.ItemViewManager;
+ import com.yyyydu.hi.eapp.datasource.ViewDataSource;
+ import com.yyyydu.hi.eapp.entity.EappCategoryEntity;
++import com.yyyydu.hi.eapp.entity.EappCategoryOthersEntity;
+ import com.yyyydu.hi.eapp.entity.EappEntity;
+ import com.yyyydu.hi.eapp.entity.EmptyEappEntity;
+ import com.yyyydu.hi.eapp.entity.json.NoCommonEappEntity;
+ import com.yyyydu.hi.eapp.itemviews.ItemViewCategory;
++import com.yyyydu.hi.eapp.itemviews.ItemViewCategoryOthers;
+ import com.yyyydu.hi.eapp.itemviews.ItemViewEapp;
+ import com.yyyydu.hi.eapp.itemviews.ItemViewEmpty;
+ import com.yyyydu.hi.eapp.itemviews.ItemViewEmptyEapp;
+ import com.yyyydu.hi.eapp.itemviews.ItemViewNoCommon;
++import com.yyyydu.hi.eapp.logic.EappLogic;
+ import com.yyyydu.hi.eapp.viewholder.ViewHolder;
+ import com.yyyydu.hi.utils.LogUtil;
++import com.yyyydu.hi.widget.GifView;
++import com.google.android.material.tabs.TabLayout;
+ 
+ import android.content.Context;
+ import androidx.annotation.NonNull;
+@@ -42,9 +50,11 @@
+ 
+     @SuppressWarnings("WeakerAccess")
+     OnItemClickListener mOnItemClickListener;
++    TabLayout.OnTabSelectedListener mTabSelectedListener;
+ 
+     private final ItemViewManager<T> itemViewManager = new ItemViewManager<>();
+ 
++    // 编辑排序或普通展示模式
+     private int mode;
+ 
+     public void setMode(int mode) {
+@@ -71,6 +81,7 @@
+         itemViewManager.addItemView(new ItemViewEmpty<>(), TYPE_EMPTY);
+         itemViewManager.addItemView(new ItemViewEmptyEapp<>(), TYPE_EMPTY_EAPP);
+         itemViewManager.addItemView(new ItemViewNoCommon<>(), TYPE_NO_COMMON_EAPP);
++        itemViewManager.addItemView(new ItemViewCategoryOthers<>(), TYPE_TITLE_OTHERS);
+     }
+ 
+     public void setmDatas(List<T> datas) {
+@@ -105,6 +116,7 @@
+                 }
+             });
+         }
++        // TYPE_TITLE_OTHERS动态添加，因此点击事件在bindView里面
+     }
+ 
+     @Override
+@@ -118,16 +130,54 @@
+             LogUtil.e(TAG, "getItemViewType:: position->" + position + " mDatas.size()->" + mDatas.size());
+             return;
+         }
+-        boolean isNoCommonEappExited = false;
+         // 判断常用应用引导是否存在
+-        for (int i = 0; i < mDatas.size(); i++) {
+-            T t = mDatas.get(i);
+-            if (t instanceof NoCommonEappEntity) {
+-                isNoCommonEappExited = true;
+-                break;
+-            }
+-        }
++        boolean isNoCommonEappExited
++                = EappCacheClassified.getInstance().getCommonEappList().size() <= 0;
+         itemViewManager.convert(holder, position, mDatas.get(position), mode, isNoCommonEappExited);
++        if (getItemViewType(position) == TYPE_TITLE_OTHERS) {
++            setTabClickListener(holder);
++        }
++    }
++
++    // 设置"全部应用"TabLayout的选择事件,position:RecyclerView中的position
++    private void setTabClickListener(RecyclerView.ViewHolder holder) {
++        TabLayout tabLayout = holder.itemView.findViewById(R.id.eapp_category_others_tab);
++        // 退出界面再回来，恢复之前选中状态
++        tabLayout.selectTab(tabLayout.getTabAt(EappCacheClassified.currentTabPosition));
++        if (mTabSelectedListener == null) {
++            mTabSelectedListener = new TabLayout.OnTabSelectedListener() {
++                @Override
++                public void onTabSelected(TabLayout.Tab tab) {
++                    if (mOnItemClickListener == null || EappCacheClassified.isClickTooFast(false)) {
++                        tabLayout.selectTab(tabLayout.getTabAt(EappCacheClassified.currentTabPosition));
++                    } else {
++                        EappCacheClassified.getInstance().setCurrentCategoryPos(tab.getPosition());
++                        if (getTabLayoutPosition() > 0) {
++                            // 不能使用局部变量参数，会造成位置错误。
++                            mOnItemClickListener.onItemClick(tabLayout, holder, getTabLayoutPosition());
++                        }
++                    }
++                }
++
++                @Override
++                public void onTabUnselected(TabLayout.Tab tab) {
++                }
++
++                @Override
++                public void onTabReselected(TabLayout.Tab tab) {
++                }
++            };
++        }
++        tabLayout.addOnTabSelectedListener(mTabSelectedListener);
++    }
++
++    private int getTabLayoutPosition() {
++        for (int i=0; i<mDatas.size(); i++) {
++            if (mDatas.get(i) instanceof EappCategoryOthersEntity) {
++                return i;
++            }
++        }
++        return -1;
+     }
+ 
+     @Override
+@@ -243,13 +293,48 @@
+         for (int i = 0; i < mDatas.size(); i++) {
+             ViewDataSource dataSource = (ViewDataSource) mDatas.get(i);
+             if (dataSource instanceof EappEntity) {
+-                if (((EappEntity) dataSource).getAgentId() == agentId) {
++                EappEntity removedEntity = (EappEntity) dataSource;
++                if (removedEntity.getAgentId() == agentId) {
+                     // TODO删除之前看看是不是还有
+                     if (!isCancelCommon && isSingleInCategory(i)) {
+                         mDatas.remove(i - 1);
+                         i = i - 1;
+                     }
+                     mDatas.remove(i);
++                    removedEntity.setEditIconType(EappEntity.COLOR_GREEN);
++                    removedEntity.setSpceClassId(EappLogic.SPEC_CLASS_DEFAULT);
++                    boolean deleted = EappCacheClassified.getInstance()
++                            .removeEntityFromCommon(removedEntity);
++                    // 从常用中删除的应用可能需要展示在全部应用中
++                    if (deleted && removedEntity.getClassId()
++                            == EappCacheClassified.getInstance().getCurrentTabClassId()) {
++                        addEntityTomData(removedEntity, mDatas.size());
++                    }
++                    return i;
++                }
++            }
++        }
++        return -1;
++    }
++
++    public int addCommon(long agentId) {
++        if (mDatas == null) {
++            return -1;
++        }
++        for (int i = 0; i < mDatas.size(); i++) {
++            ViewDataSource dataSource = (ViewDataSource) mDatas.get(i);
++            if (dataSource instanceof EappEntity) {
++                EappEntity tempEntity = (EappEntity) dataSource;
++                if (tempEntity.getAgentId() == agentId) {
++                    mDatas.remove(i);
++                    tempEntity.setEditIconType(EappEntity.COLOR_RED);
++                    tempEntity.setSpceClassId(EappLogic.SPEC_CLASS_COMMON);
++                    boolean added = EappCacheClassified.getInstance()
++                            .addEntityToCommon(tempEntity);
++                    if (added) {
++                        addEntityTomData(tempEntity, EappCacheClassified.getInstance()
++                                .getCommonEappList().size());
++                    }
+                     return i;
+                 }
+             }
+@@ -257,6 +342,25 @@
+         return -1;
+     }
+ 
++    /**
++     * 添加数据到RecyclerView数据集指定位置
++     */
++    private void addEntityTomData(EappEntity dataSource, int insertPos) {
++        if (mDatas == null || mDatas.size() < insertPos) {
++            return;
++        }
++        if (mDatas.size() == 0) {
++            mDatas.add((T)dataSource);
++            return;
++        }
++        // 无常用应用,则删除空Item，添加Eapp Item
++        if (mDatas.get(insertPos - 1) instanceof NoCommonEappEntity) {
++            mDatas.remove(insertPos - 1);
++            insertPos--;
++        }
++        mDatas.add(insertPos, (T)dataSource);
++    }
++
+     public ViewDataSource find(long agentId) {
+         if (mDatas == null || mDatas.size() == 0) {
+             return null;
+@@ -272,41 +376,38 @@
+ 
+     public void add(final ViewDataSource dataSource, boolean isSetCommon) {
+         if (isSetCommon) {
+-
+             if (mDatas == null) {
+                 return;
+             }
+-            if (mDatas.size() == 0) {
+-                mDatas.add((T) dataSource);
+-                return;
+-            }
+-//            Map<Integer, Long> categoryIndexs = new LinkedHashMap<>();
+-//            Set<Integer> categoriedIds = new HashSet<>();
+-//            EappEntity eappEntity = (EappEntity) dataSource;
+-//            int classId = eappEntity.getClassId();
+-//            long order = eappEntity.getOrder();
+-//            boolean hasCategory = false;
++            // 更新"全部应用"缓存中的数据
++            if (dataSource instanceof EappEntity) {
++                EappEntity removedEntity = (EappEntity) dataSource;
++                boolean deleted = EappCacheClassified.getInstance().removeEntityFromMap(removedEntity);
++                EappCacheClassified.getInstance().getCommonEappList().add(removedEntity);
++                if (deleted && removedEntity.getClassId()
++                        == EappCacheClassified.getInstance().getCurrentTabClassId()) {
++                    removeEntityFromData(removedEntity);
++                }
++            }
+             int insertPosition = -1;
+             int insertFirstCommonPosition = -1;
+-//            boolean isFirstNonCommonIndex = false;
+-//            int firstNonCommonIndex = 0;
+             // 当常用应用引导存在时，add前需进行移除，同时添加EmptyEappEntity
+             for (int i = 0; i < mDatas.size(); i++) {
+                 T t = mDatas.get(i);
+                 if (t instanceof NoCommonEappEntity) {
+                     mDatas.remove(i);
+-                    mDatas.add(i, (T) new EmptyEappEntity());
++//                    mDatas.add(i, (T) new EmptyEappEntity());
+                     break;
+                 }
+             }
+             for (int i = 0; i < mDatas.size(); i++) {
+                 T t = mDatas.get(i);
+-                if (t instanceof EmptyEappEntity) {
+-                    insertPosition = i;
++                if (t instanceof EappCategoryOthersEntity) {
++                    insertPosition = i - 1;
+                     break;
+                 } else if (t instanceof EappCategoryEntity) {
+                     if (((EappCategoryEntity) t).isCommon()) {
+-                        insertFirstCommonPosition = i;
++                        insertFirstCommonPosition = i + 1;
+                     }
+                 }
+             }
+@@ -319,147 +420,14 @@
+             if (insertFirstCommonPosition != -1) {
+                 mDatas.add(insertFirstCommonPosition, (T) dataSource);
+             }
+-
+-//            for (int i = 0; i < mDatas.size(); i++) {
+-//                T t = mDatas.get(i);
+-//                if (t instanceof EappCategoryEntity) {
+-//                    int tempClassId = ((EappCategoryEntity) t).getClassId();
+-//                    long tempOrder = ((EappCategoryEntity) t).getOrder();
+-//                    categoryIndexs.put(i, tempOrder);
+-//                    if (tempClassId == classId) {
+-//                        hasCategory = true;
+-//                        insertPosition = i + 1;
+-//                    }
+-//                } else if (t instanceof EappEntity) {
+-//                    if (((EappEntity) t).getSpceClassId() != EappLogic.SPEC_CLASS_COMMOM) {
+-//                        categoriedIds.add(classId);
+-//                        if (!isFirstNonCommonIndex) {
+-//                            isFirstNonCommonIndex = true;
+-//                            firstNonCommonIndex = i;
+-//                        }
+-//                    }
+-//                    if (((EappEntity) t).getClassId() == classId) {
+-//                        insertPosition = i + 1;
+-//                    }
+-//                } else if (t instanceof EmptyEntity) {
+-//                    insertPosition = i + 1;
+-//                }
+-//            }
+-//            // 有分类直接添加 或者没有分类
+-//            if (hasCategory || categoriedIds.size() == 0) {
+-//                mDatas.add(insertPosition, (T) dataSource);
+-//                return;
+-//            } else {
+-//                EappCategoryEntity categoryEntity = null;
+-//                if (CorpLogic.getInstance().isCorpMemberAuthed()) {
+-//                    try {
+-//                        categoryEntity = EappLogic.getInstance().getCategory(classId);
+-//                    } catch (NullPointerException e) {
+-//                        LogUtil.E(TAG, "add:: 这种情况无法添加");
+-//                        return;
+-//                    }
+-//                }
+-//                /*
+-//                 * 从这里开始分两种情况
+-//                 * 1 什么分类都没有，而且这个应用也是这个分类中。只插入应用
+-//                 * 2 什么分类都没有，但是这个应用不在这个分类中。需要插入应用和2个分类
+-//                 * 3 有分类，但是没有这个分类。需要插入应用和分类
+-//                 *
+-//                 */
+-//                if (categoryIndexs.size() == 0) {
+-//                    long order1 = ((EappEntity) mDatas.get(0)).getOrder();
+-//                    int classId1 = ((EappEntity) mDatas.get(0)).getClassId();
+-//                    if (((EappEntity) mDatas.get(0)).getClassId() == classId) {
+-//                        // case 1
+-//                        mDatas.add(mDatas.size(), (T) dataSource);
+-//                        return;
+-//                    } else {
+-//                        EappCategoryEntity categoryEntity1;
+-//                        try {
+-//                            categoryEntity1 = EappLogic.getInstance().getCategory(classId1);
+-//                        } catch (NullPointerException e) {
+-//                            LogUtil.E(TAG, "add:: 这种情况无法添加");
+-//                            return;
+-//                        }
+-//                        // case 2
+-//                        if (categoryEntity1.getOrder() > categoryEntity.getOrder()) {
+-//                            mDatas.add(0, (T) categoryEntity1);
+-//                            mDatas.add(0, (T) dataSource);
+-//                            mDatas.add(0, (T) categoryEntity);
+-//                            return;
+-//                        } else {
+-//                            mDatas.add(0, (T) categoryEntity1);
+-//                            mDatas.add(mDatas.size(), (T) categoryEntity);
+-//                            mDatas.add(mDatas.size(), (T) dataSource);
+-//                            return;
+-//                        }
+-//                    }
+-//                } else if (categoryIndexs.size() == 1 && categoriedIds.size() == 1) {
+-//                    // case 2的特例 就有常用应用分类，但是没有其他分类
+-//                    long order1 = ((EappEntity) mDatas.get(firstNonCommonIndex)).getOrder();
+-//                    int classId1 = ((EappEntity) mDatas.get(firstNonCommonIndex)).getClassId();
+-//                    if (((EappEntity) mDatas.get(firstNonCommonIndex)).getClassId() == classId) {
+-//                        // case 1
+-//                        mDatas.add(mDatas.size(), (T) dataSource);
+-//                        return;
+-//                    } else {
+-//                        EappCategoryEntity categoryEntity1;
+-//                        try {
+-//                            categoryEntity1 = EappLogic.getInstance().getCategory(classId1);
+-//                        } catch (NullPointerException e) {
+-//                            LogUtil.E(TAG, "add:: 这种情况无法添加");
+-//                            return;
+-//                        }
+-//                        // case 2
+-//                        if (categoryEntity1.getOrder() > categoryEntity.getOrder()) {
+-//                            mDatas.add(firstNonCommonIndex, (T) categoryEntity1);
+-//                            mDatas.add(firstNonCommonIndex, (T) dataSource);
+-//                            mDatas.add(firstNonCommonIndex, (T) categoryEntity);
+-//                            return;
+-//                        } else {
+-//                            mDatas.add(firstNonCommonIndex, (T) categoryEntity1);
+-//                            mDatas.add(mDatas.size(), (T) categoryEntity);
+-//                            mDatas.add(mDatas.size(), (T) dataSource);
+-//                            return;
+-//                        }
+-//                    }
+-//                } else {
+-//                    // case 3
+-//                    Iterator<Map.Entry<Integer, Long>> iterator = categoryIndexs.entrySet().iterator();
+-//                    int categoryOrder = categoryEntity.getOrder();
+-//                    while (iterator.hasNext()) {
+-//                        Map.Entry<Integer, Long> entry = iterator.next();
+-//                        int index = entry.getKey();
+-//                        long tempOrder = entry.getValue();
+-//                        if (categoryOrder < tempOrder) {
+-//                            insertPosition = index;
+-//                            break;
+-//                        } else {
+-//                            insertPosition = mDatas.size();
+-//                        }
+-//                    }
+-//                    if (insertPosition == -1) {
+-//                        insertPosition = mDatas.size();
+-//                    }
+-//                    mDatas.add(insertPosition, (T) dataSource);
+-//                    mDatas.add(insertPosition, (T) categoryEntity);
+-//                }
+-//            }
+-
++            // 当前Tab中的应用全部被添加到了常用中，显示空界面Item
++            if (EappCacheClassified.getInstance().getCurrentOthersNumRest() <= 0) {
++                mDatas.add((T) new NoCommonEappEntity(GifView.NO_OTHERS_EAPP, false));
++            }
+         } else {
+             if (mDatas == null) {
+                 return;
+             }
+-//            int index = mDatas.size();
+-//            for (int i = mDatas.size() - 1; i >= 0; i--) {
+-//                if (mDatas.get(i) instanceof EmptyEappEntity) {
+-//                    index--;
+-//                }
+-//            }
+-//            if (index != mDatas.size()) {
+-//                mDatas.remove(mDatas.size() - 1);
+-//                mDatas.add(index, (T) dataSource);
+-//            }
+             int i;
+             for (i = 0; i < mDatas.size(); i++) {
+                 if (mDatas.get(i) instanceof EmptyEappEntity) {
+@@ -472,10 +440,21 @@
+ 
+     }
+ 
++    // 删除Adapter数据集"全部应用"中的数据
++    private void removeEntityFromData(EappEntity dataSource) {
++        for (int i=0; i<mDatas.size(); i++) {
++            if (mDatas.get(i) instanceof EappEntity) {
++                EappEntity entity = (EappEntity)mDatas.get(i);
++                if (entity.getAgentId() == dataSource.getAgentId()) {
++                    mDatas.remove(i);
++                    break;
++                }
++            }
++        }
++    }
++
+     /**
+      * 更新状态，用于应用下载之后的更新
+-     *
+-     *
+      */
+     public int updateEappState(long agentId, int state) {
+         if (mDatas == null || mDatas.size() == 0) {
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/SimpleItemTouchHelperCallback.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/SimpleItemTouchHelperCallback.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/SimpleItemTouchHelperCallback.java	(date 1662628550000)
+@@ -1,21 +1,19 @@
+ package com.yyyydu.hi.eapp;
+ 
+-import android.graphics.Canvas;
+-
+ import androidx.recyclerview.widget.ItemTouchHelper;
+ import androidx.recyclerview.widget.RecyclerView;
+ 
+-import com.yyyydu.hi.R;
+ import com.yyyydu.hi.eapp.adapter.EappCenterAdapter;
+-import com.yyyydu.hi.eapp.datasource.ViewDataSource;
+ import com.yyyydu.hi.eapp.entity.EappCategoryEntity;
++import com.yyyydu.hi.eapp.entity.EappCategoryOthersEntity;
+ import com.yyyydu.hi.eapp.entity.EappEntity;
++import com.yyyydu.hi.eapp.logic.EappLogic;
+ import com.yyyydu.hi.eapp.logreport.EappReport;
+ import com.yyyydu.hi.utils.LocalLogReporter;
+ import com.yyyydu.hi.utils.LogUtil;
+-import com.yyyydu.hi.utils.Utils;
+ 
+ import java.util.Collections;
++import java.util.List;
+ 
+ /**
+  * Created by liuguanli on 2017/3/29.
+@@ -28,6 +26,14 @@
+     private final EappCenterAdapter adapter;
+ 
+     private boolean isDragAble = true;
++    // 记录各个标题栏位置
++    int indexCommonTitle = 0;
++    int indexOthersTitle = 0;
++    int indexOthersCategory = 0;
++    // 记录数据更新分类
++    private static final int TYPE_ADD_COMMON = 1;
++    private static final int TYPE_DEL_COMMON = 2;
++    private static final int TYPE_MOVE_COMMON = 3;
+ 
+     public SimpleItemTouchHelperCallback(EappCenterAdapter adapter) {
+         this.adapter = adapter;
+@@ -54,6 +60,9 @@
+         try {
+             int from = viewHolder.getLayoutPosition();
+             int to = target.getLayoutPosition();
++            int changeType = changeFromItemState(from, to);
++            LogUtil.w(TAG, "拖动事件类型changeType:" + changeType);
++            processCache(changeType, (EappEntity) adapter.getDatas().get(from));
+             if (from + 1 == to || from - 1 == to) {
+                 Collections.swap(adapter.getDatas(), from, to);
+             } else {
+@@ -69,7 +78,12 @@
+                         begin--;
+                     }
+                 }
+-
++            }
++            if (changeType == TYPE_MOVE_COMMON) {
++                EappCacheClassified.commonMoved = true;
++                processPosition();
++                EappCacheClassified.getInstance()
++                        .setCommonEappList(adapter.getDatas().subList(0, indexOthersTitle));
+             }
+             adapter.notifyItemMoved(from, to);
+             return true;
+@@ -84,43 +98,62 @@
+                                RecyclerView.ViewHolder target) {
+         int from = current.getLayoutPosition();
+         int to = target.getLayoutPosition();
+-        ViewDataSource dataSourceFrom = (ViewDataSource) adapter.getDatas().get(from);
+-        ViewDataSource dataSourceTo = (ViewDataSource) adapter.getDatas().get(to);
+-        if (dataSourceFrom instanceof EappCategoryEntity) {
++        if (!(adapter.getDatas().get(from) instanceof EappEntity)) {
+             return false;
+         }
+-        if (dataSourceTo.getViewType() == dataSourceFrom.getViewType()) {
+-            if (dataSourceFrom instanceof EappEntity && dataSourceTo instanceof EappEntity) {
+-                if (((EappEntity) dataSourceFrom).getClassId() == ((EappEntity) dataSourceTo).getClassId()) {
+-                    return true;
+-                } else if (((EappEntity) dataSourceFrom).isCommon() && ((EappEntity) dataSourceTo).isCommon()) {
+-                    return true;
+-                } else {
+-                    Utils.showSingleToast(R.string.eapp_move_hint);
+-                    return false;
+-                }
+-            } else {
+-                return false;
+-            }
+-        } else {
+-            return false;
++        processPosition();
++        // 常用->全部：只能tab分类和当前拖动应用相同则允许
++        if (EappCacheClassified.getInstance().getCurrentTabClassId()
++                != ((EappEntity) adapter.getDatas().get(from)).getClassId()) {
++            if (from < indexOthersTitle && to >= indexOthersCategory) {
++                return false;
++            }
+         }
++        return isToPositionOk(from, to);
+     }
+ 
+-    @SuppressWarnings("EmptyMethod")
+-    @Override
+-    public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY,
+-                            int actionState, boolean isCurrentlyActive) {
+-        super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
++    /**
++     * @return from位置Item的拖动事件分类
++     * {@link #TYPE_ADD_COMMON}/{@link #TYPE_DEL_COMMON}/{@link #TYPE_MOVE_COMMON}
++     */
++    private int changeFromItemState(int from, int to) {
++        // 跨分类
++        boolean fromNeedChange = false;
++        int changeType = -1;
++        if (from > indexOthersCategory && to <= indexOthersTitle) {
++            // 全部应用->常用
++            fromNeedChange = true;
++            changeType = TYPE_ADD_COMMON;
++        }
++        if (from < indexOthersTitle && to >= indexOthersCategory) {
++            // 常用->全部应用
++            fromNeedChange = true;
++            changeType = TYPE_DEL_COMMON;
++        }
++        EappEntity entityFrom = (EappEntity) adapter.getDatas().get(from);
++        // 跨分类的情况处理
++        if (fromNeedChange) {
++            int specClassId =
++                    (entityFrom.getSpceClassId() == EappLogic.SPEC_CLASS_DEFAULT) ?
++                            EappLogic.SPEC_CLASS_COMMON : EappLogic.SPEC_CLASS_DEFAULT;
++            entityFrom.setSpceClassId(specClassId);
++            int color = (specClassId == EappLogic.SPEC_CLASS_COMMON) ?
++                    EappEntity.COLOR_RED : EappEntity.COLOR_GREEN;
++            entityFrom.setEditIconType(color);
++        }
++        // 常用应用调整顺序
++        if (changeType < 0 && entityFrom.isCommon()) {
++            changeType = TYPE_MOVE_COMMON;
++        }
++        return changeType;
+     }
+ 
+-    @SuppressWarnings("EmptyMethod")
+-    @Override
+-    public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
+-//        if (actionState != ItemTouchHelper.ACTION_STATE_IDLE) {
+-//            viewHolder.itemView.setBackgroundResource(R.drawable.eapp_item_box);
+-//        }
+-        super.onSelectedChanged(viewHolder, actionState);
++    private void processCache(int changeType, EappEntity entity) {
++        if (changeType == TYPE_ADD_COMMON) {
++            EappCacheClassified.getInstance().addEntityToCommon(entity);
++        } else if (changeType == TYPE_DEL_COMMON) {
++            EappCacheClassified.getInstance().removeEntityFromCommon(entity);
++        }
+     }
+ 
+     @Override
+@@ -129,6 +162,7 @@
+         viewHolder.itemView.setBackgroundResource(0);
+         EappReport eappReport = new EappReport(EappReport.EAPP_EDIT_MOVE);
+         LocalLogReporter.getInstance().uploadReportWithoutSave(eappReport);
++        adapter.notifyItemChanged(viewHolder.getAdapterPosition());
+     }
+ 
+     @Override
+@@ -144,5 +178,53 @@
+     public boolean isItemViewSwipeEnabled() {
+         return false;
+     }
++
++    // 计算各个标题栏和分类Item的位置
++    private void processPosition() {
++        List datas = adapter.getDatas();
++        for (int i = 0; i < datas.size(); i++) {
++            if (datas.get(i) instanceof EappCategoryEntity
++                    && ((EappCategoryEntity) datas.get(i)).isCommon()) {
++                indexCommonTitle = i;
++                continue;
++            }
++            if (datas.get(i) instanceof EappCategoryEntity
++                    && (!((EappCategoryEntity) datas.get(i)).isCommon())) {
++                indexOthersTitle = i;
++                continue;
++            }
++            if (datas.get(i) instanceof EappCategoryOthersEntity) {
++                indexOthersCategory = i;
++            }
++        }
++    }
++
++    /**
++     * 判断To位置是否合规。
++     * 1. 全部应用只能拖到常用
++     * 2. 常用应用随意拖动
++     * 注：当前仅处理两个Category的情况
++     */
++    private boolean isToPositionOk(int from, int to) {
++        // 常用应用可以随意拖动
++        // 不能位于常用标题栏之前
++        if (to <= indexCommonTitle) {
++            return false;
++        }
++        // 从下往上拖
++        if (from > to) {
++            // 不能位于两个全部应用标题栏之间
++            if (to == indexOthersCategory) {
++                return false;
++            }
++        } else {
++            // 从上往下拖
++            // 不能位于两个全部应用标题栏之间
++            if (to == indexOthersTitle) {
++                return false;
++            }
++        }
++        return true;
++    }
+ 
+ }
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/database/EappMetaData.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/database/EappMetaData.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/database/EappMetaData.java	(date 1661936635000)
+@@ -17,6 +17,7 @@
+     public static final String ORDER = "ea_order";
+     public static final String M_INSTALL_TYPE = "ea_m_install_type";
+     public static final String M_INSTALL_VER = "ea_m_install_ver";
++    // http://ip:18087/h5/icps/kqdk/callback.html?hi_userdocumentTitle=true&account=MTIwNTI1Njc=
+     public static final String MOBILE_URL = "ea_mobile_url";
+     public static final String WEB_URL = "ea_web_url";
+     public static final String FUNC = "ea_func";
+Index: YYYYduHiSupportLib/src/main/res/values-zh/strings_zh.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHiSupportLib/src/main/res/values-zh/strings_zh.xml	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHiSupportLib/src/main/res/values-zh/strings_zh.xml	(date 1662100933000)
+@@ -2092,7 +2092,7 @@
+     <string name="unknown_app">未知应用</string>
+ 
+     <!-- 应用中心 -->
+-    <string name="sort_by_drag_common">（长按拖动排序）</string>
++    <string name="sort_by_drag_common">（长按拖动进行排序）</string>
+     <string name="sort_by_drag">（拖动可在本类别内排序）</string>
+     <string name="wait_to_add">待添加</string>
+     <string name="eapp_hidden">添加常用</string>
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/logic/EappLogic.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/logic/EappLogic.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/logic/EappLogic.java	(date 1662707631000)
+@@ -50,6 +50,7 @@
+ import com.yyyydu.hi.debug.LoginLogger;
+ import com.yyyydu.hi.debug.WebAppLogger;
+ import com.yyyydu.hi.debug.XPLoginlogger;
++import com.yyyydu.hi.eapp.EappCacheClassified;
+ import com.yyyydu.hi.eapp.database.EappCategoryDBUtil;
+ import com.yyyydu.hi.eapp.database.EappDBUtil;
+ import com.yyyydu.hi.eapp.database.EappMetaData;
+@@ -126,8 +127,6 @@
+ import com.yyyydu.hi.webapp.utils.HiAppUtil;
+ import com.yyyydu.hi.widget.Loading;
+ 
+-import org.json.JSONException;
+-
+ import java.io.File;
+ import java.util.ArrayList;
+ import java.util.Collections;
+@@ -231,7 +230,7 @@
+     }
+ 
+     public static final int SPEC_CLASS_DEFAULT = 0;
+-    public static final int SPEC_CLASS_COMMOM = 1;
++    public static final int SPEC_CLASS_COMMON = 1;
+     public static final int SPEC_CLASS_HIDE = 2;
+ 
+     // public static final int AGENTID_TODO = 1;
+@@ -1247,10 +1246,10 @@
+             eappEntity.setSpceClassId(SPEC_CLASS_DEFAULT);
+         } else if (classIds.size() == 2) {
+             // 应用类别2种：常用，其他类别
+-            if (classIds.get(0) == SPEC_CLASS_COMMOM) {
++            if (classIds.get(0) == SPEC_CLASS_COMMON) {
+                 eappEntity.setSpceClassId(classIds.get(0));
+                 eappEntity.setClassId(classIds.get(1));
+-            } else if (classIds.get(1) == SPEC_CLASS_COMMOM) {
++            } else if (classIds.get(1) == SPEC_CLASS_COMMON) {
+                 eappEntity.setSpceClassId(classIds.get(1));
+                 eappEntity.setClassId(classIds.get(0));
+             }
+@@ -3811,7 +3810,7 @@
+                 selection.append(')');
+             }
+             Cursor cursor = EappDBUtil.getDB().findBySelection(new String[] { EappMetaData.MSG_UNREAD_COUNT },
+-                    selection.toString(), new String[] { String.valueOf(EappLogic.SPEC_CLASS_COMMOM), "0", "1" },
++                    selection.toString(), new String[] { String.valueOf(EappLogic.SPEC_CLASS_COMMON), "0", "1" },
+                     EappMetaData.MSG_UNREAD_COUNT + " desc", "1");
+             if (cursor != null && cursor.moveToFirst()) {
+                 if (cursor.getInt(0) > 0) {
+@@ -3855,7 +3854,7 @@
+                 selection.append(')');
+             }
+             List<EappEntity>  eappEntities= EappDBUtil.getDB().findAllList(selection.toString(),
+-                    new String[] { String.valueOf(EappLogic.SPEC_CLASS_COMMOM), "0", "1" }, null);
++                    new String[] { String.valueOf(EappLogic.SPEC_CLASS_COMMON), "0", "1" }, null);
+             if (eappEntities != null && !eappEntities.isEmpty()) {
+                 List<Long> appAgentIds = new ArrayList<>();
+                 List<Long> appAgentIdsNew = new ArrayList<>();
+@@ -3909,6 +3908,9 @@
+         return null;
+     }
+ 
++    /**
++     * 两个List里的应用一致返回true
++     */
+     private boolean isSameAgentIdList(List<EappEntity> beforeEntities, List<EappEntity> afterEntities) {
+         if (beforeEntities == null && afterEntities == null) {
+             return true;
+@@ -3928,13 +3930,21 @@
+         return true;
+     }
+ 
++    /**
++     * 弃用，specClassId等数据均为更新，用的是旧的数据，不能满足新需求。
++     * 替代：{@link EappCacheClassified#getUpdateList}
++     * @param beforeEdit 编辑前的应用
++     * @param afterEdit  编辑后的应用
++     * @return 被删除的常用应用
++     */
+     private List<EappEntity> getDiffCommonEapps(final List<ViewDataSource> beforeEdit,
+             final List<ViewDataSource> afterEdit) {
+         Map<Integer, List<EappEntity>> beforeData = eapplistToMap(beforeEdit);
+         Map<Integer, List<EappEntity>> afterData = eapplistToMap(afterEdit);
+ 
+-        List<EappEntity> maxList = beforeData.get(1);
+-        List<EappEntity> minList = afterData.get(1);
++        // 此处有问题，maxList的specClassId没有更新
++        List<EappEntity> maxList = beforeData.get(EappLogic.SPEC_CLASS_COMMON);
++        List<EappEntity> minList = afterData.get(EappLogic.SPEC_CLASS_COMMON);
+         List<EappEntity> diff = new ArrayList<>();
+         // 当常用应用全部被删除时，afterData为空
+         if (maxList == null && minList != null) {
+@@ -3978,19 +3988,21 @@
+         return diff;
+     }
+ 
+-    public void updateCommonEapps(final List<ViewDataSource> beforeEdit, final List<ViewDataSource> afterEdit) {
+-        List<EappEntity> diff = getDiffCommonEapps(beforeEdit, afterEdit);
++    public void updateCommonEapps() {
++//        List<EappEntity> diff = getDiffCommonEapps(beforeEdit, afterEdit);
++        List<EappEntity> diff = EappCacheClassified.getInstance().getUpdateList();
+         if (diff.size() > 0) {
++            List<EappEditedResult> eappEditedResults = new ArrayList<>();
+             for (EappEntity eappEntity : diff) {
+                 EappEditedResult eappEditedResult = new EappEditedResult();
+                 eappEditedResult.setAgentId(eappEntity.getAgentId());
+                 eappEditedResult.setApp_agent_id(eappEntity.getAppAgentId());
+                 eappEditedResult.setClass_id(eappEntity.getClassId());
++                eappEditedResult.setSpec_class_id(eappEntity.getSpceClassId());
+                 eappEditedResult.setOrder((int) eappEntity.getOrder());
+-                List<EappEditedResult> eappEditedResults = new ArrayList<>();
+                 eappEditedResults.add(eappEditedResult);
+-                EappDBUtil.getDB().updateEapps(eappEditedResults);
+-            }
++            }
++            EappDBUtil.getDB().updateEapps(eappEditedResults);
+         }
+     }
+ 
+@@ -4006,6 +4018,9 @@
+         setCommonEapp(eappEntity, callback);
+     }
+ 
++    /**
++     * @param eappEntity '全部应用（普通应用）/搜索应用' 添加常用
++     */
+     public boolean setCommonEapp(final EappEntity eappEntity, final EappEditFinishCallback callback) {
+         if (eappEntity == null || callback == null) {
+             LogUtil.e(TAG, "setCommonEapp :: eappEntity is null! or callback is null!");
+@@ -4025,13 +4040,17 @@
+         }
+         LogUtil.i(TAG, "setCommonEapp:: ");
+         ThreadPoolManager.getInstance().addTask(() -> {
+-            final List<EappEntity> list = EappDBUtil.getDB().getCommonEapp();
+-            eappEntity.setSpceClassId(EappLogic.SPEC_CLASS_COMMOM);
++            // 此处修复不能保存数据顺序的BUG，不能用数据库的数据。
++//            final List<EappEntity> list = EappDBUtil.getDB().getCommonEapp();
++            List<EappEntity> list = new ArrayList<>();
++            list.addAll(EappCacheClassified.getInstance().getCommonEappList());
++            eappEntity.setSpceClassId(EappLogic.SPEC_CLASS_COMMON);
+             list.add(eappEntity);
+ 
+             org.json.JSONObject param = new org.json.JSONObject();
+             org.json.JSONArray jsonArray = new org.json.JSONArray();
+ 
++            // 暂存添加后的常用，用来更新数据库
+             final List<Long> agentIds = new ArrayList<>();
+ 
+             try {
+@@ -4047,7 +4066,7 @@
+                     // 1. 数据库中更新eappEntitiy
+                     EappLogic.getInstance().updateCommonEapp(eappEntity);
+                     // 2. 更新EappCategory中agentIds
+-                    EappCategoryDBUtil.getDB().updateEappCategory(EappLogic.SPEC_CLASS_COMMOM, agentIds);
++                    EappCategoryDBUtil.getDB().updateEappCategory(EappLogic.SPEC_CLASS_COMMON, agentIds);
+ 
+                 });
+ 
+@@ -4064,7 +4083,8 @@
+             EappEditedResult eappEditedResult = new EappEditedResult();
+             eappEditedResult.setAgentId(eappEntity.getAgentId());
+             eappEditedResult.setApp_agent_id(eappEntity.getAppAgentId());
+-            eappEditedResult.setClass_id(eappEntity.getSpceClassId());
++            eappEditedResult.setClass_id(eappEntity.getClassId());
++            eappEditedResult.setSpec_class_id(eappEntity.getSpceClassId());
+             eappEditedResult.setOrder((int) eappEntity.getOrder());
+             List<EappEditedResult> eappEditedResults = new ArrayList<>();
+             eappEditedResults.add(eappEditedResult);
+@@ -4085,6 +4105,9 @@
+         return false;
+     }
+ 
++    /**
++     * @return key：classId， value：List<EappEntity>
++     */
+     public Map<Integer, List<EappEntity>> eapplistToMap(List<ViewDataSource> dataSources) {
+         Map<Integer, List<EappEntity>> categoriedEapps = new LinkedHashMap<>();
+         if (dataSources == null || dataSources.size() == 0) {
+@@ -4147,6 +4170,10 @@
+         return categoriedEapps;
+     }
+ 
++    /**
++     * 其实只是获取编辑后的全部常用数据上传即可，添加常用和删除常用是同一个接口。
++     * 20220822：弃用，改用{@link EappCacheClassified#getCurrentCommon}.
++     */
+     public org.json.JSONObject getDiff(List<ViewDataSource> beforeEdit, List<ViewDataSource> afterEdit) {
+         org.json.JSONObject param = new org.json.JSONObject();
+         if (beforeEdit == null || afterEdit == null) {
+@@ -4156,10 +4183,10 @@
+         Map<Integer, List<EappEntity>> afterData = eapplistToMap(afterEdit);
+         try {
+             // 常用应用发生变化
+-            if (!isListEquals(beforeData.get(SPEC_CLASS_COMMOM), afterData.get(SPEC_CLASS_COMMOM))) {
++            if (!isListEquals(beforeData.get(SPEC_CLASS_COMMON), afterData.get(SPEC_CLASS_COMMON))) {
+                 org.json.JSONArray jsonArray = new org.json.JSONArray();
+                 for (ViewDataSource entity : afterEdit) {
+-                    if (entity instanceof EappEntity && ((EappEntity) entity).getSpceClassId() == SPEC_CLASS_COMMOM) {
++                    if (entity instanceof EappEntity && ((EappEntity) entity).getSpceClassId() == SPEC_CLASS_COMMON) {
+                         jsonArray.put(((EappEntity) entity).getAgentId());
+                     }
+                 }
+@@ -4576,7 +4603,7 @@
+         for (EappEntity eappEntity : items) {
+             int classId;
+             int specClassId = eappEntity.getSpceClassId();
+-            if (specClassId == EappLogic.SPEC_CLASS_COMMOM) {
++            if (specClassId == EappLogic.SPEC_CLASS_COMMON) {
+                 classId = specClassId;
+             } else {
+                 classId = eappEntity.getClassId();
+@@ -4585,7 +4612,7 @@
+                 List<EappEntity> eappEntities = categoriedEapps.get(classId);
+                 eappEntities.add(eappEntity);
+                 categoriedEapps.put(classId, eappEntities);
+-                if (classId != EappLogic.SPEC_CLASS_COMMOM) {
++                if (classId != EappLogic.SPEC_CLASS_COMMON) {
+                     categoriedIds.add(classId);
+                 } else {
+                     List<EappEntity> eappEntities1 = categoriedEapps.get(eappEntity.getClassId());
+@@ -4725,13 +4752,17 @@
+             Utils.showToast(R.string.chat_net_fail);
+             return;
+         }
++        final GlobalSearchAdapter.ViewHolderEapp holder = (GlobalSearchAdapter.ViewHolderEapp) v.getTag();
++        final EappEntity entity = EappDBUtil.getDB().get(holder.mId);
++        if (entity.getClassId() == EappCacheClassified.defaultCategoryClassId) {
++            Utils.showToast("企业级应用不允许添加常用。");
++            return;
++        }
+ 
+         EappReport eappReportClick = new EappReport(EappReport.EAPP_SEARCH_RESULT_CLICK, position, true);
+         LogUtil.i(TAG, "appCenterSearch EAPP_SEARCH_RESULT_CLICK:: eappReport->" + eappReportClick);
+         LocalLogReporter.getInstance().uploadReportWithoutSave(eappReportClick);
+ 
+-        final GlobalSearchAdapter.ViewHolderEapp holder = (GlobalSearchAdapter.ViewHolderEapp) v.getTag();
+-        final EappEntity entity = EappDBUtil.getDB().get(holder.mId);
+         // display 加载
+         EappShowHidedEvent showEvent = new EappShowHidedEvent();
+         showEvent.setShow(true);
+@@ -4746,7 +4777,7 @@
+                 event.setSuccess(true);
+                 event.setAgentId(entity.getAgentId());
+                 HiApplication.getInstance().ottoEventPost(event);
+-                entity.setSpceClassId(EappLogic.SPEC_CLASS_COMMOM);
++                entity.setSpceClassId(EappLogic.SPEC_CLASS_COMMON);
+                 HiApplication.getInstance().runOnUIThread(() -> {
+                     if (globalSearchAdapter != null) {
+                         globalSearchAdapter.notifyDataSetChanged();
+Index: YYYYduHi/src/main/res/layout/eapp_no_common.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/res/layout/eapp_no_common.xml	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/res/layout/eapp_no_common.xml	(date 1661936635000)
+@@ -22,12 +22,12 @@
+             gifview:hint_size="@dimen/f_3"/>
+ 
+     <Button
++        android:id="@+id/btn_no_network"
+         style="@style/button_8_0_2"
+         android:layout_width="112dp"
+         android:layout_height="33dp"
+         android:layout_marginBottom="65dp"
+         android:layout_marginTop="20dp"
+-        android:onClick="goToAllEapp"
+         android:text="@string/add" />
+ 
+ </LinearLayout>
+\ No newline at end of file
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/view/EappDetailActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/view/EappDetailActivity.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/view/EappDetailActivity.java	(date 1662628550000)
+@@ -432,7 +432,7 @@
+                         event.setSuccess(true);
+                         event.setAgentId(self.getAgentId());
+                         HiApplication.getInstance().ottoEventPost(event);
+-                        self.setSpceClassId(EappLogic.SPEC_CLASS_COMMOM);
++                        self.setSpceClassId(EappLogic.SPEC_CLASS_COMMON);
+                         HiApplication.getInstance().runOnUIThread(new Runnable() {
+                             @Override
+                             public void run() {
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/database/EappCategoryDBUtil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/database/EappCategoryDBUtil.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/database/EappCategoryDBUtil.java	(date 1662689949000)
+@@ -112,7 +112,7 @@
+     }
+ 
+     /**
+-     * 设置常用后更新AGENT_IDS
++     * 更新EappCategory中agentIds(即分类中的应用)
+      */
+     public void updateEappCategory(int classId, List<Long> agentIds) {
+         LogUtil.i(TAG, "updateEappCategory:: agentIds->" + agentIds.toString());
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappEntity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappEntity.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappEntity.java	(date 1662628550000)
+@@ -58,6 +58,10 @@
+     private int classId;
+     // 特殊分类id，这里放常用（1）、隐藏（2)，默认（0）
+     private int specClassId;
++    // 长按编辑的时候，右上角按钮颜色。0:红色按钮，1：绿色按钮
++    private int editIconType;
++    public static final int COLOR_RED = 0;
++    public static final int COLOR_GREEN = 1;
+ 
+     public String getDomain() {
+         return domain;
+@@ -92,7 +96,7 @@
+     }
+ 
+     public boolean isCommon() {
+-        return specClassId == EappLogic.SPEC_CLASS_COMMOM;
++        return specClassId == EappLogic.SPEC_CLASS_COMMON;
+     }
+ 
+     public boolean isAuthConfirmStatus() {
+@@ -341,6 +345,14 @@
+         this.lu = lu;
+     }
+ 
++    public int getEditIconType() {
++        return editIconType;
++    }
++
++    public void setEditIconType(int editIconType) {
++        this.editIconType = editIconType;
++    }
++
+     public String getPackageName() {
+         if (path != null) {
+             try {
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/database/EappDBUtil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/database/EappDBUtil.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/database/EappDBUtil.java	(date 1662628550000)
+@@ -247,12 +247,12 @@
+     public List<EappEntity> getCommonEapp() {
+         if (CorpLogic.getInstance().isCorpMemberAuthed()) {
+             String[] strings = new String[] { String.valueOf(AccountUtil.getInstance().getCorpId()),
+-                    String.valueOf(GENERAL_CORPID), String.valueOf(EappLogic.SPEC_CLASS_COMMOM) };
++                    String.valueOf(GENERAL_CORPID), String.valueOf(EappLogic.SPEC_CLASS_COMMON) };
+             return findAllList(" ((" + EappMetaData.CORP_ID + " = ? OR " + EappMetaData.CORP_ID + " = ? ) AND "
+                     + EappMetaData.SPEC_CLASS_ID + " = ? ) ", strings, EappMetaData.ORDER);
+         } else {
+             return findAllList(" (" + EappMetaData.CORP_ID + " = ? AND " + EappMetaData.SPEC_CLASS_ID + " = ? ) ",
+-                    new String[] { String.valueOf(GENERAL_CORPID), String.valueOf(EappLogic.SPEC_CLASS_COMMOM) },
++                    new String[] { String.valueOf(GENERAL_CORPID), String.valueOf(EappLogic.SPEC_CLASS_COMMON) },
+                     EappMetaData.ORDER);
+         }
+     }
+@@ -260,12 +260,12 @@
+     public List<EappEntity> getHidedEapp() {
+         if (CorpLogic.getInstance().isCorpMemberAuthed()) {
+             String[] strings = new String[] { AccountUtil.getInstance().getCorpId() + "", GENERAL_CORPID + "",
+-                    EappLogic.SPEC_CLASS_COMMOM + "" };
++                    EappLogic.SPEC_CLASS_COMMON + "" };
+             return findAllList(" (" + EappMetaData.CORP_ID + " = ? OR " + EappMetaData.CORP_ID + " = ? ) AND "
+                     + EappMetaData.SPEC_CLASS_ID + " <> ? ", strings, EappMetaData.ORDER);
+         } else {
+             return findAllList(EappMetaData.CORP_ID + " = ? AND " + EappMetaData.SPEC_CLASS_ID + " <> ? ",
+-                    new String[] { GENERAL_CORPID + "", EappLogic.SPEC_CLASS_COMMOM + "" }, EappMetaData.ORDER);
++                    new String[] { GENERAL_CORPID + "", EappLogic.SPEC_CLASS_COMMON + "" }, EappMetaData.ORDER);
+         }
+     }
+ 
+@@ -368,7 +368,7 @@
+         StringBuilder selection = new StringBuilder();
+         if (CorpLogic.getInstance().isCorpMemberAuthed()) {
+             selection.append(" SELECT * FROM " + EappMetaData.TABLE_NAME + " " + "WHERE " + EappMetaData.SPEC_CLASS_ID
+-                    + " = " + EappLogic.SPEC_CLASS_COMMOM);
++                    + " = " + EappLogic.SPEC_CLASS_COMMON);
+         } else {
+             // 未进行企业认证文件互传助手&待办classId为0
+             selection.append(
+@@ -405,7 +405,7 @@
+         StringBuilder selection = new StringBuilder();
+         if (CorpLogic.getInstance().isCorpMemberAuthed()) {
+             selection.append(" SELECT SUM ( " + EappMetaData.MSG_UNREAD_COUNT + " ) FROM " + EappMetaData.TABLE_NAME
+-                    + " " + "WHERE " + EappMetaData.SPEC_CLASS_ID + " = " + EappLogic.SPEC_CLASS_COMMOM);
++                    + " " + "WHERE " + EappMetaData.SPEC_CLASS_ID + " = " + EappLogic.SPEC_CLASS_COMMON);
+         } else {
+             // 未进行企业认证文件互传助手&待办classId为0
+             selection.append(" SELECT SUM ( " + EappMetaData.MSG_UNREAD_COUNT + " ) FROM " + EappMetaData.TABLE_NAME
+@@ -498,13 +498,8 @@
+             for (int i = 0; i < eappEditedResults.size(); i++) {
+                 EappEditedResult temp = eappEditedResults.get(i);
+                 ContentValues cv = new ContentValues();
+-                if (temp.getClass_id() == EappLogic.SPEC_CLASS_HIDE
+-                        || temp.getClass_id() == EappLogic.SPEC_CLASS_COMMOM) {
+-                    cv.put(EappMetaData.SPEC_CLASS_ID, temp.getClass_id() + "");
+-                } else {
+-                    cv.put(EappMetaData.CLASS_ID, temp.getClass_id() + "");
+-                    cv.put(EappMetaData.SPEC_CLASS_ID, EappLogic.SPEC_CLASS_DEFAULT + "");
+-                }
++                cv.put(EappMetaData.CLASS_ID, temp.getClass_id() + "");
++                cv.put(EappMetaData.SPEC_CLASS_ID, temp.getSpec_class_id() + "");
+                 cv.put(EappMetaData.ORDER, temp.getOrder() + "");
+                 db.update(getTableName(), cv, getQueryKeyList()[0] + "=?", new String[] { temp.getAgentId() + "" });
+             }
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappEditedResult.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappEditedResult.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappEditedResult.java	(date 1661936635000)
+@@ -11,6 +11,7 @@
+     private long app_agent_id;
+     private int order;
+     private int class_id;
++    private int spec_class_id;
+     private long agentId;
+ 
+     public long getAgentId() {
+@@ -29,6 +30,14 @@
+         this.class_id = class_id;
+     }
+ 
++    public void setSpec_class_id(int spec_class_id) {
++        this.spec_class_id = spec_class_id;
++    }
++
++    public int getSpec_class_id() {
++        return spec_class_id;
++    }
++
+     public long getApp_agent_id() {
+         return app_agent_id;
+     }
+Index: YYYYduHi/src/HiXXXBank/res/layout/eapp_category_others_title_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/HiXXXBank/res/layout/eapp_category_others_title_item.xml	(date 1661936635000)
++++ YYYYduHi/src/HiXXXBank/res/layout/eapp_category_others_title_item.xml	(date 1661936635000)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout android:layout_height="match_parent"
++    android:layout_width="match_parent"
++    xmlns:android="http://schemas.android.com/apk/res/android">
++    <TextView
++        android:id="@+id/tv_category_tab"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:textSize="@dimen/sp_15"/>
++</LinearLayout>
+\ No newline at end of file
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappCategoryOthersEntity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappCategoryOthersEntity.java	(date 1661936635000)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappCategoryOthersEntity.java	(date 1661936635000)
+@@ -0,0 +1,29 @@
++package com.yyyydu.hi.eapp.entity;
++
++import com.yyyydu.hi.eapp.datasource.ViewDataSource;
++
++import java.util.List;
++import java.util.Map;
++
++/**
++ * 包含除常用应用外的其他分类，进行TabLayout切换。
++ */
++public class EappCategoryOthersEntity extends ViewDataSource {
++
++    // 除了常用应用外的分类
++    List<EappCategoryEntity> categoryList;
++
++    @Override
++    public int getViewType() {
++        return TYPE_TITLE_OTHERS;
++    }
++
++    public void setCategoryList(List<EappCategoryEntity> categoryList) {
++        this.categoryList = categoryList;
++    }
++
++    public List<EappCategoryEntity> getCategoryList() {
++        return categoryList;
++    }
++
++}
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/ui/EappFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/ui/EappFragment.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/ui/EappFragment.java	(date 1662628550000)
+@@ -4,12 +4,15 @@
+ import android.graphics.Color;
+ import android.os.Bundle;
+ import android.os.Handler;
++import android.view.LayoutInflater;
+ import android.view.View;
+ import android.view.ViewGroup;
+ import android.view.ViewStub;
+ import android.widget.RelativeLayout;
+ import android.widget.TextSwitcher;
+ 
++import androidx.annotation.NonNull;
++import androidx.annotation.Nullable;
+ import androidx.recyclerview.widget.GridLayoutManager;
+ import androidx.recyclerview.widget.ItemTouchHelper;
+ import androidx.recyclerview.widget.LinearLayoutManager;
+@@ -23,6 +26,7 @@
+ import com.yyyydu.hi.common.NotificationsLogic;
+ import com.yyyydu.hi.common.PreferenceUtil;
+ import com.yyyydu.hi.debug.WebAppLogger;
++import com.yyyydu.hi.eapp.EappCacheClassified;
+ import com.yyyydu.hi.eapp.EappPresenter;
+ import com.yyyydu.hi.eapp.OnRecyclerItemClickListener;
+ import com.yyyydu.hi.eapp.SimpleItemTouchHelperCallback;
+@@ -31,8 +35,11 @@
+ import com.yyyydu.hi.eapp.datasource.ViewDataSource;
+ import com.yyyydu.hi.eapp.entity.ActiveEapps;
+ import com.yyyydu.hi.eapp.entity.EappCategoryEntity;
++import com.yyyydu.hi.eapp.entity.EappCategoryOthersEntity;
+ import com.yyyydu.hi.eapp.entity.EappEntity;
+ import com.yyyydu.hi.eapp.entity.EmptyEappEntity;
++import com.yyyydu.hi.eapp.entity.json.NoCommonEappEntity;
++import com.yyyydu.hi.eapp.event.AddEappEvent;
+ import com.yyyydu.hi.eapp.event.DeleteEappEvent;
+ import com.yyyydu.hi.eapp.logic.AppCenterLogic;
+ import com.yyyydu.hi.eapp.logic.CorpLogic;
+@@ -51,6 +58,7 @@
+ import com.yyyydu.hi.utils.LogUtil;
+ import com.yyyydu.hi.utils.ThreadPoolManager;
+ import com.yyyydu.hi.utils.UIEvent;
++import com.yyyydu.hi.utils.Utils;
+ import com.yyyydu.hi.widget.EappGridDivider;
+ import com.yyyydu.hi.widget.GifView;
+ 
+@@ -78,25 +86,28 @@
+     private RecyclerView recyclerView;
+     @SuppressWarnings("WeakerAccess")
+     EappCenterAdapter<ViewDataSource> eappCenterAdapter;
+-    
+-    // 常用应用边框
+-    private RecyclerView.ItemDecoration itemDecoration;
+-    private RecyclerView.ItemDecoration itemWhiteDecoration;
++
++    // 常用应用边框(包括编辑和非编辑模式)
++    public static final boolean IS_DECORATION_NEEDED = false; // 是否展示边框，20220808修改不再展示
++    private RecyclerView.ItemDecoration itemDecoration; //普通边框
++    private RecyclerView.ItemDecoration itemWhiteDecoration; // 长按边框
+ 
+     // 推荐应用
+     private RecyclerView recyclerViewSuggested;
+     @SuppressWarnings("WeakerAccess")
+     EappCenterSuggestedAdapter<ViewDataSource> eappCenterAdapterSuggested;
+ 
++    // RecyclerView的touch事件回调（包含长按）--更新adapter数据记得更新此处
+     private OnRecyclerItemClickListener eappOnRecyclerItemClickListener;
++    // 拖动事件回调，配合长按事件进行调用
++    @SuppressWarnings("WeakerAccess")
++    SimpleItemTouchHelperCallback callback;
+ 
+     private EappHideRecallStub eappHideRecallStub;
+     @SuppressWarnings("WeakerAccess")
+     final EappEditFinishStub eappEditFinishStub = new EappEditFinishStub();
+     @SuppressWarnings("WeakerAccess")
+     final Handler mHandler = new Handler();
+-    @SuppressWarnings("WeakerAccess")
+-    SimpleItemTouchHelperCallback callback;
+ 
+     @SuppressWarnings("WeakerAccess")
+     ViewStub allEappHidedViewStub = null;
+@@ -152,6 +163,14 @@
+         super.onCreate(savedInstanceState);
+     }
+ 
++    @Nullable
++    @Override
++    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
++        EappCacheClassified.currentTabPosition = 0;
++        EappCacheClassified.unselectedTabPosition = -1;
++        return super.onCreateView(inflater, container, savedInstanceState);
++    }
++
+     @Override
+     protected int getLayout() {
+         return R.layout.eapp_fragment;
+@@ -246,6 +265,7 @@
+         boolean isEditable = isEditable();
+         LogUtil.i(TAG, "backPressed:: isEditable->" + isEditable);
+         if (isEditable) {
++            EappCacheClassified.getInstance().backPressed();
+             // 编辑之后的数据准备, 如果是按back键，应该把原来保存的数据取出来直接设置
+             if(eappCenterAdapter != null) {
+                 prepareEapps(presenter.getBeforeEditEapps(), eappCenterAdapter, eappOnRecyclerItemClickListener,
+@@ -326,7 +346,7 @@
+             // 把变化告诉server
+             final List<ViewDataSource> finalList = list;
+             ThreadPoolManager.getInstance().addTask(() -> {
+-                final boolean isChanged = presenter.editEappsFinished(finalList);
++                final boolean isChanged = presenter.editEappsFinished(finalList, true);
+                 LogUtil.i(TAG, "FinishEdit:: isChanged->" + isChanged);
+                 HiApplication.getInstance().runOnUIThread(() -> {
+                     if (!isChanged) {
+@@ -379,7 +399,7 @@
+         callback.setDragAble(true);
+         // 禁用搜索框
+         globalSearchBar.setEnabled(false);
+-        // 隐藏底部
++        // 隐藏底部(显示顶部"确定/取消")
+         UIEvent.getInstance().notifications(Constant.UIEventCode.HIDE_BOTTOM_NAVI);
+         // 设置不能刷新
+         customedSwipeRefreshLayout.setEnabled(false);
+@@ -392,15 +412,18 @@
+                 presenter.saveSuggestedViewDataSourceBeforeEdit(suggestedDataSources);
+             }
+         }
+-        List<ViewDataSource> commonEapps = presenter.getCommonEappsFromNormalMode(eappCenterAdapter.getDatas());
+-        LogUtil.w(TAG, "initEditMode:: commonEapps->" + commonEapps.size());
+-        recyclerView.addItemDecoration(itemWhiteDecoration);
++        if (IS_DECORATION_NEEDED) {
++            recyclerView.addItemDecoration(itemWhiteDecoration);
++        }
+ 
+         recyclerView.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                 ViewGroup.LayoutParams.MATCH_PARENT));
+         recyclerViewSuggested.setVisibility(View.GONE);
+-        eappCenterAdapter.setmDatas(commonEapps);
++        List<ViewDataSource> editableEapps = presenter.getEditableEapps(eappCenterAdapter.getDatas());
++        eappCenterAdapter.setmDatas(editableEapps);
++        // 设置绿色按钮，替代红色按钮。
+         eappCenterAdapter.notifyDataSetChanged();
++        eappOnRecyclerItemClickListener.updateSourceList(editableEapps);
+ 
+         // 编辑模式背景为白色
+         fragmentApp.setBackgroundColor(recyclerView.getContext().getResources().getColor(R.color.L_12));
+@@ -419,7 +442,9 @@
+             eappCenterAdapter.setMode(editMode);
+         }
+         recyclerViewSuggested.setVisibility(View.VISIBLE);
+-        recyclerView.addItemDecoration(itemDecoration);
++        if (IS_DECORATION_NEEDED) {
++            recyclerView.addItemDecoration(itemDecoration);
++        }
+         recyclerView.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                 ViewGroup.LayoutParams.WRAP_CONTENT));
+ 
+@@ -512,7 +537,9 @@
+         recyclerView.setAdapter(eappCenterAdapter);
+         // add divider
+ //        recyclerView.addItemDecoration(new EappGridDivier(getActivity()));
+-        recyclerView.addItemDecoration(itemDecoration);
++        if (IS_DECORATION_NEEDED) {
++            recyclerView.addItemDecoration(itemDecoration);
++        }
+ 
+         if (eappOnRecyclerItemClickListener != null) {
+             eappOnRecyclerItemClickListener.updateSourceList(eappCenterAdapter.getDatas());
+@@ -538,7 +565,9 @@
+                 recyclerView.addOnItemTouchListener(listener);
+             }
+             this.setLayout(adapter, recyclerView).setItemClickListener(adapter);
+-            recyclerView.addItemDecoration(itemDecoration);
++            if (IS_DECORATION_NEEDED) {
++                recyclerView.addItemDecoration(itemDecoration);
++            }
+ 
+             // 未认证企业用户 && 普通用户 背景色为白色，不能进行下拉刷新
+             if (!CorpLogic.getInstance().isCorpMemberAuthed()) {
+@@ -668,6 +697,12 @@
+         initEappView(true);
+     }
+ 
++    @Override
++    public void initEdit() {
++        LogUtil.w(TAG, "init::编辑模式初始化");
++        initEditMode();
++    }
++
+     @Override
+     public void update() {
+         LogUtil.w(TAG, "update");
+@@ -840,6 +875,9 @@
+     }
+ 
+ 
++    /**
++     * 撤销删除常用应用
++     */
+     @Override
+     public void onDeleteRecall() {
+         LogUtil.i(TAG, "onDeleteRecall:: deletedEappIndex->" + deletedEappIndex);
+@@ -859,7 +897,8 @@
+                 eappCenterAdapter.notifyItemInserted(deletedEappIndex);
+                 deletedEappIndex++;
+             }
+-            deletedEappEntity.setSpceClassId(EappLogic.SPEC_CLASS_COMMOM);
++            deletedEappEntity.setSpceClassId(EappLogic.SPEC_CLASS_COMMON);
++            deletedEappEntity.setEditIconType(EappEntity.COLOR_RED);
+             if (deletedEappEntity.isNew()) {
+                 newEappNum++;
+             }
+@@ -872,7 +911,17 @@
+                 return;
+             }
+             list.add(deletedEappIndex, deletedEappEntity);
+-            eappCenterAdapter.notifyItemInserted(deletedEappIndex);
++            // 恢复缓存数据
++            EappCacheClassified.getInstance().addEntityToCommon(deletedEappEntity);
++            if (EappCacheClassified.getInstance().getCurrentTabClassId()
++                    == deletedEappEntity.getClassId()) {
++                List<ViewDataSource> newList
++                        = EappCacheClassified.getInstance().updateAdapterDatas(list);
++                eappCenterAdapter.setmDatas(newList);
++                eappCenterAdapter.notifyDataSetChanged();
++            } else {
++                eappCenterAdapter.notifyItemInserted(deletedEappIndex);
++            }
+ 
+             if (isAnotherCategoryDeleted) {
+                 if (isdeletedEappEntityBack) {
+@@ -903,10 +952,9 @@
+         LogUtil.i(TAG, "delete:: event->" + event);
+         if (event.isCommon()) {
+             boolean isSetCommonOperation = event.isSetCommonOperation();
+-            // 记录删除的应用
++            // 记录删除的应用（设置为默认）
+             if (!isSetCommonOperation) {
+-                long agentId = event.getAgentId();
+-                ViewDataSource dataSource = eappCenterAdapter.find(agentId);
++                ViewDataSource dataSource = eappCenterAdapter.find(event.getAgentId());
+                 if (dataSource instanceof EappEntity) {
+                     deletedEappEntity = (EappEntity) dataSource;
+                     if (deletedEappEntity.isNew()) {
+@@ -925,52 +973,33 @@
+                 deletedEappIndex = index;
+             }
+             if (index != -1) {
+-                eappCenterAdapter.notifyItemRemoved(index);
++                eappCenterAdapter.notifyDataSetChanged();
+             }
+-//                boolean isSingle = eappCenterAdapter.isSingleInCategory(index);
+-//                isSingle = false;
+-//                isCategoryDeleted = isSingle & !isSetCommonOperation;
+-//                if (isSingle) {
+-//                    eappCenterAdapter.notifyItemRemoved(index);
+-//                    if (!isSetCommonOperation) {
+-//                        ViewDataSource dataSource = (ViewDataSource) eappCenterAdapter.getDatas().get(index - 1);
+-//                        deletedEappCategoryEntity = (EappCategoryEntity) dataSource;
+-//                        // 删除了分类
+-//                        deletedEappIndex--;
+-//                    }
+-//                    eappCenterAdapter.getDatas().remove(index - 1);
+-//                    eappCenterAdapter.notifyItemRemoved(index - 1);
+-//
+-//                    // TODO  如果只剩下一个分类就把那个分类删除了，这里如果不删除会好一点,但是……哎……
+-//                    if (eappCenterAdapter.isOnlyOneCategory()) {
+-//                        isAnotherCategoryDeleted = true;
+-//                        ViewDataSource dataSource = (ViewDataSource) eappCenterAdapter.getDatas().get(0);
+-//                        if (dataSource instanceof EappCategoryEntity) {
+-//                            anotherDeletedEappCategoryEntity = (EappCategoryEntity) dataSource;
+-//                            if (deletedEappCategoryEntity != null && ((EappCategoryEntity) dataSource).getOrder() <
+-//                                    deletedEappCategoryEntity.getOrder()) {
+-//                                // 只有在一种场景：还剩两个分类，其中一个分类有一个应用，这个应用被移出了。而且他的分类在最下面
+-//                                // 这个时候 上面的分类也被删除了 所以顺序应该-1
+-//                                deletedEappIndex--;
+-//                                isdeletedEappEntityBack = true;
+-//                            }
+-//
+-//                        }
+-//                        eappCenterAdapter.getDatas().remove(0);
+-//                        eappCenterAdapter.notifyItemRemoved(0);
+-//                    } else {
+-//                        isAnotherCategoryDeleted = false;
+-//                    }
+-//                    eappCenterAdapter.notifyItemRangeRemoved(index - 1, index);
+-//                } else {
+-//                    eappCenterAdapter.notifyItemRemoved(index);
+-//                }
+-//            }
+-//            if (!isSetCommonOperation && index != -1) {
+-//                deletedEappIndex = index;
+-//            }
+         }
+     }
++
++    @Override
++    public void addCommon(AddEappEvent event) {
++        // 记录删除的应用（设置为常用）
++        long agentId = event.getAgentId();
++        ViewDataSource dataSource = eappCenterAdapter.find(agentId);
++        EappEntity addedEapp = null;
++        if (dataSource instanceof EappEntity) {
++            addedEapp = (EappEntity) dataSource;
++            if (addedEapp.isNew()) {
++                newEappNum++;
++            }
++            if (addedEapp.getMsgUnreadCount() > 0) {
++                unreadMsgNum += addedEapp.getMsgUnreadCount();
++            }
++            ((EappEntity) dataSource).setSpceClassId(EappLogic.SPEC_CLASS_COMMON);
++        }
++        // 添加常用
++        int index = eappCenterAdapter.addCommon(event.getAgentId());
++        if (index != -1) {
++            eappCenterAdapter.notifyDataSetChanged();
++        }
++    }
+     /* ****************************** 设置常用应用和编辑应用相关 end *****************************/
+ 
+     /* *************************************** 布局和监听设置相关 begin * *********************************************/
+@@ -991,16 +1020,20 @@
+             recyclerView.setLayoutManager(layoutManager);
+         }
+ 
+-        final List<ViewDataSource> items = adapter.getDatas();
+         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+             @Override
+             public int getSpanSize(int position) {
++                final List<ViewDataSource> items = adapter.getDatas();
++                if (position >= items.size()) {
++                    return 1;
++                }
+                 ViewDataSource dataSource = items.get(position);
+                 switch (dataSource.getViewType()) {
+                     case ViewDataSource.TYPE_EAPP:
+                     case ViewDataSource.TYPE_EMPTY_EAPP:
+                         return 1;
+                     case ViewDataSource.TYPE_TITLE:
++                    case ViewDataSource.TYPE_TITLE_OTHERS:
+                         return ViewHolder.LINE_ITEM_NUM;
+                     case ViewDataSource.TYPE_EMPTY:
+                     case ViewDataSource.TYPE_NO_COMMON_EAPP:
+@@ -1077,26 +1110,14 @@
+     }
+ 
+     private EappFragment setItemClickListener(EappCenterAdapter<ViewDataSource> adapter) {
+-        final List<ViewDataSource> items = adapter.getDatas();
+         adapter.setOnItemClickListener(new EappCenterAdapter.OnItemClickListener() {
+-            long lastClickTime = 0;
+-            boolean isTooShort() {
+-                long clickTime = System.currentTimeMillis();
+-                if (clickTime - lastClickTime < 1000) {
+-                    return true;
+-                }
+-
+-                lastClickTime = clickTime;
+-
+-                return false;
+-            }
+ 
+             @Override
+             public void onItemClick(View view, RecyclerView.ViewHolder holder, final int position) {
+-                if (isTooShort()) {
++                List<ViewDataSource> items = adapter.getDatas();
++                if (EappCacheClassified.isClickTooFast(true)) {
+                     return;
+                 }
+-
+                 if(items.get(position) instanceof  EappEntity) {
+                     final EappEntity eappEntity = (EappEntity) items.get(position);
+                     if (!isEditable()) {
+@@ -1173,6 +1194,17 @@
+                     } else {
+                         CorpLogic.getInstance().gotoAuthPage(EappFragment.this.getActivity());
+                     }
++                } else if (items.get(position) instanceof EappCategoryOthersEntity) {
++                    boolean selectSuc = EappCacheClassified.getInstance().getIsSelectSuc();
++                    if (!selectSuc) {
++                        return;
++                    }
++                    List<ViewDataSource> result = updateOthersEappList(items, position);
++                    eappOnRecyclerItemClickListener.updateSourceList(result);
++                    recyclerView.post(() -> {
++                        adapter.setmDatas(result);
++                        adapter.notifyDataSetChanged();
++                    });
+                 }
+             }
+ 
+@@ -1184,6 +1216,28 @@
+         return this;
+     }
+ 
++    // 更新Adapter数据(主要是"全部"分类底下展示的应用)
++    private List<ViewDataSource> updateOthersEappList(List<ViewDataSource> list, int position) {
++        if (list == null || list.size() == 0) {
++            return list;
++        }
++        List<ViewDataSource> result = new ArrayList<>();
++        if (list.size() <= position) {
++            result.addAll(list);
++        } else {
++            result.addAll(list.subList(0, position + 1));
++        }
++        List<EappEntity> currentEappList = EappCacheClassified.getInstance().getCurrentEappList();
++        if (currentEappList == null || currentEappList.size() == 0) {
++            if (!isEditable()) {
++                result.add(new NoCommonEappEntity(GifView.NO_OTHERS_EAPP, false));
++            }
++        } else {
++            result.addAll(currentEappList);
++        }
++        return result;
++    }
++
+     private void setItemClickListener(EappCenterSuggestedAdapter<ViewDataSource> adapter) {
+         final List<ViewDataSource> items = adapter.getDatas();
+         adapter.setOnItemClickListener((view, holder, position) -> {
+@@ -1239,14 +1293,14 @@
+                     });
+                 }
+                 goToEappDetail((EappEntity) (items.get(position)));
++            } else if (items.get(position) instanceof EappCategoryOthersEntity) {
++                Utils.showToast("setItemClickListener:suggested");
+             }
+         });
+     }
+ 
+     /**
+-     * 设置长按拖动
+-     *
+-     *
++     * 设置长按拖动回调事件。
+      */
+     private SimpleItemTouchHelperCallback setLongPressDrag(EappCenterAdapter<ViewDataSource> adapter,
+                                                            RecyclerView recyclerView) {
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappCategoryEntity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappCategoryEntity.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EappCategoryEntity.java	(date 1662628550000)
+@@ -58,7 +58,7 @@
+     }
+ 
+     public boolean isCommon() {
+-        return classId == EappLogic.SPEC_CLASS_COMMOM;
++        return classId == EappLogic.SPEC_CLASS_COMMON;
+     }
+ 
+     public boolean isyyyyduSuggested() {
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/itemviews/ItemViewNoCommon.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/itemviews/ItemViewNoCommon.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/itemviews/ItemViewNoCommon.java	(date 1661936635000)
+@@ -1,7 +1,14 @@
+ package com.yyyydu.hi.eapp.itemviews;
+ 
++import android.view.View;
++import android.widget.Button;
++
++import com.yyyydu.hi.HiApplication;
+ import com.yyyydu.hi.R;
++import com.yyyydu.hi.eapp.entity.json.NoCommonEappEntity;
++import com.yyyydu.hi.eapp.event.EditModeEvent;
+ import com.yyyydu.hi.eapp.viewholder.ViewHolder;
++import com.yyyydu.hi.widget.GifView;
+ 
+ public class ItemViewNoCommon<T> extends ItemView<T> {
+ 
+@@ -12,5 +19,21 @@
+ 
+     @Override
+     public void convert(ViewHolder holder, T t, int position, int mode, boolean isNoCommonEappExited) {
++        GifView gifViewNoNet = holder.itemView.findViewById(R.id.gif_view_no_network);
++        Button btnNoNet = holder.itemView.findViewById(R.id.btn_no_network);
++        NoCommonEappEntity entity = (NoCommonEappEntity)t;
++        gifViewNoNet.changeImageByType(entity.getHintType());
++        if (entity.getBtnVisible()) {
++            btnNoNet.setVisibility(View.VISIBLE);
++        } else {
++            btnNoNet.setVisibility(View.INVISIBLE);
++        }
++
++        btnNoNet.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                HiApplication.getInstance().ottoEventPost(new EditModeEvent());
++            }
++        });
+     }
+ }
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/itemviews/ItemViewCategory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/itemviews/ItemViewCategory.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/itemviews/ItemViewCategory.java	(date 1662687083000)
+@@ -12,6 +12,7 @@
+ import com.yyyydu.hi.utils.LocalLogReporter;
+ 
+ import android.content.res.Resources;
++import android.graphics.Paint;
+ import android.text.Spannable;
+ import android.text.SpannableString;
+ import android.text.style.ForegroundColorSpan;
+@@ -19,6 +20,8 @@
+ import android.widget.RelativeLayout;
+ import android.widget.TextView;
+ 
++import androidx.constraintlayout.widget.ConstraintLayout;
++
+ /**
+  * Created by liuguanli on 2017/3/27.
+  */
+@@ -32,9 +35,11 @@
+ 
+     @Override
+     public void convert(ViewHolder holder, T t, int position, int mode, boolean isNoCommonEappExited) {
+-        RelativeLayout layout = holder.itemView.findViewById(R.id.eapp_category);
+-        TextView title = holder.itemView.findViewById(R.id.category_title);
++        ConstraintLayout layout = holder.itemView.findViewById(R.id.eapp_category);
++        TextView tvTitle = holder.itemView.findViewById(R.id.category_title);
++        setBold(tvTitle);
+         TextView setting = holder.itemView.findViewById(R.id.category_setting);
++        View divider = holder.itemView.findViewById(R.id.divider_all_category);
+         EappCategoryEntity entity = (EappCategoryEntity) t;
+         if (entity.isFirst() || entity.isCommon()) {
+             if (isNoCommonEappExited) {
+@@ -42,6 +47,7 @@
+             } else {
+                 setting.setText(R.string.staff_manage);
+                 setting.setVisibility(View.VISIBLE);
++                divider.setVisibility(View.INVISIBLE);
+                 setting.setOnClickListener((View v) -> {
+                     HiApplication.getInstance().ottoEventPost(new StartEditmodeEvent());
+                     EappReport eappReport = new EappReport(EappReport.EAPP_MANAGE_BEGIN);
+@@ -50,6 +56,7 @@
+             }
+         } else {
+             setting.setVisibility(View.GONE);
++            divider.setVisibility(View.VISIBLE);
+         }
+ 
+         Resources resources = HiApplication.context.getResources();
+@@ -62,18 +69,26 @@
+                     .setSpan(new ForegroundColorSpan(resources.getColor(R.color.L_1)), 0,
+                             categoryName.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
+ 
+-            title.setText(categoryNameSpannable);
++            tvTitle.setText(categoryNameSpannable);
+             if (mode == MODE_EDIT) {
+                 setting.setVisibility(View.GONE);
+                 String tip = "";
+                 if (entity.isCommon()) {
+                     tip = resources.getString(R.string.sort_by_drag_common);
++                } else {
++                    tip = "（长按向上拖动排序）";
+                 }
+                 Spannable tipSpannable = new SpannableString(tip);
+                 tipSpannable.setSpan(new ForegroundColorSpan(resources.getColor(R.color.L_5)), 0, tip.length(),
+                         SPAN_EXCLUSIVE_EXCLUSIVE);
+-                title.append(tipSpannable);
++                tvTitle.append(tipSpannable);
+             }
+         }
+     }
++
++    private void setBold(TextView tvTitle) {
++        Paint paint = tvTitle.getPaint();
++        paint.setStyle(Paint.Style.FILL_AND_STROKE);
++        paint.setStrokeWidth(2);
++    }
+ }
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/itemviews/ItemViewEapp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/itemviews/ItemViewEapp.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/itemviews/ItemViewEapp.java	(date 1662100934000)
+@@ -3,7 +3,6 @@
+ import android.graphics.Color;
+ import android.text.TextUtils;
+ import android.view.View;
+-import android.widget.AbsListView;
+ import android.widget.ImageView;
+ import android.widget.RelativeLayout;
+ import android.widget.TextView;
+@@ -13,6 +12,7 @@
+ import com.yyyydu.hi.eapp.entity.ActiveEappInfo;
+ import com.yyyydu.hi.eapp.entity.ActiveEapps;
+ import com.yyyydu.hi.eapp.entity.EappEntity;
++import com.yyyydu.hi.eapp.event.AddEappEvent;
+ import com.yyyydu.hi.eapp.event.DeleteEappEvent;
+ import com.yyyydu.hi.eapp.logic.EappLogic;
+ import com.yyyydu.hi.eapp.logreport.EappReport;
+@@ -52,7 +52,8 @@
+     @Override
+     public void convert(ViewHolder holder, T t, int position, int mode, boolean isNoCommonEappExited) {
+         // LogUtil.I(TAG, "convert:: getChildSize->" + holder.getChildSize());
+-        holder.itemView.setLayoutParams(new AbsListView.LayoutParams(holder.getChildSize(), ViewHolder.getHeight()));
++        // 自适应高度和宽度，不需要设置为正方形
++//        holder.itemView.setLayoutParams(new AbsListView.LayoutParams(holder.getChildSize(), ViewHolder.getHeight()));
+         RelativeLayout dividerLayout = holder.itemView.findViewById(R.id.item_divider);
+         TextView nameTxt = holder.itemView.findViewById(R.id.item_name);
+         SimpleDraweeView logoImg = holder.itemView.findViewById(R.id.item_logo);
+@@ -60,20 +61,33 @@
+         ImageView updateImg = holder.itemView.findViewById(R.id.item_update_icon);
+         ImageView messageImg = holder.itemView.findViewById(R.id.item_msg_icon);
+         RelativeLayout deleteImg = holder.itemView.findViewById(R.id.item_delete_icon);
++        RelativeLayout addImg = holder.itemView.findViewById(R.id.item_add_icon);
+         CircleProgress progressBar = holder.itemView.findViewById(R.id.sector);
+         ImageView loadingEdge = holder.itemView.findViewById(R.id.loading_edge);
+ //        ImageView newEappImg = holder.itemView.findViewById(R.id.item_new_icon);
+ 
+         deleteImg.setTag(this);
++        addImg.setTag(this);
+ 
+         EappEntity entity = (EappEntity) t;
+ 
+         if (mode == EappFragment.MODE_EDIT) {
+             // newEappImg.setVisibility(GONE);
+-            dividerLayout.setBackgroundResource(R.drawable.eapp_center_eapp_edit_divider);
+-            deleteImg.setVisibility(VISIBLE);
++            if (EappFragment.IS_DECORATION_NEEDED) {
++                dividerLayout.setBackgroundResource(R.drawable.eapp_center_eapp_edit_divider);
++            } else {
++                dividerLayout.setBackgroundColor(Color.parseColor("#FFFFFF"));
++            }
++            if (entity.getEditIconType() == EappEntity.COLOR_RED) {
++                deleteImg.setVisibility(VISIBLE);
++                addImg.setVisibility(GONE);
++            } else {
++                deleteImg.setVisibility(GONE);
++                addImg.setVisibility(VISIBLE);
++            }
+         } else {
+             deleteImg.setVisibility(GONE);
++            addImg.setVisibility(GONE);
+             dividerLayout.setBackgroundColor(Color.parseColor("#00000000"));
+             // if (entity.isNew()) {
+             // newEappImg.setVisibility(VISIBLE);
+@@ -83,6 +97,7 @@
+         }
+ //        setCommonTxt.setOnClickListener(new EappEditOnClickListener(entity));
+         deleteImg.setOnClickListener(new EappEditOnClickListener(entity));
++        addImg.setOnClickListener(new EappEditOnClickListener(entity));
+ 
+         // @TODO 如果server伪造两个应用 则可以只用 {#link EappEntity#getName()}
+         switch ((int) entity.getAgentId()) {
+@@ -205,6 +220,12 @@
+                         LogUtil.i(TAG, "onClick:: 删除->" + entity.getName());
+                         HiApplication.getInstance().ottoEventPost(event);
+                     }
++                    break;
++                case R.id.item_add_icon:
++                    AddEappEvent event = new AddEappEvent();
++                    event.setAgentId(entity.getAgentId());
++                    LogUtil.i(TAG, "onClick::添加应用到常用->" + entity.getName());
++                    HiApplication.getInstance().ottoEventPost(event);
+                     break;
+                 default:
+                     break;
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EmptyEappEntity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EmptyEappEntity.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/entity/EmptyEappEntity.java	(date 1662097961000)
+@@ -4,6 +4,7 @@
+ 
+ /**
+  * Created by liuguanli on 2017/5/3.
++ * "添加"Item，20220830已去除，不展示了。
+  */
+ 
+ public class EmptyEappEntity extends ViewDataSource {
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/datasource/ViewDataSource.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/datasource/ViewDataSource.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/datasource/ViewDataSource.java	(date 1661936635000)
+@@ -9,8 +9,12 @@
+     public static final int TYPE_EAPP = 1;
+     public static final int TYPE_TITLE = 2;
+     public static final int TYPE_EMPTY = 3;
++    // "添加"按钮，点击跳转全部应用界面
+     public static final int TYPE_EMPTY_EAPP = 4;
++    // 此分类没有应用
+     public static final int TYPE_NO_COMMON_EAPP = 5;
++    // 左右切换分类，包含除了常用外的其他分类
++    public static final int TYPE_TITLE_OTHERS = 6;
+ 
+ 
+     public abstract int getViewType();
+Index: YYYYduHi/src/main/java/com/yyyydu/hi/eapp/viewholder/ViewHolder.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- YYYYduHi/src/main/java/com/yyyydu/hi/eapp/viewholder/ViewHolder.java	(revision 7972aeec340270843bdc2cddab3e740a0fe1789d)
++++ YYYYduHi/src/main/java/com/yyyydu/hi/eapp/viewholder/ViewHolder.java	(date 1661936635000)
+@@ -16,7 +16,7 @@
+ 
+ public class ViewHolder extends RecyclerView.ViewHolder {
+ 
+-    public static final int LINE_ITEM_NUM = 4;
++    public static final int LINE_ITEM_NUM = 5;
+     private static final double LINE_SUGGESTED_ITEM_NUM = 3.5;
+ 
+     private static final int ITEM_HEIGHT = 104;
+@@ -37,6 +37,9 @@
+         return new ViewHolder(item, context);
+     }
+ 
++    /**
++     * 获取每个子Item的宽度
++     */
+     public int getChildSize() {
+         if (CHILD_SIZE == 0) {
+             WindowManager wm = (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);
+diff --git YYYYduHi/src/HiXXXBank/res/drawable-xxxhdpi/eapp_item_add.png YYYYduHi/src/HiXXXBank/res/drawable-xxxhdpi/eapp_item_add.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..b6676b17a216f347f65492acf5b105805fb4cccd
+GIT binary patch
+literal 2158
+zc$@)l2$A=RP)<h;3K|Lk000e1NJLTq001xm001xu1^@s7AO*=00004XX+uL$YePpv
+zZ)|UJQ*dEpWkhLnaBN|DP%{7kD3NuLy-UMT6va=gQqVex4jmjai9^)V3U+a5D-=aA
+zR0XS3ntlmwd?YDSaT8Z5_#aroS#Yq3RB&-{5JU$N-JCipxM+CZmsHv!-pA$rIGl62
+zT)-Pp87uYzDCw4wOvI$M)Vkz*gNL3|s%EmNqAUvj{k!Y)(e>U>h*?d$b`aT5T$j!+
+zmv){4Q-A$k)t||l8vWnYL5&#};E{=yZHo!sB_1(oDdMW&yvxUe(=MMoo|R;r_?B4G
+z3TlS9Ni3&3^n3@Gie;^}gV^4m)mN9r9O_ZbVG|}8icnF31O?%L{L_v<jxBOmU{EfP
+z0xZfzNf8sW#PiUhVG=TN2tn$QxO3}%53T#jZEf!rm~C**FWTBd12~<blhxbWcmx<4
+z0B-6`HB?9Hq4wr-!21a>m;#3HD6?Va!XbBie+=k*;rwF^@ErnnmGiG7&g~k7pMfj=
+z2Nx-7yi*22%K!iXIAvH#W=%~1DgXcg2mk?xX#fNO00031000^Q000000-yo_1ONa4
+z0RR91FrWhf1ONa40RR91FaQ7m0Qmn-HUIzya7jc#RA>dwT2E+PMHruX$%gzPLMtte
+zNj&A?si?GMa}er5@gQ~+NlAhgwb-KKK@T3pLZRZpgB3)jkruI%ga(tX7ex;iJY++P
+ziYLLIY+{Pl2D&s!vq{G9H@n|t-rJeCZ#QX@ci5Tv{>?XUzWM&lTOq8cH#cyPhZ3F4
+z)PQ0Dw*hz1PNqlAFkp5DavKr_U~g_vbA=E_j@{{<8vHJk8$8D_Cr7qtOiGuk;Ht;Z
+zg~vY=dmHwkyD_<s!#{`SFa7wqfrdh8osxinJ|}*89bNNCDdz*M*FdZeD{p~>QmQRb
+zQv6{9EA_o9IT>YeN;5E$Htugs%VX0LVKzN7jB$tofWE1L=aiHeiE$y-(ROgW^V|~P
+z{1^t>=ownoAx7A3s;Qx4{L!!G0MiWgrk0dYjW$uVUnfNRo1U@h;N-QF%~9gxor9uY
+z5{dP!36aClX-#a-Y`un0%53OR7=*8*R3<b7OODdpGldwKkQr@4##N<KAcB|mYmGB&
+zmW&oAUYtS7<2J(851j`P^sCEth1|qy95HalG@^vq(0>Z~n?k78D9$lHO&YxKfR|5@
+z#H?I`42)h!Ha+?^kIf3=jGKw8X;bOG`f+(|t+Z={cappcwwK#03uXStHF<MOus6W@
+zO(NVD;PO{Cp8Jb;*KbR*-hatCJjg(9aYFmrY3_uN>lA=Bfah_^7@fT=@G6o#6La5s
+z$z=bHx0(vG^NU^z3&DE;kWXWa9EV^rDEZ9OAw-2ioW?e5Ha*s2%(VZv7uyR<E3-C1
+zt$jo^TJ1yNHxsb1=cfj`+1)ZMX=@8+p0WuTfp+Nkp*@R>>LNv#j14z^ykix-G0`*f
+zrGZ5{u@it+8^PSo4``BSr4$d-qVqzD87b7~6Fp;o^C?Z_oq&Audqi`#L>JS@{Qgwy
+zf#E~LPD?DCpyth%@)|k0!%<B_A%`5^3pHC3WdZQS(Fx27He)@uP$}f{WY1_5!}JOe
+zooY2r7Q`*G4(<9&06oF#^yCdD@U=)ykS4+jR($AnAtHh<fUP@ow1|}RkA0$Z;-nt7
+z7;b3-eUKu;T*IU>V1u_9%LDHz-Jq<whhP>m)0!oD7?qH(Ide78+rHn!Z@_Thmu_s7
+zSBxO%_urPR;K;rwSZ1VEt=<We1{H+WQ@_3$5nLQ9CI0fhq9}*`$`XZ32$1sQ0C6)a
+zY^%np_5<$*2pC%>Fe(S}K8TA(Hbc@qv3PVMp}lD)H*`{{_45{T(_PN@wH2W*M8Mv(
+z)RF*Hf-K9JDW@5XsJW%|oy$zfFad`Jk_oyiU?zxZsn*oxs7+Ef0g%=130`k~cW)=^
+z0b4lw&Iy>PZ))hJb-Dg2r71diFx<3M+BP@KS4Iwwc(df#35*~|2Z3t&t~k0b)lsT1
+zp7tu?;ME{~z~v8g2XdvcMO=wf(kBA&#0$_>>vZ-6C3I(!MA*1VeK>3-g^)9;?#u<(
+zcDnc~E&$omx|EamOKF!<fMGFIeD&fE#z&*+d`RSwlnq?+;kOkYsqF2!%XR>n_3CnA
+zX1m|Gt(2>;Jw;>cu<heOXB;U8a6ic0cboFi4LU(L?IHmvJ!S`z7fa0QZ(SD<zO>9Q
+zB^G0Drt}WL9}{_kN-tKZLAr8#7tAnJ-#J^-Sp=wmbug)3$c}PAXXqXjbn)(qggdHY
+zg~=&;LwDrVe-dd|1#*K%jXBtHOrR2|zFIS4LLDUjS8x3+aJROq%F>Y#ZDeqrZUP7H
+zQFYJ|L3oGucO5TLjfkXoq%5AUd{*cX)16Nh58l-Mda9Q#^AaDR=+5GqtyIb`;cU5y
+z%Q>4VrcakS-v_vDi=o-oDCkaAA6*qv-o2|ebty+WLw6m>P&8C~7F;qJ=DMYK!I-}K
+zR_2R3TlE00)NZZjuWv;jWV>1@SEGw`t_w-szWUZKzV|h`5U7hq%Vdr+C+CM%r^M|9
+z(p_?@yEknYJD~-zF1m;j@@n)uF5|bm#nmxgRUUB_H_ipHf+%XF5?}1pLZCSPZQxb=
+zGbQWBZR`S=NPj+9E@ZdOv|uWYsZ6wZVSVg2(E@CS;uqyRZ`1jIr`oTbww!Pu*?{_R
+zf9ipc_;7~t{!!HnaEU@%yEZ%j6cztZlF2<nCf7yYg8m4@pUq{SyxRhq#C80Wgo^c_
+k>N?tfjQ&N#CA$*re;zcJ4TO?jDF6Tf07*qoM6N<$f^_=wzyJUM
+
+diff --git YYYYduHi/src/HiXXXBank/res/drawable-xhdpi/eapp_item_add.png YYYYduHi/src/HiXXXBank/res/drawable-xhdpi/eapp_item_add.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..f20783b45d105dba5bdc7d828ea5aadb7e6f20c0
+GIT binary patch
+literal 1553
+zc$@(d2JZQZP)<h;3K|Lk000e1NJLTq001BW001Be1^@s71bs?k0004XX+uL$YePpv
+zZ)|UJQ*dEpWkhLnaBN|DP%{7kD3NuLy-UMT6va=gQqVex4jmjai9^)V3U+a5D-=aA
+zR0XS3ntlmwd?YDSaT8Z5_#aroS#Yq3RB&-{5JU$N-JCipxM+CZmsHv!-pA$rIGl62
+zT)-Pp87uYzDCw4wOvI$M)Vkz*gNL3|s%EmNqAUvj{k!Y)(e>U>h*?d$b`aT5T$j!+
+zmv){4Q-A$k)t||l8vWnYL5&#};E{=yZHo!sB_1(oDdMW&yvxUe(=MMoo|R;r_?B4G
+z3TlS9Ni3&3^n3@Gie;^}gV^4m)mN9r9O_ZbVG|}8icnF31O?%L{L_v<jxBOmU{EfP
+z0xZfzNf8sW#PiUhVG=TN2tn$QxO3}%53T#jZEf!rm~C**FWTBd12~<blhxbWcmx<4
+z0B-6`HB?9Hq4wr-!21a>m;#3HD6?Va!XbBie+=k*;rwF^@ErnnmGiG7&g~k7pMfj=
+z2Nx-7yi*22%K!iXIAvH#W=%~1DgXcg2mk?xX#fNO00031000^Q000000-yo_1ONa4
+z0RR91AfN*P1ONa40RR91AOHXW0FO>U$p8QZ6G=otR9FeMS5HWkK@^{vbyLV9ScMcl
+zbSR^sC@k%!r=UY*5v+CT;=#y6oq|wA2|U%o{v5h=F$F0l=nw>Ub1f<=3bjKA#R3&V
+z4c6A(>HWri(|q54-?uK<!0ybv_nY_LyqWjreM010+hlT;$Ku>%QZJ^LG<pFJCTJi?
+zzzoOYK}faVzc6*_G-%S#RiKVF51U^g!U(;PYCn?I`Xdl-8$UH76%@Ekh~ox*DkkM~
+zCIt0H1sHzoK!XYkxcH@a$HwaPXD!6Sc=Jdr0B8mfv|36zPxjPHGIC95y%Xr;dyb0t
+zzy56|9;>KP%mkqO;7xS4WwPlX)^+aofM`p#8=wVX1`sn0m;Mx)+0PR{(|D4$)I*z1
+zF^GE@h_UqpCSBjU%IB7smR-X^_cYQ7p-eLZ%)+I`G!wVd!>Y07ky8>UkXe~t4_d^Y
+z@$b!IrCgD1spO2-;s6tI7=C{<Z)ts5bbPqRQ`6H)CMSdzEgouqQq%&%Dfi;|g+OCe
+zQ%XFvr$GChqtL61THx|<jH4$X|Fi;_dGXDay_wwl3?1cerg0CA&zeTA@*I7E01y%5
+zS)IEnwP+;7f)?^sd{@Ku(Zjuez;~NR06Dae9NO&yJYy+;*C(nHgZl^Vv0DM9_#hsS
+z9T{yL`V8SF@z7nEEX9GDO!gCQuMq&J(M4+Zn3|tFI(E-Qc@WRU3^A1Pco2eURpp7$
+zTZw=}7$9X799M|E0&-?`=B_7W00Fb1IjHqd4|tLmMdYk;q6-dN3{2;~4i`$s%bGF|
+zg(hz377Zq;-xXNk7Z^2<Nj0EwzoS4=5&5*~$xCw+gHnH#P{YgTMzaOZutgW;0eDw9
+zu^Iu0>#YjeOs2#2tjq=z6V6X1ALMePljpXl1R7W64NzujG$;_@GBHN1WOceHr{(1>
+z-&#_pq#laNiax(Wzx+T0pmZab9t#UnzmQ^cxUEc8v;`UCF<?{i`rA@cOEKjxABSJ2
+z%1^k4*g!xwMZNI9l*16nh7Oat^OhM8gkBuieBanjIzbPv4_+|k2TI`q3cR%iOS}X(
+zX}M!BDtrc=(5>+Lg~R?Y$Gp5K$f-1~3{&O0It&v=FLpF^{%fc(7s3R9{_y)F5tUHG
+z)?y9TMmExoGW$MVPfxWHxhT)%w}!FqJH)i2y_63WDjq?Zt0;K80Z7fHTcO-SjwU01
+zm!bpjJKT&P#w9h<W!?qSZ8ISXrTOK>*V~nT!wf=Nu1i$6aCvAA;05@2%n9*gyECFm
+z!)59Wmz1opzyM}!elacHq6hN^T~hNc$h<B0=2-Qe`b70@-m!mer~!T;s>s~hY%6^|
+zpQWsRh!)mTC0=WAri4d0%dhx=R+R@Pf=YS6Ow9iR)78>?Go+3k00000NkvXXu0mjf
+DK8L$9
+
+diff --git YYYYduHi/src/HiXXXBank/res/drawable-hdpi/eapp_item_add.png YYYYduHi/src/HiXXXBank/res/drawable-hdpi/eapp_item_add.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..2918f790d3eb05b47fe7c93cacff989317e19476
+GIT binary patch
+literal 940
+zc$@*O15^BoP)<h;3K|Lk000e1NJLTq000mG000mO1^@s7X!Otb0004XX+uL$YePpv
+zZ)|UJQ*dEpWkhLnaBN|DP%{7kD3NuLy-UMT6va=gQqVex4jmjai9^)V3U+a5D-=aA
+zR0XS3ntlmwd?YDSaT8Z5_#aroS#Yq3RB&-{5JU$N-JCipxM+CZmsHv!-pA$rIGl62
+zT)-Pp87uYzDCw4wOvI$M)Vkz*gNL3|s%EmNqAUvj{k!Y)(e>U>h*?d$b`aT5T$j!+
+zmv){4Q-A$k)t||l8vWnYL5&#};E{=yZHo!sB_1(oDdMW&yvxUe(=MMoo|R;r_?B4G
+z3TlS9Ni3&3^n3@Gie;^}gV^4m)mN9r9O_ZbVG|}8icnF31O?%L{L_v<jxBOmU{EfP
+z0xZfzNf8sW#PiUhVG=TN2tn$QxO3}%53T#jZEf!rm~C**FWTBd12~<blhxbWcmx<4
+z0B-6`HB?9Hq4wr-!21a>m;#3HD6?Va!XbBie+=k*;rwF^@ErnnmGiG7&g~k7pMfj=
+z2Nx-7yi*22%K!iXIAvH#W=%~1DgXcg2mk?xX#fNO00031000^Q000000-yo_1ONa4
+z0RR915TFA91ONa40RR915C8xG02iH8$N&HVu1Q2eR5%fhQoBk+K@i<pui6;FAFwoH
+zDiI{M3W8mND2a6%(Lw}mv`ArPp%w<4)J7DEoe<DAL41G^F_wOSf)T{mUFU3=Ww{1%
+zLhj6-nc1DkQHmv9%{1-Du&C*aYyzmde7ZKNYNmz25P;yd9vC92TDH#rZJf#X5>Xfc
+zEhkG*DqYL!NQ5rfOWAYAHH_OZ@6*{k*sbw^@09Bh_xW=Fu31;Sq+h0eVy2$&`f4`b
+z_$DM+A<~6%a(~eV06`yQOwJHJc4#$wJX)#)CuHL-9DLy(&$*rnjjP469$ytxp>RxA
+z`|pnQ4Z8ps-=R8mMM-<mYw;Bu$TjubQR2kIvLl5S;ev~luFdTl6D|no>yxnq(zaLb
+z*>_+|7&9<8ht{wjwv;mSe&NwXPT31$1ItH={D-^XuQL1#eA{ipGRc@F-zm0C#&2AF
+zRuk<INNtqr5eJqLowxX|o^RAfV^fak|CK;DUfYmEJ>wr0+yx*`7}9OK!Qn;2zjlI6
+zXwLQNdJ6uu3yxwSVi1c@VH0kR5(EM=$8vn01eJh;;;brMZBb|r9P$HRR@0`^i^jqL
+O0000<MNUMnLSTZ$LzsmC
+
