@@ -1,6 +1,25 @@
-\documentclass{ctexart}
+% 文档格式：article+中文
+\documentclass[12pt,a4paper]{ctexart}
+% 设置页眉页脚
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+% 右页眉不显示
+\fancyhead[R]{}
+% 中间页脚显示页码
+\fancyfoot[C]{\thepage} 
+% 页眉分隔线宽度4磅
+\renewcommand{\headrulewidth}{4pt} 
+% 长注释 \iffalse 设置超链接 \fi
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+	pdftitle={Work Abstract},
+	pdfpagemode=FullScreen,
+}
+\urlstyle{same}
 
 \title{\heiti 2022工作日报}
 \author{Cuiyang}
@@ -8,8 +27,16 @@
 
 \begin{document}
 	\maketitle
+	\tableofcontents
+	\clearpage
+	\section{2020}
+		\subsection{待补充}
+	% \clearpage
+	\section{2021}
+		\subsection{待补充}
+	% \clearpage
 	\section{2022}
-	\subsection{五月版}
+		\subsection{五月版}
 	\begin{itemize}
 		\item 开发ASR+讯飞SDK
 		\begin{itemize}
@@ -170,6 +197,61 @@
 		\item 1012: SIM卡认证对接
 		\begin{itemize}
 			\item[-] 新项目/沿用浦银接口：网银的项目下子项目，沿用接口。
+			\item[-] 1018、1026:开发界面功能
+			\item[-] 待定：逻辑开发（后台依赖）
 		\end{itemize}
+		\item 1013:追踪新建环境登录失败的BUG
+		\begin{itemize}
+			\item[-] 持续跟进，后台服务问题，TCP登录模块不明原因导致超时
+			\item[-] 1018:协议 ser\_service，升级到百度追查
+		\end{itemize}
+		\item 1014:需求-Eapp添加英文化字段（数据库升级逻辑）
+		\begin{itemize}
+			\item[-] 1031:数据库升级逻辑追踪
+			\item[-] 1028:企业推荐应用英文化Eapp
+			\item[-] 1028:群应用英文化GroupApp
+			\item[-] 1103:数据库升级逻辑处理，\underline{\textbf{覆盖安装升级数据库}}
+		\end{itemize}
+		\item 1014:联系群应用英文化接口
+		\begin{itemize}
+			\item[-] 涉及连接:https://ip:port/xpc/
+			\item[1.] 群机器人接口：group/applist?v=2，group/appget
+			\item[2.] Eapp机器人 v3接口：app/ids，app/get
+		\end{itemize}
+		\item 1014:GitHub旧项目从https鉴权切换为ssh鉴权
+		\begin{itemize}
+			\item[-] \underline{\href{https://blog.csdn.net/weixin_43065003/article/details/126973140}{参考博客(点击跳转)}}
+			\item[1.] git remote -v
+			\item[2.] git remote set-url origin git@github.com:baizhu0414/ProName.git
+		\end{itemize}
+		\item 1018:抓包HF环境，登录ser\_service出错
+		\item 1020:ASR识别不出来BUG- hi\_websocket=1协议错
+		\item 1025:排查日程通知BUG- push\_msg\_notify协议错，是否与推送二选一？
+		\item 1028:整理动态口令代码，临时打包--去除冗余配置页xml
+		\item 1031:百度BdExplorer内核替换—查找可能出现的BUG（待办）
+		\item 1031:集成埋点依赖（独立于现有埋点体系）
+		\begin{itemize}
+			\item[-] 1103:查看火眼SDK继承需求，评估工作量
+			\item[-] 1107:沟通，获取SDK，注册参数
+			\item[-] 1109:开发测试火眼监测埋点
+			\item[-] 1110:查看Flavor的方法（多渠道）-BuildConfig里面有
+			\item[-] 1114，1115，1116:打通火眼SDK，现在连不通。
+			\item[-] 1114，1118:构建单例类，抽离代码，代码规范化：
+			\item[-] -  细化分类：PageType + EventType
+			\item[-] 1122:梳理埋点的代码结构
+		\end{itemize}
+		\item 1103:查看PublicCalendar-BUG-推送协议JSON错误
+		\item 1108:HF登录环境排查—publicKey请求超时app4地址
+		\item 1109:群机器人自动添加失败BUG——appGet接口405查询失败
+		\item 1109:修复工作站空指针崩溃BUG
+		\item 1114:测试1200版本功能用例
+		\newpage
+		\item 1115:
+		\begin{itemize}
+			\item[-] 机器人查询为空抓包—机器人不存在
+			\item[-] 工作站点击上报失败问题排查（泪目，上传了，但是文件夹不一样）
+		\end{itemize}
+		\item 1121:BUG-置顶折叠8变成7条，在小屏手机上没有让折叠Item消失
+		\item 1121:BUG-HF下发HiDns地址问题
 	\end{itemize}
 \end{document}
