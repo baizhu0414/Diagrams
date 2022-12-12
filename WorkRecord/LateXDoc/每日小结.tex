@@ -252,6 +252,32 @@
 			\item[-] 工作站点击上报失败问题排查（泪目，上传了，但是文件夹不一样）
 		\end{itemize}
 		\item 1121:BUG-置顶折叠8变成7条，在小屏手机上没有让折叠Item消失
-		\item 1121:BUG-HF下发HiDns地址问题
+		\item 1121:
+		\begin{itemize}
+			\item[-] BUG-HF下发HiDns地址问题
+			\item[-] 1121发现，1123:BUG-置顶折叠8变成7条，在小屏手机上没有让折叠Item消失
+		\end{itemize}
+		\item 1130: 重新进行修复，梳理逻辑，并进行多机型测试。
+		\item 1125: 
+		\begin{itemize}
+			\item[-] BUG-搜索文件互传助手
+			\item[-] 联系人分类助手
+			\begin{sloppypar}
+				\item[-] 点击富文本出问题是因为消息类型问题，com.baidu.hi.entity.ChatInformation.UrlParamsHolder\#URL\_TYPE\_EVENT这个类型发送com.baidu.hi.bean.command.PublicTextLinkCommand没处理，所以跳转不了。应该是开发的时候处理丢了吧？
+			\end{sloppypar}
+				\item 1207:记住密码后登录的流程$\backslash$EAP相关链接追踪
+				\begin{sloppypar}
+					\item[-]  com.baidu.hi.database.FriendsDBUtil\#\\GLOBAL\_SEARCH\_EMP\_SQL\_WITH\_SEARCH\_FEATURE
+				\end{sloppypar}
+			\item[-] Eapp分类助手
+			\item[-] 1130: 联系人可查到
+			\item[-] 1201: 查询Eapp
+		\end{itemize}
+		\item 1208:BUG-超文本中链接点击失败
+		\begin{sloppypar}
+			\item[--] 点击富文本出问题是因为消息类型问题，com.baidu.hi.entity.ChatInformation.\\UrlParamsHolder\#URL\_TYPE\_EVENT这个类型发送com.baidu.hi.bean.command.\\PublicTextLinkCommand没处理，所以跳转不了。应该是开发的时候处理丢了吧？
+			\item 1207:记住密码后登录的流程$\backslash$EAP相关链接追踪
+		\end{sloppypar}
+		
 	\end{itemize}
 \end{document}

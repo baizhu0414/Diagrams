@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.14)  23 NOV 2022 11:02
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.14)  12 DEC 2022 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,6 +689,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11]
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+[]\TU/SongtiSCLight(0)/m/n/12 点 击 富 文 本 出 问 题 是 因 为 消 息 类 型 问 题，|
+ []
+
+
+Overfull \hbox (73.95595pt too wide) in paragraph at lines 266--267
+\TU/lmr/m/n/12 com.baidu.hi.entity.ChatInformation.UrlParamsHolder#URL_TYPE_EVE
+NT
+ []
+
+
+Overfull \hbox (23.35596pt too wide) in paragraph at lines 266--267
+\TU/SongtiSCLight(0)/m/n/12 这 个 类 型 发 送 \TU/lmr/m/n/12 com.baidu.hi.bean.comman
+d.PublicTextLinkCommand
+ []
+
+
+Overfull \hbox (8.09996pt too wide) in paragraph at lines 270--271
+\TU/lmr/m/n/12 GLOBAL_SEARCH_EMP_SQL_WITH_SEARCH_FEATURE 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+[]\TU/SongtiSCLight(0)/m/n/12 点 击 富 文 本 出 问 题 是 因 为 消 息 类 型 问 题，|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+\TU/lmr/m/n/12 UrlParamsHolder#URL_TYPE_EVENT \TU/SongtiSCLight(0)/m/n/12 这 个 类
+ 型 发 送
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -697,7 +729,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12] (./每日小结.aux)
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13] (./每日小结.aux)
 Package rerunfilecheck Info: File `每日小结.out' has not changed.
 (rerunfilecheck)             Checksum: 20C8C44FDB9D159A392E2593B96FA127;757.
  ) 
@@ -710,4 +751,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  89i,11n,97p,1190b,498s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 每日小结.pdf (12 pages).
+Output written on 每日小结.pdf (13 pages).
