@@ -274,10 +274,34 @@
 			\item[-] 1201: 查询Eapp
 		\end{itemize}
 		\item 1208:BUG-超文本中链接点击失败
-		\begin{sloppypar}
-			\item[--] 点击富文本出问题是因为消息类型问题，com.baidu.hi.entity.ChatInformation.\\UrlParamsHolder\#URL\_TYPE\_EVENT这个类型发送com.baidu.hi.bean.command.\\PublicTextLinkCommand没处理，所以跳转不了。应该是开发的时候处理丢了吧？
-			\item 1207:记住密码后登录的流程$\backslash$EAP相关链接追踪
-		\end{sloppypar}
+		\item 1212-1214:已完成需求代码梳理
+		\item 1215:抓包-
+		\begin{itemize}
+			\item[-] 群投票
+			\item[-] 工作站会议请求等
+		\end{itemize}
+		\item 1215:梳理火眼代码
+		\item 1216:梳理卡片消息类型的流程
+		\item 1229-0103: 追踪开启直播失败BUG———发现一处单词拼写错误导致JSON可能转换失败
+		\section{2023}
+		\subsection{一月}
+		\item 0103: 协助抓包群投票
+		\item 0105:
+		\begin{itemize}
+			\item[-] 协助查看isNative错误问题
+			\item[-] ~0106协助查看showTeller在uatRelease包和uatDebug包不同表现问题
+			\item[-] 修改动态口令BUG
+		\end{itemize}
+		\item 0109:继续查看uatRelease包的showTeller，确认整体流程是否有问题
+		\item[--] showTellerSDK也有BUG，一起更新。
+		\item 0109:追踪手势密码登录参数，后端需要写压测脚本
+		\newpage
+		\item 0110:
+		\begin{itemize}
+			\item[-] 协助抓包：TCP+ 匿名登陆
+			\item[-] 匿名登陆流程追踪
+		\end{itemize}
+		
 		
 	\end{itemize}
 \end{document}
