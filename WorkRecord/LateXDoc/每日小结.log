@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.14)  11 JAN 2023 14:50
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.14)  20 JAN 2023 10:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -741,11 +741,11 @@ Package rerunfilecheck Info: File `每日小结.out' has not changed.
 (rerunfilecheck)             Checksum: D483AFCA2AFFDE5CC055FE1EA5DAD543;895.
  ) 
 Here is how much of TeX's memory you used:
- 14139 strings out of 476179
- 325981 string characters out of 5809544
+ 14161 strings out of 476179
+ 327099 string characters out of 5809544
  642583 words of memory out of 5000000
- 34691 multiletter control sequences out of 15000+600000
- 475214 words of font info for 81 fonts, out of 8000000 for 9000
+ 34707 multiletter control sequences out of 15000+600000
+ 475246 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,11n,97p,1190b,498s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
