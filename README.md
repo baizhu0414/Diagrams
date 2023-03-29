@@ -1,5 +1,9 @@
 # Diagrams
 画图
-include: workrecord, project analysis, etc.
-How to use:
-use it by :https://app.diagrams.net
+# including:
+- workrecord
+- project analysis
+- etc not saied.
+# Reading it by following steps:
+1. clone the project
+2. open it by download application: https://app.diagrams.net
