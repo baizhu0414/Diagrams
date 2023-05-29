@@ -11,6 +11,7 @@
 \renewcommand{\headrulewidth}{4pt} 
 % 长注释 \iffalse 设置超链接 \fi
 \usepackage{hyperref}
+\usepackage{ulem}
 \hypersetup{
 	colorlinks=true,
 	linkcolor=blue,
@@ -325,6 +326,109 @@
 			\item[-] BUG待修复：Eapp有时候会自己清空———没有复现成功
 		\end{itemize}
 		\item 0202: 处理版本更新通知事项
+		
+		\item 0203\textbackslash0206: 查看项目中需要英文化的图片(ios、android需要对齐)
+		\item 0206: 将英文化字符串替换
+		\item 0206:协助后台排查REAL登录失败问题：publicKey公钥获取失败
+		\item 0207:review火眼sdk代码，整理完善patch。
+		\item 0209:给工作站添加数据更新日志，便于BUG排查
+		\item 0210:重构火眼SDK代码，在LogReport相关位置上传。
+		\begin{itemize}
+			\item[-] 0214:详细梳理日志上报，根据已有埋点进行上传。
+			\item[-] 0215：火眼SDK突然卡顿，发送日志给供应商。
+		\end{itemize}
+		\item 0210:整理英文化代码—群应用，工作站，公众号(PulbicActount)
+		\item 0208:协助后台排查安卓Pad登录手势密码多次设置问题。
+		\item 0213:排查数组相关BUG(可能数组越界查过int byte数组大小2G=2\^31-1 )
+		\item 0215:成功复现并彻底解决0202发现的工作站清空BUG
+		\item 0216:英文化图片——UI要求—追踪应用场景
+		\item 0220-0222:火眼上传数据有问题，协助sdk提供方排查结果
+		\item 0220-0221：协助抓日志排查直播失败BUG
+		\item 0222:抓包建群和开启语音
+		\item 0223:何业洋转存选项没有
+		\item 0223:win端和android端置顶数量不同步———没查出问题
+		\item 0223:客户经理sdk登陆问题排查
+		\item 0227:加固release排查转存BUG
+		\item 0225:火眼sdk日志混乱，尝试更新
+		\item 0228:一键建群有时失败，查看日志。
+		\item 0301:初步查明长按消息弹框选项不全的BUG，数据库获取Eapp属性不正确。
+		\item 0302:app/get打日志继续查看是否“更新”数据正常。
+		\item 0314:修复长按聊天文件长按弹框不完全问题。
+		\item 0301:下载虚拟机，尝试安装Call浦。
+		\item 0301:调研Call浦检测虚拟机的技术。
+		\item 0301:调研目前前端界面操作可选项，后面改成服务端全局控制是否展示。
+		\item HiAppActivity\#createMenu(int, java.util.List<MenuItemFastJson>, android.util.SparseIntArray)
+		\item 0317：开发控制功能，超链接参数控制部分按钮显示。
+		\item 0302-0303:整理代码，参与review，并且进行相应修改。
+		\item 0308:打包加固
+		\item 0309:调研北斗集成方法，没找到具体方案。硬件相关。
+		\item 0316：完成高德地图集成和地址转换，底层使用北斗导航。
+		\item 0313:督促行员升级软件
+		\item 0321-0322:火眼生产环境测试——sdk需要修改
+		\item 0322: 排查李研敏的安卓置顶聊天小时BUG，根据现象，预计是数据库相关的逻辑问题。
+		\item 0322:排除数据库问题，可能是后端数据问题。还需要排查oppositeUid相关判断逻辑。
+		\item 0324:怀疑是headerType问题，仍旧是后端问题。添加日志，方便后期发现排查。
+		\item 0322:修复动态口令又是网络失败不展示BUG，设置为true
+		\item 0322:查看语音识别JSSDK接口，完善接口文档。
+		\item 0327:查看添加常用应用问题—行长BUG-------没有找到BUG位置
+		\item 测试其他数据库操作+完善数据库close操作逻辑
+		\item 0327:数据库升级
+		\item 数据库关闭方法和逻辑：以比较好的方法关闭数据库，可以节省资源，同时提高操作效率。（此处不用缓存的情况）
+		\item SQLiteOpenHelper会自动关闭，只需关闭cursor即可。
+		\item 完善文件相关操作‘
+		\begin{itemize}
+			\item[-] initFolder等HiApplication功能
+			\item[-] 0329:查看日志打印逻辑
+			\item[-] 0406:崩溃日志打印
+			\item[-] 0407:开发权限申请逻辑
+			\item[-] 0424-0523:开发ActionBar，Navigator组件
+			\item[-] 0412:开发图片切割操作
+			\item[-] 0412:开发简单的消息总线，分析OttoEvent
+			\item[-] 0412:开发简单Http工具，搞个服务器尝试部署各种服务。
+		\end{itemize}
+		\item 0328:协助家俊追踪长按打印文件的参数处理
+		\begin{itemize}
+			\item[-] ResponseCallback\#onSuccess
+		\end{itemize}
+		
+		\item 0330:英文化Prd细节查看和评论
+		\item 0331:Pad横屏
+		\item 0331:虚拟机检测
+		\begin{itemize}
+			\item SpdbUtils\#getRemoteUrlWithKey
+			\item NativeWebViewModule\#getURL
+		\end{itemize}
+		\item 0331:高德地图
+		\item 0331，0404:更新火眼SDK
+		\item 0403:加固软件
+		\item 0404,0406:查看英文化文档，是否有后端内容
+		\item 0412: 排查打卡定位问题
+		\item 0414:排查没有安装软件权限时升级软件
+		\item 0414、0419:研究打包机接入“飞云”安全检测网站
+		\item 0418，0424:英文化开发（IM、应用等），测试文档完善
+		% 中划线
+		\item \sout{0419:省电功能}
+		\item 0420:协助打包、抓包等
+		\item 0427:整理登陆后http请求
+		\item 0505:IM英文化测试打包——uat
+		\item 服务号英文化开发——dev
+		\item 0505: 应用英文化开发测试——延期uat
+		\item 0509:后端修改，代码修改
+		\item 服务端下发会议分享信息的英文化——前端界面请求后台，无关内容
+		\item 0506:驾驶模式英文图片更改
+		\item \sout{灰度显示动态口令的onFailure改一下}
+		\item msg\_notify报文解析查看，工作流-直播\/智能记录通知
+		\item \sout{‘收藏’的html文件}
+		\item 0509:下发通知英文化：
+		\begin{itemize}
+			\item[-] 1. 日程：“远程会议”英文化；
+			\item[-] 0510:测试时间显示，’无主题’英化
+			\item[-]  2. 工作流：英文化。ChatListitemPublicNews
+		\end{itemize}
+		\item 协助打包加固工作：produatrelease，1301加固
+		\item 聊天分类拖动超过“全部”然后再点击灰色按钮，导致错乱
+		\item 更新火焰3.0.5版本
+		\item BUG：推送消息不在首页显示
 		\newline
 	\end{itemize}
 \end{document}
