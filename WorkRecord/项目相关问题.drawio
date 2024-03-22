@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-22T11:20:30.690Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="2RTDigDP4J8Q68Zc7TDt" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-22T12:47:41.398Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="kv1POG96i-0iI_rn1hcP" version="24.0.7" type="github">
   <diagram name="第 1 页" id="cVpbqnuZjv5tUL9fKgHS">
     <mxGraphModel dx="1050" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
       <root>
@@ -124,25 +124,49 @@
         </mxCell>
         <mxCell id="asEf8vuWVPnKcKxidllt-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="asEf8vuWVPnKcKxidllt-10">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="69" y="990" as="targetPoint" />
+            <mxPoint x="69" y="1200" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="69" y="1020" />
+              <mxPoint x="69" y="1230" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="asEf8vuWVPnKcKxidllt-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="asEf8vuWVPnKcKxidllt-10">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="961" y="990" as="targetPoint" />
+            <mxPoint x="961" y="1200" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="961" y="1020" />
+              <mxPoint x="961" y="1230" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="asEf8vuWVPnKcKxidllt-10" value="&lt;div&gt;上面是&lt;/div&gt;UIEvent的封装" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="469" y="990" width="120" height="60" as="geometry" />
+        <mxCell id="asEf8vuWVPnKcKxidllt-10" value="&lt;div&gt;上面是&lt;/div&gt;UIEvent、OttoBus的封装" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="469" y="1200" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="asEf8vuWVPnKcKxidllt-11" value="可优化项：&lt;br&gt;1.可以采用映射方式增加解耦能力；&lt;br&gt;2.可以增加类型字段，减少通知数量。" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="200" y="860" width="670" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="asEf8vuWVPnKcKxidllt-12" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="930" as="sourcePoint" />
+            <mxPoint x="940" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="asEf8vuWVPnKcKxidllt-14" value="OttoBus(Bus单例封装)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="960" width="240" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="asEf8vuWVPnKcKxidllt-16" value="public void register(Object object)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="asEf8vuWVPnKcKxidllt-14">
+          <mxGeometry y="26" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="asEf8vuWVPnKcKxidllt-17" value="public void unregister(Object object)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="asEf8vuWVPnKcKxidllt-14">
+          <mxGeometry y="52" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="asEf8vuWVPnKcKxidllt-18" value="public void post(Object event)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="asEf8vuWVPnKcKxidllt-14">
+          <mxGeometry y="78" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="asEf8vuWVPnKcKxidllt-19" value="同样采用观察者+单例，但是可以通知任何数据，包括UI等" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="960" width="330" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="asEf8vuWVPnKcKxidllt-20" value="步骤&lt;br&gt;1.register&amp;nbsp;注册需要通知的对象&lt;br&gt;2.@Subscribe&amp;nbsp;接受某个类型Event的函数&lt;br&gt;3.unregister&amp;nbsp;销毁对象时需要注销&lt;br&gt;4.post&amp;nbsp; 发送Event给2对应的函数" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="990" width="240" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
