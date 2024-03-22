@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-22T08:29:52.329Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="RLY_Xra0xxrBhUc_Af9M" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-22T11:18:46.135Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="aopVf2HfeMxk-To9oYpx" version="24.0.7" type="github">
   <diagram name="第 1 页" id="cVpbqnuZjv5tUL9fKgHS">
     <mxGraphModel dx="1050" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
       <root>
@@ -30,19 +30,19 @@
         <mxCell id="_Ly2tGGcxf1HoNy1rfg0-23" value="key：StudentDBUtil，TeacherUtil代表&lt;div&gt;&lt;b&gt;school库里的两张表&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="615" y="35" width="230" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-9" value="key：“school”&lt;b&gt;数据库，sqLiteHelper访问数据库使用&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-9" value="key：“school”&lt;b&gt;数据库，sqLiteHelper访问数据库使用&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="615" y="75" width="300" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-11" value="使用抽象类T代表数据库访问&lt;div&gt;的结果，得到cursor后具体构造&lt;/div&gt;&lt;div&gt;对象在子类中。&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-11" value="使用抽象类T代表数据库访问&lt;div&gt;的结果，得到cursor后具体构造&lt;/div&gt;&lt;div&gt;对象在子类中。&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="160" y="19" width="190" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="1c0kHlhWkJaU_nETKubm-11">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" target="1c0kHlhWkJaU_nETKubm-11" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="290" y="49" as="targetPoint" />
             <mxPoint x="380" y="49" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="1c0kHlhWkJaU_nETKubm-12">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="1c0kHlhWkJaU_nETKubm-12" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="70" y="240" as="targetPoint" />
             <Array as="points">
@@ -50,7 +50,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="1c0kHlhWkJaU_nETKubm-12">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="1c0kHlhWkJaU_nETKubm-12" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="962" y="240" as="targetPoint" />
             <Array as="points">
@@ -58,31 +58,31 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-12" value="&lt;div&gt;上面是&lt;/div&gt;SQLite数据库封装" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-12" value="&lt;div&gt;上面是&lt;/div&gt;SQLite数据库封装" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="470" y="240" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-15" value="PermissionUtil" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-15" value="PermissionUtil" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" parent="1" vertex="1">
           <mxGeometry x="190" y="360" width="260" height="78" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-16" value="&lt;b&gt;static&amp;nbsp;class PermissionReqBuilder&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1c0kHlhWkJaU_nETKubm-15">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-16" value="&lt;b&gt;static&amp;nbsp;class PermissionReqBuilder&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1c0kHlhWkJaU_nETKubm-15" vertex="1">
           <mxGeometry y="26" width="260" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-17" value="Queue&amp;lt;PermissionReqBuilder&amp;gt;&amp;nbsp;queue" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1c0kHlhWkJaU_nETKubm-15">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-17" value="Queue&amp;lt;PermissionReqBuilder&amp;gt;&amp;nbsp;queue" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1c0kHlhWkJaU_nETKubm-15" vertex="1">
           <mxGeometry y="52" width="260" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-20" value="&lt;b&gt;建造者模式&lt;/b&gt;Builder&amp;nbsp;Pattern" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-20" value="&lt;b&gt;建造者模式&lt;/b&gt;Builder&amp;nbsp;Pattern" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="460" y="383" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-21" value="按顺序依次申请，返回结果通过Util的静态方法回调。&lt;div&gt;queue先来后到，获取最近申请的权限单。&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-21" value="按顺序依次申请，返回结果通过Util的静态方法回调。&lt;div&gt;queue先来后到，获取最近申请的权限单。&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="460" y="413" width="300" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-22" value="处理过程中通过参数+handler判断是否&lt;div&gt;需要在主进程（UI进程）中响应。&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-22" value="处理过程中通过参数+handler判断是否&lt;div&gt;需要在主进程（UI进程）中响应。&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="460" y="453" width="230" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-23" value="针对新的权限，如：&lt;div style=&quot;font-size: 12px;&quot;&gt;1）访问内存权限的变更，&lt;span style=&quot;color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve; background-color: rgb(255, 255, 255);&quot;&gt;应用只能访问自己的应用特定目录以及共享的存储空间，无法直接访问外部存储中的其他目录。&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve; background-color: rgb(255, 255, 255);&quot;&gt;①需要申请&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve;&quot;&gt;MANAGE_EXTERNAL_STORAGE 权限&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve;&quot;&gt;②Android的SAF API访问&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" vertex="1" parent="1">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-23" value="针对新的权限，如：&lt;div style=&quot;font-size: 12px;&quot;&gt;1）访问内存权限的变更，&lt;span style=&quot;color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve; background-color: rgb(255, 255, 255);&quot;&gt;应用只能访问自己的应用特定目录以及共享的存储空间，无法直接访问外部存储中的其他目录。&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve; background-color: rgb(255, 255, 255);&quot;&gt;①需要申请&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve;&quot;&gt;MANAGE_EXTERNAL_STORAGE 权限&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve;&quot;&gt;②Android的SAF API访问&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
           <mxGeometry x="185" y="493" width="660" height="87" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="1c0kHlhWkJaU_nETKubm-26">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="1c0kHlhWkJaU_nETKubm-26" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="69" y="620" as="targetPoint" />
             <Array as="points">
@@ -90,7 +90,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="1c0kHlhWkJaU_nETKubm-26">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="1c0kHlhWkJaU_nETKubm-26" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="961" y="620" as="targetPoint" />
             <Array as="points">
@@ -98,8 +98,51 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-26" value="&lt;div&gt;上面是&lt;/div&gt;Permission的封装" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-26" value="&lt;div&gt;上面是&lt;/div&gt;Permission的封装" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="469" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7RCxnM5kFQCjKImOHv_X-1" value="UIEvent" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="710" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7RCxnM5kFQCjKImOHv_X-2" value="&lt;b&gt;List&amp;lt;Handler&amp;gt; needToReflashList&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="7RCxnM5kFQCjKImOHv_X-1">
+          <mxGeometry y="26" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7RCxnM5kFQCjKImOHv_X-3" value="void register(Handler item)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="7RCxnM5kFQCjKImOHv_X-1">
+          <mxGeometry y="52" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7RCxnM5kFQCjKImOHv_X-4" value="void remove(Handler item)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="7RCxnM5kFQCjKImOHv_X-1">
+          <mxGeometry y="78" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7RCxnM5kFQCjKImOHv_X-6" value="void notifications：暴力遍历通知，通过类型区分" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="7RCxnM5kFQCjKImOHv_X-1">
+          <mxGeometry y="104" width="240" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="7RCxnM5kFQCjKImOHv_X-5" value="UIEvent采用了观察者模式+单例模式，仅用于UI更新。" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="465" y="710" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7RCxnM5kFQCjKImOHv_X-7" value="方法使用&amp;nbsp;&lt;span style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(69,89,164,.5); --tw-ring-offset-shadow: 0 0 transparent; --tw-ring-shadow: 0 0 transparent; --tw-shadow: 0 0 transparent; --tw-shadow-colored: 0 0 transparent; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; font-weight: 600; color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space: pre-wrap; background-color: rgb(255, 255, 255);&quot;&gt;synchronized&lt;/span&gt;&lt;span style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(69,89,164,.5); --tw-ring-offset-shadow: 0 0 transparent; --tw-ring-shadow: 0 0 transparent; --tw-shadow: 0 0 transparent; --tw-shadow-colored: 0 0 transparent; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space: pre-wrap; background-color: rgb(255, 255, 255);&quot;&gt;修饰&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="465" y="765" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7RCxnM5kFQCjKImOHv_X-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="7RCxnM5kFQCjKImOHv_X-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="69" y="990" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="69" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7RCxnM5kFQCjKImOHv_X-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="7RCxnM5kFQCjKImOHv_X-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="961" y="990" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="961" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7RCxnM5kFQCjKImOHv_X-10" value="&lt;div&gt;上面是&lt;/div&gt;UIEvent的封装" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="469" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7RCxnM5kFQCjKImOHv_X-11" value="可优化项：&lt;br&gt;1.可以采用映射方式增加解耦能力；&lt;br&gt;2.可以增加类型字段，减少通知数量。" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="200" y="860" width="670" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
