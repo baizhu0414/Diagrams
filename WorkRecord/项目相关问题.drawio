@@ -1,37 +1,66 @@
-<mxfile host="app.diagrams.net" modified="2024-03-22T07:05:37.654Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="ytEk9A5U6Uk63x0QvHWa" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-22T07:08:16.106Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="YT_anVmB-sUT8JYhULKh" version="24.0.7" type="github">
   <diagram name="第 1 页" id="cVpbqnuZjv5tUL9fKgHS">
     <mxGraphModel dx="1050" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="_Ly2tGGcxf1HoNy1rfg0-3">
+        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="_Ly2tGGcxf1HoNy1rfg0-3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="330" y="110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-3" value="StudentDBUtil" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-3" value="StudentDBUtil" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="160" y="160" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-4" value="TeacherDBUtil" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-4" value="TeacherDBUtil" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="380" y="160" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-17" value="&lt;span style=&quot;text-wrap: wrap;&quot;&gt;abstract&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; background-color: initial;&quot;&gt;DatabaseUtil&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-17" value="&lt;span style=&quot;text-wrap: wrap;&quot;&gt;abstract&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; background-color: initial;&quot;&gt;DatabaseUtil&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" parent="1" vertex="1">
           <mxGeometry x="220" y="10" width="220" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-18" value="Map&amp;lt;String,DatabaseUtil&amp;gt;dbUtilPool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_Ly2tGGcxf1HoNy1rfg0-17">
+        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-18" value="Map&amp;lt;String,DatabaseUtil&amp;gt;dbUtilPool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_Ly2tGGcxf1HoNy1rfg0-17" vertex="1">
           <mxGeometry y="26" width="220" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-19" value="Map&amp;lt;String, SQLiteHelper&amp;gt; sqLiteHelperPool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_Ly2tGGcxf1HoNy1rfg0-17">
+        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-19" value="Map&amp;lt;String, SQLiteHelper&amp;gt; sqLiteHelperPool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_Ly2tGGcxf1HoNy1rfg0-17" vertex="1">
           <mxGeometry y="52" width="220" height="48" as="geometry" />
         </mxCell>
-        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_Ly2tGGcxf1HoNy1rfg0-4" target="_Ly2tGGcxf1HoNy1rfg0-19">
+        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="_Ly2tGGcxf1HoNy1rfg0-4" target="_Ly2tGGcxf1HoNy1rfg0-19" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-23" value="key：StudentDBUtil，TeacherUtil代表&lt;div&gt;&lt;b&gt;school库里的两张表&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-23" value="key：StudentDBUtil，TeacherUtil代表&lt;div&gt;&lt;b&gt;school库里的两张表&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="455" y="35" width="230" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-24" value="key：“school”&lt;b&gt;数据库&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="_Ly2tGGcxf1HoNy1rfg0-24" value="key：“school”&lt;b&gt;数据库&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="455" y="80" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="1c0kHlhWkJaU_nETKubm-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-2" value="StudentDBUtil" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-3" value="TeacherDBUtil" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-4" value="&lt;span style=&quot;text-wrap: wrap;&quot;&gt;abstract&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; background-color: initial;&quot;&gt;DatabaseUtil&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="10" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-5" value="Map&amp;lt;String,DatabaseUtil&amp;gt;dbUtilPool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1c0kHlhWkJaU_nETKubm-4">
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-6" value="Map&amp;lt;String, SQLiteHelper&amp;gt; sqLiteHelperPool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1c0kHlhWkJaU_nETKubm-4">
+          <mxGeometry y="52" width="220" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1c0kHlhWkJaU_nETKubm-3" target="1c0kHlhWkJaU_nETKubm-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-8" value="key：StudentDBUtil，TeacherUtil代表&lt;div&gt;&lt;b&gt;school库里的两张表&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="455" y="35" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-9" value="key：“school”&lt;b&gt;数据库，sqLiteHelper访问数据库使用&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="455" y="80" width="300" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
