@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-22T08:11:37.279Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="nC3dVa4B6oWAFzEz5x9D" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-22T08:17:25.263Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="Y_T6mBHtpOKPcog4Svq_" version="24.0.7" type="github">
   <diagram name="第 1 页" id="cVpbqnuZjv5tUL9fKgHS">
     <mxGraphModel dx="1050" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
       <root>
@@ -79,8 +79,27 @@
         <mxCell id="1c0kHlhWkJaU_nETKubm-22" value="处理过程中通过参数+handler判断是否&lt;div&gt;需要在主进程（UI进程）中响应。&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="460" y="453" width="230" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="1c0kHlhWkJaU_nETKubm-23" value="针对新的权限，如：&lt;div style=&quot;font-size: 12px;&quot;&gt;1）访问内存权限的变更，&lt;span style=&quot;color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve; background-color: rgb(255, 255, 255);&quot;&gt;应用只能访问自己的应用特定目录以及共享的存储空间，无法直接访问外部存储中的其他目录。①需要申请&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve;&quot;&gt;MANAGE_EXTERNAL_STORAGE 权限②Android的SAF API访问&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve;&quot;&gt;2）&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" vertex="1" parent="1">
+        <mxCell id="1c0kHlhWkJaU_nETKubm-23" value="针对新的权限，如：&lt;div style=&quot;font-size: 12px;&quot;&gt;1）访问内存权限的变更，&lt;span style=&quot;color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve; background-color: rgb(255, 255, 255);&quot;&gt;应用只能访问自己的应用特定目录以及共享的存储空间，无法直接访问外部存储中的其他目录。&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve; background-color: rgb(255, 255, 255);&quot;&gt;①需要申请&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve;&quot;&gt;MANAGE_EXTERNAL_STORAGE 权限&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(13, 13, 13); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 12px; white-space-collapse: preserve;&quot;&gt;②Android的SAF API访问&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" vertex="1" parent="1">
           <mxGeometry x="185" y="493" width="660" height="87" as="geometry" />
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="1c0kHlhWkJaU_nETKubm-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="69" y="620" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="69" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="1c0kHlhWkJaU_nETKubm-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="961" y="620" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="961" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1c0kHlhWkJaU_nETKubm-26" value="&lt;div&gt;上面是&lt;/div&gt;Permission的封装" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="469" y="620" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
