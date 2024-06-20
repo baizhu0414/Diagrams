@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-20T03:30:41.980Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" etag="2jFA_zKHxhDOCs6QLl4n" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-20T03:35:40.387Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" etag="dXz_Is_F7kwCXvd3vWsE" version="24.3.1" type="github">
   <diagram name="第 1 页" id="zIWrWEI_CjIFEU36oibR">
     <mxGraphModel dx="1002" dy="543" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -14,19 +14,10 @@
           <mxGeometry x="50" y="1010" width="690" height="60" as="geometry" />
         </mxCell>
         <mxCell id="haQ4ByIaois3tKmlB66D-1" value="&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Conv2D&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-punctuation&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;×&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-operator&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;32&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;filters&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-operator&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;stride&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-punctuation&quot;&gt;)&lt;br style=&quot;font-size: 14px;&quot;&gt;BatchNorm&lt;br style=&quot;font-size: 14px;&quot;&gt;ReLU&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="60" y="1300" width="270" height="60" as="geometry" />
+          <mxGeometry x="60" y="1300" width="250" height="60" as="geometry" />
         </mxCell>
         <mxCell id="haQ4ByIaois3tKmlB66D-2" value="&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-built_in&quot;&gt;Input&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-operator&quot;&gt;:&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;512&lt;/span&gt;×&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;512&lt;/span&gt;×&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;3&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;SAR&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-built_in&quot;&gt;Image&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="60" y="1200" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="haQ4ByIaois3tKmlB66D-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="720" y="1340" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="haQ4ByIaois3tKmlB66D-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="720" y="1240" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="haQ4ByIaois3tKmlB66D-5" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="720" y="1440" width="120" height="60" as="geometry" />
+          <mxGeometry x="60" y="1200" width="250" height="60" as="geometry" />
         </mxCell>
         <mxCell id="haQ4ByIaois3tKmlB66D-6" value="MobileNetV2" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="60" y="1400" width="250" height="120" as="geometry" />
@@ -35,10 +26,37 @@
           <mxGeometry y="24" width="250" height="80" as="geometry" />
         </mxCell>
         <mxCell id="haQ4ByIaois3tKmlB66D-8" value="LightweightFPN" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="60" y="1554" width="250" height="106" as="geometry" />
+          <mxGeometry x="60" y="1560" width="250" height="106" as="geometry" />
         </mxCell>
         <mxCell id="haQ4ByIaois3tKmlB66D-9" value="&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Conv2D&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-punctuation&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;×&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-operator&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;reduced&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;channels&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-punctuation&quot;&gt;)&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Conv2D&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-punctuation&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;×&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-operator&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;reduced&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;channels&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-punctuation&quot;&gt;)&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Feature&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Fusion&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Downsampled&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Feature&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Maps&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="haQ4ByIaois3tKmlB66D-8">
           <mxGeometry x="-5" y="21" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="haQ4ByIaois3tKmlB66D-10" value="LightweightGlobalContext" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="395" y="1200" width="250" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="haQ4ByIaois3tKmlB66D-11" value="&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Global&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Average&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Pooling&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Conv2D&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-punctuation&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;×&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-operator&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;reduced&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;channels&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-punctuation&quot;&gt;)&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;ULSAM&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Attention&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Depthwise&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Separable&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Conv2D&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="haQ4ByIaois3tKmlB66D-10">
+          <mxGeometry y="30" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="haQ4ByIaois3tKmlB66D-12" value="&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Output&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-operator&quot;&gt;:&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Enhanced&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Feature&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Maps&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;for&lt;/span&gt; &lt;span style=&quot;font-size: 14px;&quot; class=&quot;hljs-variable&quot;&gt;Detection&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="395" y="1370" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="haQ4ByIaois3tKmlB66D-13" value="Step1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1169" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="haQ4ByIaois3tKmlB66D-14" value="Step2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1270" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="haQ4ByIaois3tKmlB66D-15" value="Step3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1370" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="haQ4ByIaois3tKmlB66D-16" value="Step4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1530" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="haQ4ByIaois3tKmlB66D-17" value="Step5" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="395" y="1169" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="haQ4ByIaois3tKmlB66D-18" value="Step6" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="395" y="1340" width="50" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
