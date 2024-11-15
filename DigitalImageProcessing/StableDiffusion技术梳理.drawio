@@ -138,6 +138,12 @@
         <mxCell id="6MLAKp4boBGu571ln-3i-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-3" target="6MLAKp4boBGu571ln-3i-19">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-3" target="6MLAKp4boBGu571ln-3i-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-3" target="6MLAKp4boBGu571ln-3i-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-3" value="Stable Diffusion" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="65" y="1070" width="120" height="60" as="geometry" />
         </mxCell>
@@ -194,6 +200,24 @@
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-23" value="提示词反推技术帮助获取提示词：&lt;div&gt;CLIP+Textual Inversion(图像语义)&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="465" y="1370" width="245" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-25" value="目前没有此类技术，但是Diffusion的时间步调（timestep）控制可以优化这种融合，例如在生成初期注重布局，后期调整细节。" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1550" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-26" target="6MLAKp4boBGu571ln-3i-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-26" target="6MLAKp4boBGu571ln-3i-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-26" value="背景图片的下载与学习" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="265" y="1440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-29" value="目标三维 (3D Object Information)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="265" y="1600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-31" value="1. ControlNet可以通过专门的参考图像进行生成，可控制背景类型&lt;div&gt;2. GLIGEN通过方框控制主题外其他图像位置，可控制背景类型&lt;/div&gt;&lt;div&gt;3. Inpaint可通过重绘，一定程度上再固定背景图片上生成指定的物体&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1420" width="270" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
