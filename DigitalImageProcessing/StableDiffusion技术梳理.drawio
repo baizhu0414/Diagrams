@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="第 1 页" id="jtz1CIJAaIZpYcR0TfDH">
-    <mxGraphModel dx="1284" dy="643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="949" dy="375" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -157,34 +157,34 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-4" value="Diffusion融合" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="265" y="1070" width="120" height="60" as="geometry" />
+          <mxGeometry x="250" y="1070" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-6" target="6MLAKp4boBGu571ln-3i-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-6" value="尺度 (Scale):图像生成需要保持目标的真实比例" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="460" y="1070" width="150" height="60" as="geometry" />
+          <mxGeometry x="414" y="1070" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-8" target="6MLAKp4boBGu571ln-3i-12">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-8" value="布局（Layout）:布局约束通过Bounding Box或Segmentation Mask嵌入" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="460" y="1140" width="150" height="60" as="geometry" />
+          <mxGeometry x="414" y="1140" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-9" target="6MLAKp4boBGu571ln-3i-15">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-9" value="复杂度细节和风格" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="460" y="1209" width="150" height="60" as="geometry" />
+          <mxGeometry x="414" y="1209" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-12" value="ControlNet&lt;div&gt;GLIGEN&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="675.67" y="1180" width="120" height="40" as="geometry" />
+          <mxGeometry x="629.67" y="1180" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-15" value="LoRA&lt;div&gt;Inpaint（重绘）&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="675.67" y="1230" width="120" height="39" as="geometry" />
+          <mxGeometry x="629.67" y="1230" width="120" height="39" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-17" value="&lt;b&gt;GLIGEN可以一定程度上控制，但是不准确，绘制的框只控制平面尺寸。&lt;/b&gt;&lt;div&gt;&lt;b style=&quot;color: rgb(255, 51, 51);&quot;&gt;思路：因此考虑添加距离这一因素到当前的流程中，通过框的大小，估计出物体远近再结合生成图像。&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="650" y="1070" width="214.33" height="90" as="geometry" />
+          <mxGeometry x="604" y="1070" width="214.33" height="90" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-19" target="6MLAKp4boBGu571ln-3i-21">
           <mxGeometry relative="1" as="geometry" />
