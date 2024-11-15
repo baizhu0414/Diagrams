@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="第 1 页" id="jtz1CIJAaIZpYcR0TfDH">
-    <mxGraphModel dx="899" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1284" dy="643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -178,13 +178,13 @@
           <mxGeometry x="460" y="1209" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-12" value="ControlNet&lt;div&gt;GLIGEN&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="675.67" y="1140" width="120" height="60" as="geometry" />
+          <mxGeometry x="675.67" y="1180" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-15" value="LoRA&lt;div&gt;Inpaint（重绘）&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="675.67" y="1209" width="120" height="60" as="geometry" />
+          <mxGeometry x="675.67" y="1230" width="120" height="39" as="geometry" />
         </mxCell>
-        <mxCell id="6MLAKp4boBGu571ln-3i-17" value="&lt;b&gt;GLIGEN可以一定程度上控制，但是不准确，绘制的框只控制平面尺寸。&lt;/b&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="675.67" y="1070" width="120" height="60" as="geometry" />
+        <mxCell id="6MLAKp4boBGu571ln-3i-17" value="&lt;b&gt;GLIGEN可以一定程度上控制，但是不准确，绘制的框只控制平面尺寸。&lt;/b&gt;&lt;div&gt;&lt;b style=&quot;color: rgb(255, 51, 51);&quot;&gt;思路：因此考虑添加距离这一因素到当前的流程中，通过框的大小，估计出物体远近再结合生成图像。&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="1070" width="214.33" height="90" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-19" target="6MLAKp4boBGu571ln-3i-21">
           <mxGeometry relative="1" as="geometry" />
@@ -201,7 +201,7 @@
         <mxCell id="6MLAKp4boBGu571ln-3i-23" value="提示词反推技术帮助获取提示词：&lt;div&gt;CLIP+Textual Inversion(图像语义)&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="465" y="1370" width="245" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="6MLAKp4boBGu571ln-3i-25" value="目前没有此类技术，但是Diffusion的时间步调（timestep）控制可以优化这种融合，例如在生成初期注重布局，后期调整细节。" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="6MLAKp4boBGu571ln-3i-25" value="目前没有批量更换背景图片生成的技术，但是Diffusion的时间步调（timestep）控制可以优化这种融合，例如在生成初期注重布局，后期调整细节。" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="460" y="1550" width="280" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-26" target="6MLAKp4boBGu571ln-3i-25">
@@ -211,13 +211,25 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-26" value="背景图片的下载与学习" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="265" y="1440" width="120" height="60" as="geometry" />
+          <mxGeometry x="265" y="1450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-29" target="6MLAKp4boBGu571ln-3i-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-29" target="6MLAKp4boBGu571ln-3i-35">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-29" value="目标三维 (3D Object Information)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="265" y="1600" width="120" height="60" as="geometry" />
+          <mxGeometry x="265" y="1655" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-31" value="1. ControlNet可以通过专门的参考图像进行生成，可控制背景类型&lt;div&gt;2. GLIGEN通过方框控制主题外其他图像位置，可控制背景类型&lt;/div&gt;&lt;div&gt;3. Inpaint可通过重绘，一定程度上再固定背景图片上生成指定的物体&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="460" y="1420" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-33" value="1. DreamFusion 结合&lt;strong&gt;NeRF&lt;/strong&gt;创建三维物体&lt;div&gt;2.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Text2Mesh&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;通过结合文本提示和三维信息，可以从文本描述中生成对应的三维网格。&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1650" width="275" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="6MLAKp4boBGu571ln-3i-35" value="目前没有结合生成图片的技术。" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1754" width="275" height="46" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
