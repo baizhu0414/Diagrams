@@ -11,10 +11,10 @@
           <mxGeometry x="60" y="130" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-4" value="4.CheckpointLoaderSimple" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="130" width="160" height="30" as="geometry" />
+          <mxGeometry x="230" y="130" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-5" value="5.EmptyLatentImage" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="420" y="130" width="120" height="30" as="geometry" />
+          <mxGeometry x="410" y="130" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-6" value="6.CLIPTextEncode pos" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="570" y="130" width="150" height="30" as="geometry" />
@@ -23,7 +23,7 @@
           <mxGeometry x="60" y="210" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-8" value="8.VAEDecode" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="210" width="130" height="30" as="geometry" />
+          <mxGeometry x="220" y="210" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-9" value="9.SaveImage" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="380" y="210" width="130" height="30" as="geometry" />
@@ -53,10 +53,10 @@
           <mxGeometry x="60" y="520" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-18" value="4.CheckpointLoaderSimple" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="520" width="160" height="30" as="geometry" />
+          <mxGeometry x="235" y="520" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-19" value="5.EmptyLatentImage" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="420" y="520" width="120" height="30" as="geometry" />
+          <mxGeometry x="410" y="520" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-20" value="6.CLIPTextEncode pos" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="570" y="520" width="150" height="30" as="geometry" />
@@ -73,13 +73,10 @@
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-24" value="10.GLIGENLoader" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="540" y="600" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ogA_cs4jYgl6kHqg-TM3-25" value="11.VAELoader" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="60" y="680" width="130" height="30" as="geometry" />
+        <mxCell id="ogA_cs4jYgl6kHqg-TM3-25" value="11.GLIGENTextBoxApply" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="680" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ogA_cs4jYgl6kHqg-TM3-26" value="12.LoraLoader" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="680" width="130" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ogA_cs4jYgl6kHqg-TM3-27" value="13.GLIGENTextBoxApply" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="ogA_cs4jYgl6kHqg-TM3-27" value="13.VAELoader" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="380" y="680" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-28" value="14&lt;span style=&quot;background-color: initial;&quot;&gt;.GLIGENTextBoxApply&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -88,7 +85,7 @@
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-29" value="15&lt;span style=&quot;background-color: initial;&quot;&gt;.GLIGENTextBoxApply&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="60" y="750" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ogA_cs4jYgl6kHqg-TM3-30" value="16&lt;span style=&quot;background-color: initial;&quot;&gt;.GLIGENTextBoxApply&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="ogA_cs4jYgl6kHqg-TM3-30" value="16&lt;span style=&quot;background-color: initial;&quot;&gt;.&lt;/span&gt;LoraLoader" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="240" y="750" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ogA_cs4jYgl6kHqg-TM3-31" value="ComfyUI" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1;fontSize=17;" vertex="1" parent="1">
