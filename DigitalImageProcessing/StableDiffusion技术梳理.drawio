@@ -183,7 +183,7 @@
         <mxCell id="6MLAKp4boBGu571ln-3i-15" value="LoRA&lt;div&gt;Inpaint（重绘）&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="629.67" y="1230" width="120" height="39" as="geometry" />
         </mxCell>
-        <mxCell id="6MLAKp4boBGu571ln-3i-17" value="&lt;b&gt;GLIGEN可以一定程度上控制，但是不准确，绘制的框只控制平面尺寸。&lt;/b&gt;&lt;div&gt;&lt;b style=&quot;color: rgb(255, 51, 51);&quot;&gt;思路：因此考虑添加距离这一因素到当前的流程中，通过框的大小，估计出物体远近再结合生成图像。&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="6MLAKp4boBGu571ln-3i-17" value="&lt;span&gt;GLIGEN可以一定程度上控制，但是不准确，绘制的框只控制平面尺寸。&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;&quot;&gt;思路：因此考虑添加距离这一因素到当前的流程中，通过框的大小，估计出物体远近再结合生成图像。&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontStyle=0;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="604" y="1070" width="214.33" height="90" as="geometry" />
         </mxCell>
         <mxCell id="6MLAKp4boBGu571ln-3i-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6MLAKp4boBGu571ln-3i-19" target="6MLAKp4boBGu571ln-3i-21">
