@@ -43,7 +43,7 @@
         <mxCell id="e_rMs-paFZbYIKmKLnwe-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#e51400;strokeColor=#B20000;strokeWidth=2;curved=1;dashed=1;" parent="1" source="e_rMs-paFZbYIKmKLnwe-2" target="e_rMs-paFZbYIKmKLnwe-71" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="185" y="610" />
+              <mxPoint x="170" y="610" />
               <mxPoint x="1175" y="610" />
             </Array>
           </mxGeometry>
