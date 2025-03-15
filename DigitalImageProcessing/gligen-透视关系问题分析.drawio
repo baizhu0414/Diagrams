@@ -81,10 +81,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="mmYBGth3hii7XmsbXvDx-24" value="一张图片的物体相对深度也可以代表一张图片内的透视关系了，如果退而求其次可以直接使用此参数进行训练。" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="295" y="315" width="120" height="60" as="geometry" />
+          <mxGeometry x="277.5" y="317.5" width="155" height="125" as="geometry" />
         </mxCell>
         <mxCell id="mmYBGth3hii7XmsbXvDx-26" value="MLP(f(text), relative_dis, box))" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="495" y="315" width="185" height="60" as="geometry" />
+          <mxGeometry x="495" y="350" width="185" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
