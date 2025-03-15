@@ -89,6 +89,9 @@
         <mxCell id="mmYBGth3hii7XmsbXvDx-28" value="通过绘画中的消失点等类似知识点，解决问题？" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
           <mxGeometry x="403" y="250" width="360" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="mmYBGth3hii7XmsbXvDx-29" value="通过物体识别获取类别，结合类别平均尺寸先验与MiDaS相对深度，&lt;div&gt;推算真实距离，此外还要看看是否需要结合相机位姿估计，得到更准确地距离。&lt;/div&gt;&lt;div&gt;若多个物体推算的距离不一致，&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;采用加权平均或RANSAC剔除异常值。&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="500" width="580" height="70" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
