@@ -86,6 +86,9 @@
         <mxCell id="mmYBGth3hii7XmsbXvDx-26" value="MLP(f(text), &lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;relative_dis&lt;/font&gt;, box))" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="495" y="350" width="185" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="mmYBGth3hii7XmsbXvDx-28" value="通过绘画中的消失点等类似知识点，解决问题？" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="403" y="250" width="360" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
