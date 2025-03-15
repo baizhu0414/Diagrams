@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0" version="26.1.0">
   <diagram name="第 1 页" id="82f60LmP1u0pq9tIpefj">
-    <mxGraphModel dx="815" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="983" dy="1690" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -62,6 +62,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="mmYBGth3hii7XmsbXvDx-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-14" target="mmYBGth3hii7XmsbXvDx-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="mmYBGth3hii7XmsbXvDx-14" value="每个物体的相对平均深度&lt;div&gt;dis&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="255" y="190" width="200" height="50" as="geometry" />
         </mxCell>
@@ -73,6 +76,15 @@
         </mxCell>
         <mxCell id="mmYBGth3hii7XmsbXvDx-20" value="MLP(f(text),real_dis,box)&lt;div&gt;text+real_dis代表了物体透视关系，&lt;/div&gt;&lt;div&gt;box代表了物体位置，由此希望学习到更多信息&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="650" y="-40" width="150" height="141" as="geometry" />
+        </mxCell>
+        <mxCell id="mmYBGth3hii7XmsbXvDx-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-24" target="mmYBGth3hii7XmsbXvDx-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mmYBGth3hii7XmsbXvDx-24" value="一张图片的物体相对深度也可以代表一张图片内的透视关系了，如果退而求其次可以直接使用此参数进行训练。" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="315" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mmYBGth3hii7XmsbXvDx-26" value="MLP(f(text), relative_dis, box))" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="495" y="315" width="185" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
