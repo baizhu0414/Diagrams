@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0" version="26.1.0">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0" version="26.1.1">
   <diagram name="第 1 页" id="82f60LmP1u0pq9tIpefj">
-    <mxGraphModel dx="1426" dy="1924" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1386" dy="1924" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="mmYBGth3hii7XmsbXvDx-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-5" target="mmYBGth3hii7XmsbXvDx-6">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mmYBGth3hii7XmsbXvDx-5" target="mmYBGth3hii7XmsbXvDx-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="100" y="96" />
@@ -12,7 +12,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-5" target="mmYBGth3hii7XmsbXvDx-12">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mmYBGth3hii7XmsbXvDx-5" target="mmYBGth3hii7XmsbXvDx-12" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="100" y="96" />
@@ -20,13 +20,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-5" value="pic" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-5" value="pic" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="24" y="81" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-6" target="mmYBGth3hii7XmsbXvDx-8">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mmYBGth3hii7XmsbXvDx-6" target="mmYBGth3hii7XmsbXvDx-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-6" target="mmYBGth3hii7XmsbXvDx-20">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mmYBGth3hii7XmsbXvDx-6" target="mmYBGth3hii7XmsbXvDx-20" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="220" y="30" />
@@ -34,10 +34,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-6" value="&lt;font&gt;哈士奇/成年&lt;/font&gt;&lt;div&gt;&lt;font&gt;土狗/幼年&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;人类/10岁&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;男性/成年&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;奶牛/成年&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;汽车&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;吉普车&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;horizontal=1;fontStyle=0;fontFamily=Helvetica;" vertex="1" parent="1">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-6" value="&lt;font&gt;哈士奇/成年&lt;/font&gt;&lt;div&gt;&lt;font&gt;土狗/幼年&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;人类/10岁&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;男性/成年&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;奶牛/成年&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;汽车&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;吉普车&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;horizontal=1;fontStyle=0;fontFamily=Helvetica;" parent="1" vertex="1">
           <mxGeometry x="140" y="-10" width="110" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-8" target="mmYBGth3hii7XmsbXvDx-16">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mmYBGth3hii7XmsbXvDx-8" target="mmYBGth3hii7XmsbXvDx-16" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="460" y="65" />
@@ -45,16 +45,16 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-8" value="尺寸估计&lt;div&gt;l,w,&lt;b&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;h&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-8" value="尺寸估计&lt;div&gt;l,w,&lt;b&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;h&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="300" y="40" width="90" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-12" target="mmYBGth3hii7XmsbXvDx-14">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mmYBGth3hii7XmsbXvDx-12" target="mmYBGth3hii7XmsbXvDx-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-12" value="深度图" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-12" value="深度图" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="140" y="200" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-14" target="mmYBGth3hii7XmsbXvDx-16">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mmYBGth3hii7XmsbXvDx-14" target="mmYBGth3hii7XmsbXvDx-16" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="460" y="215" />
@@ -62,34 +62,34 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-14" target="mmYBGth3hii7XmsbXvDx-24">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mmYBGth3hii7XmsbXvDx-14" target="mmYBGth3hii7XmsbXvDx-24" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-14" value="每个物体的相对平均深度&lt;div&gt;dis&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-14" value="每个物体的相对平均深度&lt;div&gt;dis&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" parent="1" vertex="1">
           <mxGeometry x="255" y="190" width="200" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-16" target="mmYBGth3hii7XmsbXvDx-20">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mmYBGth3hii7XmsbXvDx-16" target="mmYBGth3hii7XmsbXvDx-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-16" value="得到绝对距离real_dis" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-16" value="得到绝对距离real_dis" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="500" y="111" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-20" value="MLP(f(text),&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;real_dis&lt;/font&gt;,box)&lt;div&gt;text+real_dis代表了物体透视关系，&lt;/div&gt;&lt;div&gt;box代表了物体位置，由此希望学习到更多信息&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-20" value="MLP(f(text),&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;real_dis&lt;/font&gt;,box)&lt;div&gt;text+real_dis代表了物体透视关系，&lt;/div&gt;&lt;div&gt;box代表了物体位置，由此希望学习到更多信息&lt;b&gt;(不可行)&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" parent="1" vertex="1">
           <mxGeometry x="660" y="-40" width="150" height="141" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-24" target="mmYBGth3hii7XmsbXvDx-26">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mmYBGth3hii7XmsbXvDx-24" target="mmYBGth3hii7XmsbXvDx-26" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-24" value="一张图片的物体相对深度也可以代表一张图片内的透视关系了，如果退而求其次可以直接使用此参数进行训练。" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-24" value="一张图片的物体相对深度也可以代表一张图片内的透视关系了，如果退而求其次可以直接使用此参数进行训练。" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="277.5" y="317.5" width="155" height="125" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-26" value="MLP(f(text), &lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;relative_dis&lt;/font&gt;, box))" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-26" value="MLP(f(text), &lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;relative_dis&lt;/font&gt;, box))" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="495" y="350" width="185" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-28" value="通过绘画中的消失点等类似知识点，解决问题？" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-28" value="通过绘画中的消失点等类似知识点，解决问题？" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d6b656;fillColor=#fff2cc;" parent="1" vertex="1">
           <mxGeometry x="403" y="250" width="360" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="mmYBGth3hii7XmsbXvDx-29" target="mmYBGth3hii7XmsbXvDx-20">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;dashed=1;" parent="1" source="mmYBGth3hii7XmsbXvDx-29" target="mmYBGth3hii7XmsbXvDx-20" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="773" y="535" />
@@ -97,7 +97,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mmYBGth3hii7XmsbXvDx-29" value="通过&lt;b&gt;物体识别&lt;/b&gt;获取类别，结合类别平均&lt;b&gt;尺寸先验&lt;/b&gt;与MiDaS&lt;b&gt;相对深度&lt;/b&gt;，&lt;div&gt;推算真实距离，此外还要看看是否需要结合&lt;b&gt;相机位姿估计&lt;/b&gt;，得到更准确地距离。&lt;/div&gt;&lt;div&gt;若多个物体推算的距离不一致，&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;采用&lt;b&gt;加权平均或RANSAC剔除异常值&lt;/b&gt;。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="mmYBGth3hii7XmsbXvDx-29" value="通过&lt;b&gt;物体识别&lt;/b&gt;获取类别，结合类别平均&lt;b&gt;尺寸先验&lt;/b&gt;与MiDaS&lt;b&gt;相对深度&lt;/b&gt;，&lt;div&gt;推算真实距离，此外还要看看是否需要结合&lt;b&gt;相机位姿估计&lt;/b&gt;，得到更准确地距离。&lt;/div&gt;&lt;div&gt;若多个物体推算的距离不一致，&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;采用&lt;b&gt;加权平均或RANSAC剔除异常值&lt;/b&gt;。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" parent="1" vertex="1">
           <mxGeometry x="80" y="490" width="580" height="90" as="geometry" />
         </mxCell>
       </root>
